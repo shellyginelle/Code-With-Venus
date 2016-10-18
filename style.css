@@ -1,6 +1,26 @@
-#div1 {
-    width: 350px;
-    height: 70px;
-    padding: 10px;
-    border: 1px solid #aaaaaa;
+#developer-container{
+  width: 100%;
+  height: 100%;
+}
+
+#code-toolbox{
+  float: left;
+  width: 33.3%;
+  height: 600px;
+  padding: 1px;
+  background-color: #999;
+}
+
+#editor-dropzone{
+  width: 33.3%;
+  height: 600px;
+  padding: 1px;
+  background-color: #eee;
+}
+
+#website-preview{
+  width: 33.3%;
+  height: 600px;
+  padding: 1px;
+  background-color: #666;
 }

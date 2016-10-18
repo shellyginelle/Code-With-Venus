@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
@@ -8,9 +8,20 @@
 </head>
 <body>
 
-<p>Drag the image into the rectangle:</p>
-<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<br>
-<img id="drag1" src="images/Venus-Diamond.png" draggable="true" ondragstart="drag(event)" width="300" height=auto>
+
+<div id="code-toolbox">
+  <p>CODE TOOLBOX </p>
+  <img id="drag-element" src="Venus-Diamond.png" draggable="true" ondragstart="drag(event)" width="300" height=auto>
+</div>
+
+<div id="editor-dropzone" ondrop="drop(event)" ondragover="allowDrop(event)" style="overflow: hidden; position: relative;">
+  <p> EDITOR </p>
+  <textarea autocorrect="off" autocapitalize="off" spellcheck="false" style="position: absolute; padding: 0px; width: 1000px height: 1em; outline: none;" tabindex="0"></textarea>
+</div>
+
+<div id="website-preview">
+  <p> WEBSITE </p>
+</div>
+
 </body>
 </html>

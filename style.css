@@ -1,15 +1,14 @@
-.left{
+#codeToolbox{
   float: left;
   width: 32%;
-}
-
-#codeToolbox{
   height: 550px;
   background-color: #999;
   padding: 5px;
 }
 
 #editorBox{
+  float: left;
+  width: 32%;
   height: 550px;
   background-color: #eee;
   padding: 5px;
@@ -23,7 +22,22 @@
 }
 
 #websiteBox{
+  float: left;
+  width: 32%;
   height: 550px;
   background-color: #666;
   padding: 5px;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: opacity 0.4s ease-in-out;
+    cursor: move;
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+    box-sizing: border-box;
+}
+.container div {
+    background-color: rgba(0, 0, 0, 0.2);
 }

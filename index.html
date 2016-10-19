@@ -3,25 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <title>Code with Venus</title>
-  <link rel="stylesheet" href="style.css">
+  <link href="style.css" rel="stylesheet"  type='text/css' />
   <script type="text/javascript" src="scripts.js"></script>
 </head>
 <body>
+  <link href='dist/dragula.css' rel='stylesheet' type='text/css' />
+  <script src='dist/dragula.js'></script>
 
-<div class="left" id="codeToolbox" style="overflow: hidden; position: relative;">
-  <img id="venus" src="imgs/Venus-Diamond.png" draggable="true" ondragstart="onDrag(event)" width="300" height=auto >
+<div id="codeToolbox" style="overflow: hidden; position: relative;">
+  <img id="venus" src="imgs/Venus-Diamond.png" draggable="true" ondragstart="onDrag(event)" width="200px" height=auto >
 </div>
 
-<div class="left" id="editorBox" style="overflow: hidden; position: relative;">
+<div id="editorBox" style="overflow: hidden; position: relative;">
   <center>
-    <div id="innerDiv" ondrop="onDrop(event)" ondragover="allowDrop(event)">Drop Zone 1</div><br>
-    <div id="innerDiv" ondrop="onDrop(event)" ondragover="allowDrop(event)">Drop Zone 2</div><br>
-    <div id="innerDiv" ondrop="onDrop(event)" ondragover="allowDrop(event)">Drop Zone 3</div><br>
-    <div id="innerDiv" ondrop="onDrop(event)" ondragover="allowDrop(event)">Drop Zone 4</div><br>
+    <div id="innerDiv" ondrop="onDrop(event)" ondragover="allowDrop(event)">Drop Zone 1</div>
+    <div id="innerDiv" ondrop="onDrop(event)" ondragover="allowDrop(event)">Drop Zone 2</div>
+    <div id="innerDiv" ondrop="onDrop(event)" ondragover="allowDrop(event)">Drop Zone 3</div>
+    <div id="innerDiv" ondrop="onDrop(event)" ondragover="allowDrop(event)">Drop Zone 4</div>
   </center>
 </div>
 
-<div class="left" id="websiteBox" style="overflow: hidden; position: relative;">
+<div id="websiteBox" style="overflow: hidden; position: relative;">
 </div>
 
 </body>

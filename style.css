@@ -1,19 +1,29 @@
 .left{
-  float:left;
-  width:33%;
+  float: left;
+  width: 32%;
 }
 
 #codeToolbox{
   height: 550px;
   background-color: #999;
+  padding: 5px;
 }
 
 #editorBox{
   height: 550px;
   background-color: #eee;
+  padding: 5px;
+}
+
+#innerDiv{
+  width: 90%;
+  height: 100px;
+  background-color: #fff;
+  border: 1px solid #aaaaaa;
 }
 
 #websiteBox{
   height: 550px;
   background-color: #666;
+  padding: 5px;
 }

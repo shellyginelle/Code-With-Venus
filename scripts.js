@@ -1,30 +1,13 @@
-window.addEventListener("load", doFirst, false);
-
-doFirst() {
-  //Image reference, add dragstart function
-  toolImage = document.getElementByI('venus');
-  toolImage.addEventListener("dragstart", startDrag, false);
-
-  editorBox = document.getElementByI('editorBox');
-  editorBox.addEventListener("dragenter", function(e){ev.preventDefault();}, false);
-  editorBox.addEventListener("dragover", dragOver, false);
-  editorBox.addEventListener("drop", dropElem, false);
-}
-
 function allowDrop(ev) {
     ev.preventDefault();
 }
 
-function startDrag(ev) {
-    var code = "<header></header>";
-    ev.dataTransfer.setData("text", code);
+function onDrag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
 }
 
-function dragOver(ev) {
-    editorBox.
-}
-
-function dropElem(ev) {
+function onDrop(ev) {
     ev.preventDefault();
-    editorBox.innerHTML = ev.dataTransfer.getData("text");
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
 }

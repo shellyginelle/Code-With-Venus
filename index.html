@@ -1,20 +1,24 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
   <meta charset="UTF-8">
   <title>Code with Venus</title>
   <link rel="stylesheet" href="style.css">
   <script type="text/javascript" src="scripts.js"></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/dragula/$VERSION/dragula.min.js'></script>
 </head>
 <body>
 
 <div class="left" id="codeToolbox" style="overflow: hidden; position: relative;">
-  <img id="venus" src="Venus-Diamond.png" style="width: 300px; height: auto;">
+  <img id="venus" src="imgs/Venus-Diamond.png" draggable="true" ondragstart="onDrag(event)" width="300" height=auto >
 </div>
 
 <div class="left" id="editorBox" style="overflow: hidden; position: relative;">
-  <p>Drag me here</p>
+  <center>
+    <div id="innerDiv" ondrop="onDrop(event)" ondragover="allowDrop(event)">Drop Zone 1</div><br>
+    <div id="innerDiv" ondrop="onDrop(event)" ondragover="allowDrop(event)">Drop Zone 2</div><br>
+    <div id="innerDiv" ondrop="onDrop(event)" ondragover="allowDrop(event)">Drop Zone 3</div><br>
+    <div id="innerDiv" ondrop="onDrop(event)" ondragover="allowDrop(event)">Drop Zone 4</div><br>
+  </center>
 </div>
 
 <div class="left" id="websiteBox" style="overflow: hidden; position: relative;">

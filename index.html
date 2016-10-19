@@ -48,25 +48,31 @@
 </nav>
 
 <div class="mainWrapper">
-  
-  <div id="codeToolbox" style="overflow: hidden; position: relative;">
-    <div align="center" id="codeToolsWrapper">
-      <div align="center" id="codeToolsLeft">
-        <div class="panel panel-default" id="draggable-element" draggable="true" ondragstart="onDrag(event)"><center>Video</center></div>
-        <div class="panel panel-default" id="draggable-element" draggable="true" ondragstart="onDrag(event)"><center>Image</center></div>
-        <div class="panel panel-default" id="draggable-element" draggable="true" ondragstart="onDrag(event)"><center>Title Text</center></div>
-        <div class="panel panel-default" id="draggable-element" draggable="true" ondragstart="onDrag(event)"><center>Paragraph Text</center></div>
-      </div>
-      <div align="center" id="codeToolsLeft">
-        <div class="panel panel-default" id="draggable-element" draggable="true" ondragstart="onDrag(event)"><center>Video</center></div>
-        <div class="panel panel-default" id="draggable-element" draggable="true" ondragstart="onDrag(event)"><center>Image</center></div>
-        <div class="panel panel-default" id="draggable-element" draggable="true" ondragstart="onDrag(event)"><center>Title Text</center></div>
-        <div class="panel panel-default" id="draggable-element" draggable="true" ondragstart="onDrag(event)"><center>Paragraph Text</center></div>
-      </div>
+
+  <div class="panel panel-default" id="codeToolbox" style="overflow: hidden; position: relative;">
+    <div class="panel-heading">
+      <h3 class="panel-title"><span class="glyphicon glyphicon-education icons-padding"></span> Code Toolbox</h3>
     </div>
+
+    <center><div id="codeToolsLeft">
+      <div class="panel panel-default" id="draggable-element" draggable="true" ondragstart="onDrag(event)"><center>Video</center></div>
+      <div class="panel panel-default" id="draggable-element" draggable="true" ondragstart="onDrag(event)"><center>Image</center></div>
+      <div class="panel panel-default" id="draggable-element" draggable="true" ondragstart="onDrag(event)"><center>Title Text</center></div>
+      <div class="panel panel-default" id="draggable-element" draggable="true" ondragstart="onDrag(event)"><center>Paragraph Text</center></div>
+    </div>
+    <div id="codeToolsLeft">
+      <div class="panel panel-default" id="draggable-element" draggable="true" ondragstart="onDrag(event)"><center>Video</center></div>
+      <div class="panel panel-default" id="draggable-element" draggable="true" ondragstart="onDrag(event)"><center>Image</center></div>
+      <div class="panel panel-default" id="draggable-element" draggable="true" ondragstart="onDrag(event)"><center>Title Text</center></div>
+      <div class="panel panel-default" id="draggable-element" draggable="true" ondragstart="onDrag(event)"><center>Paragraph Text</center></div>
+    </div></center>
   </div>
 
-  <div id="editorBox" style="overflow: hidden; position: relative;">
+<div class="panel panel-default" id="editorBox" style="overflow: hidden; position: relative;">
+    <div class="panel-heading">
+      <h3 class="panel-title"><span class="glyphicon glyphicon-console icons-padding"></span> Editor</h3>
+    </div>
+
     <center>
       <p>Drop Zone 1</p>
       <div id="dropzone" ondrop="onDrop(event)" ondragover="allowDrop(event)"></div>
@@ -79,9 +85,11 @@
     </center>
   </div>
 
-  <div id="websiteBox" style="overflow: hidden; position: relative;">
-  </div>
+<div class="panel panel-default" id="websiteBox" style="overflow: hidden; position: relative;">
+    <div class="panel-heading">
+      <h3 class="panel-title"><span class="glyphicon glyphicon-globe icons-padding"></span> Website</h3>
+    </div>
 </div>
-
+</div>
 </body>
 </html>

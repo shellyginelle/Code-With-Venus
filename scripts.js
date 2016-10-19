@@ -3,7 +3,9 @@ function allowDrop(ev) {
 }
 
 function onDrag(ev) {
-    //var code = "<example> Hello World </example>";
+    /* //On Drag 
+    var code = "<example> Hello World </example>";
+    ev.dataTransfer.setData("text", ev.code); */
     ev.dataTransfer.setData("text", ev.target.id);
 }
 

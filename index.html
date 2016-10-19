@@ -3,31 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <title>Code with Venus</title>
+
+  <!--Main Stylesheet and Script-->
   <link href="style.css" rel="stylesheet"  type='text/css' />
   <script type="text/javascript" src="scripts.js"></script>
-</head>
-<body>
+
+  <!--Dragula Stylesheet and Script-->
   <link href='dist/dragula.css' rel='stylesheet' type='text/css' />
   <script src='dist/dragula.js'></script>
 
-<div id="codeToolbox" style="overflow: hidden; position: relative;">
-  <img id="venus" src="imgs/Venus-Diamond.png" draggable="true" ondragstart="onDrag(event)" width="200px" height=auto >
-</div>
+  <!--Bootstrap Stylesheet and Script-->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-<div id="editorBox" style="overflow: hidden; position: relative;">
-  <center>
-    <p>Drop Zone 1</p>
-    <div id="innerDiv" ondrop="onDrop(event)" ondragover="allowDrop(event)"></div>
-    <p>Drop Zone 2</p>
-    <div id="innerDiv" ondrop="onDrop(event)" ondragover="allowDrop(event)"></div>
-    <p>Drop Zone 3</p>
-    <div id="innerDiv" ondrop="onDrop(event)" ondragover="allowDrop(event)"></div>
-    <p>Drop Zone 4</p>
-    <div id="innerDiv" ondrop="onDrop(event)" ondragover="allowDrop(event)"></div>
-  </center>
-</div>
+</head>
+<body>
 
-<div id="websiteBox" style="overflow: hidden; position: relative;">
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <!-- this is my custom breadcrumb -->
+            <p class="navbar-text">
+                <!-- a glyphicon as homepage -->
+                <a class="navbar-link" href="index.html" title="homepage"><img id="venus" src="imgs/Venus-Diamond-transparent.png" width="85px" height=auto ></a>
+                </p>
+            <button type="button" class="btn navbar-toggle btn-xs" data-toggle="collapse" data-target="#Navbar"><span class="glyphicon glyphicon-menu-hamburger"></span>
+            </button>
+            </p>
+        </div>
+        <div class="collapse navbar-collapse navbar-right" id="Navbar">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"> <span class="glyphicon glyphicon-user icons-padding"></span> User Profile <span class="glyphicon glyphicon-menu-down"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Profile</a></li>
+                        <li><a href="#">Sign Out</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="mainWrapper">
+  
+  <div id="codeToolbox" style="overflow: hidden; position: relative;">
+    <div align="center" id="codeToolsWrapper">
+      <div align="center" id="codeToolsLeft">
+        <div class="panel panel-default" id="draggable-element" draggable="true" ondragstart="onDrag(event)"><center>Video</center></div>
+        <div class="panel panel-default" id="draggable-element" draggable="true" ondragstart="onDrag(event)"><center>Image</center></div>
+        <div class="panel panel-default" id="draggable-element" draggable="true" ondragstart="onDrag(event)"><center>Title Text</center></div>
+        <div class="panel panel-default" id="draggable-element" draggable="true" ondragstart="onDrag(event)"><center>Paragraph Text</center></div>
+      </div>
+      <div align="center" id="codeToolsLeft">
+        <div class="panel panel-default" id="draggable-element" draggable="true" ondragstart="onDrag(event)"><center>Video</center></div>
+        <div class="panel panel-default" id="draggable-element" draggable="true" ondragstart="onDrag(event)"><center>Image</center></div>
+        <div class="panel panel-default" id="draggable-element" draggable="true" ondragstart="onDrag(event)"><center>Title Text</center></div>
+        <div class="panel panel-default" id="draggable-element" draggable="true" ondragstart="onDrag(event)"><center>Paragraph Text</center></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="editorBox" style="overflow: hidden; position: relative;">
+    <center>
+      <p>Drop Zone 1</p>
+      <div id="dropzone" ondrop="onDrop(event)" ondragover="allowDrop(event)"></div>
+      <p>Drop Zone 2</p>
+      <div id="dropzone" ondrop="onDrop(event)" ondragover="allowDrop(event)"></div>
+      <p>Drop Zone 3</p>
+      <div id="dropzone" ondrop="onDrop(event)" ondragover="allowDrop(event)"></div>
+      <p>Drop Zone 4</p>
+      <div id="dropzone" ondrop="onDrop(event)" ondragover="allowDrop(event)"></div>
+    </center>
+  </div>
+
+  <div id="websiteBox" style="overflow: hidden; position: relative;">
+  </div>
 </div>
 
 </body>

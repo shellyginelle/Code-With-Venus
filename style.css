@@ -1,26 +1,19 @@
-#developer-container{
-  width: 100%;
-  height: 100%;
+.left{
+  float:left;
+  width:33%;
 }
 
-#code-toolbox{
-  float: left;
-  width: 33.3%;
-  height: 600px;
-  padding: 1px;
+#codeToolbox{
+  height: 550px;
   background-color: #999;
 }
 
-#editor-dropzone{
-  width: 33.3%;
-  height: 600px;
-  padding: 1px;
+#editorBox{
+  height: 550px;
   background-color: #eee;
 }
 
-#website-preview{
-  width: 33.3%;
-  height: 600px;
-  padding: 1px;
+#websiteBox{
+  height: 550px;
   background-color: #666;
 }

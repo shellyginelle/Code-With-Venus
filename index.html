@@ -5,22 +5,19 @@
   <title>Code with Venus</title>
   <link rel="stylesheet" href="style.css">
   <script type="text/javascript" src="scripts.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/dragula/$VERSION/dragula.min.js'></script>
 </head>
 <body>
 
-
-<div id="code-toolbox">
-  <p>CODE TOOLBOX </p>
-  <img id="drag-element" src="Venus-Diamond.png" draggable="true" ondragstart="drag(event)" width="300" height=auto>
+<div class="left" id="codeToolbox" style="overflow: hidden; position: relative;">
+  <img id="venus" src="Venus-Diamond.png" style="width: 300px; height: auto;">
 </div>
 
-<div id="editor-dropzone" ondrop="drop(event)" ondragover="allowDrop(event)" style="overflow: hidden; position: relative;">
-  <p> EDITOR </p>
-  <textarea autocorrect="off" autocapitalize="off" spellcheck="false" style="position: absolute; padding: 0px; width: 1000px height: 1em; outline: none;" tabindex="0"></textarea>
+<div class="left" id="editorBox" style="overflow: hidden; position: relative;">
+  <p>Drag me here</p>
 </div>
 
-<div id="website-preview">
-  <p> WEBSITE </p>
+<div class="left" id="websiteBox" style="overflow: hidden; position: relative;">
 </div>
 
 </body>

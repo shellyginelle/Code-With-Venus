@@ -8,7 +8,7 @@
   float: left;
   width: 33%;
   height: 400px;
-  background-color: #999;
+  background-color: #4dd0e1;
   padding: 5px;
 }
 
@@ -31,21 +31,14 @@
   float: left;
   width: 33%;
   height: 400px;
-  background-color: #eee;
+  background-color: #666;
   padding: 5px;
-}
-
-#dropzone{
-  width: 90%;
-  height: 50px;
-  background-color: #fff;
-  border: 1px solid #aaaaaa;
 }
 
 #websiteBox{
   float: left;
   width: 33%;
   height: 400px;
-  background-color: #666;
+  background-color: #eee;
   padding: 5px;
 }

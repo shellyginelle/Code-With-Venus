@@ -4,14 +4,15 @@
   margin-left: 5px;
 }
 
-#codeToolbox{
+/* Box sections */
+#default{
   float: left;
   width: 33%;
-  height: 400px;
-  background-color: #4dd0e1;
+  height: 525px;
   padding: 5px;
 }
 
+/* codeToolbox related */
 #codeToolsLeft{
   float: left;
   width: 49%;
@@ -27,24 +28,13 @@
   cursor:move;
 }
 
-#editorBox{
-  float: left;
-  width: 33%;
-  height: 400px;
-  background-color: #666;
-  padding: 5px;
-}
-
+/* editorBox related */
 #editorTextArea {
-  width: 100%
-  height: 500px;
+  width: 100%;
+  height: 100%;
   background-color: #fff;
 }
 
-#websiteBox{
-  float: left;
-  width: 33%;
-  height: 400px;
-  background-color: #eee;
-  padding: 5px;
+/* websiteBox related */
+
 }

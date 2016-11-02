@@ -26,12 +26,13 @@ This page is a helper for local development.
       }
 
       .full {
-          height: 100vh;
+          height:100vh;
+          min-height:100vh;
           overflow: hidden;
       }
 
       #wrapper {
-          margin: 50px auto;
+          margin: 53px auto;
 }
   </style>
 
@@ -61,20 +62,152 @@ This page is a helper for local development.
 </nav>
 
 <div id="wrapper">
-  <!--div class="bramble-toolbar">
-    <div class="editor-nav">
-      <div class="filetree-pane-nav hide" style="width: 200px; display:auto">
-        hello
-      </div>
-      <div class="editor-pane-nav">
-      </div>
-      <div class="website-pane-nav">
+  <nav class="navbar navbar-default">
+  <div id="secondary-nav" class="container-fluid" style="padding:5px; background-color: #d2eef2;">
+    <div id="toolbox-nav" class="col-md-4" style="width: 380px; display:auto">
+      <div class="panel-heading pull-left" style="background-color: #9ad1e1">
+         <h3 class="panel-title"><span class="glyphicon glyphicon-scissors icons-padding"></span> Code Toolbox</h3>
       </div>
     </div>
-  </div>-->
-
-    <div id="bramble" class="full"></div>
-    <script src="thirdparty/require.min.js" data-main="hosted.js"></script>
+    <div id="filetree-nav" class="col-md-8" style="width: 520px; display: auto;">
+      <div class="panel-heading pull-left" style="background-color: #bcbcbc">
+        <h3 class="panel-title"><span class="glyphicon glyphicon-console icons-padding"></span> Editor</h3>
+      </div>
+        <div class="pull-right">
+           <div class="dropdown">
+             <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown">Create File
+            <span class="caret"></span></button>
+            <ul class="dropdown dropdown-menu">
+              <li><a href="#">HTML</a></li>
+              <li><a href="#">CSS</a></li>
+              <li><a href="#">JavaScript</a></li>
+            </ul>
+            <button class="btn btn-info" type="submit">Start Preview</button>
+            <button class="btn btn-info" type="submit"><span class="glyphicon glyphicon-resize-full"></span></button>
+          </div>
+        </div>
+    </div>
+    <div id="editor-nav" class="col-md-4" style="width: 435px; display: auto;">
+      <div class="panel-heading pull-left" style="background-color: #f2f2f2">
+        <h3 class="panel-title"><span class="glyphicon glyphicon-globe icons-padding"></span> Website</h3>
+      </div>
+        <div class="pull-right">
+           <button class="btn btn-info" type="submit"><span class="glyphicon glyphicon-resize-full"></span></button>
+        </div>
+    </div>
   </div>
+  <div id="content" style="height: 100vh;">
+    <div id="code-toolbox" class="col-md-1" style="width: 400px; display:auto; background-color: #eaeaea;">
+      <div id="tools" style="height: 325px;">
+        <div class="panel-heading" style="background-color: #fff;" data-toggle="collapse" href="#html">
+          <h4 class="panel-title"><div class="row">
+            <div class="col-md-11">Basic Building Blocks - HTML</div>
+            <div class="col-md-1"><span class="glyphicon glyphicon-chevron-down icons-padding"></span></div>
+          </div></h4>
+        </div>
+        <div id="html" class="panel-collapse collapse">
+          <div class="panel-body" data-toggle="collapse" href="#html-structure"><div class="row">
+            <div class="col-md-11">Structure</div>
+            <div class="col-md-1"><span class="glyphicon glyphicon-chevron-down icons-padding"></span></div>
+          </div></div>
+              <div id="html-structure" class="panel-collapse collapse"><div class="row">
+                <div class="col-md-6" id="title" draggable="true" ondragstart="onDrag(event)"><div class="panel-body">Title</div></div>
+                <div class="col-md-6" id="section" draggable="true" ondragstart="onDrag(event)"><div class="panel-body">Section</div></div>
+              </div></div>
+          <div class="panel-body" data-toggle="collapse" href="#html-items"><div class="row">
+            <div class="col-md-11">Items</div>
+            <div class="col-md-1"><span class="glyphicon glyphicon-chevron-down icons-padding"></span></div>
+          </div></div>
+              <div id="html-items" class="panel-collapse collapse"><div class="row">
+                <div class="col-md-6" id="video" draggable="true" ondragstart="onDrag(event)"><div class="panel-body">Video</div></div>
+                <div class="col-md-6" id="image" draggable="true" ondragstart="onDrag(event)"><div class="panel-body">Image</div></div>
+              </div></div>
+        </div>
+
+        <div class="panel-heading" style="background-color: #fff;" data-toggle="collapse" href="#css">
+          <h4 class="panel-title"><div class="row">
+            <div class="col-md-11">Basic Design Blocks - CSS</div>
+            <div class="col-md-1"><span class="glyphicon glyphicon-chevron-down icons-padding"></span></div>
+          </div></h4>
+        </div>
+        <div id="css" class="panel-collapse collapse">
+          <div class="panel-body" data-toggle="collapse" href="#css-structure"><div class="row">
+            <div class="col-md-11">Structure</div>
+            <div class="col-md-1"><span class="glyphicon glyphicon-chevron-down icons-padding"></span></div>
+          </div></div>
+              <div id="css-structure" class="panel-collapse collapse"><div class="row">
+                <div class="col-md-6" id="title" draggable="true" ondragstart="onDrag(event)"><div class="panel-body">Title</div></div>
+                <div class="col-md-6" id="section" draggable="true" ondragstart="onDrag(event)"><div class="panel-body">Section</div></div>
+              </div></div>
+          <div class="panel-body" data-toggle="collapse" href="#css-items"><div class="row">
+            <div class="col-md-11">Items</div>
+            <div class="col-md-1"><span class="glyphicon glyphicon-chevron-down icons-padding"></span></div>
+          </div></div>
+              <div id="css-items" class="panel-collapse collapse"><div class="row">
+                <div class="col-md-6" id="video" draggable="true" ondragstart="onDrag(event)"><div class="panel-body">Video</div></div>
+                <div class="col-md-6" id="image" draggable="true" ondragstart="onDrag(event)"><div class="panel-body">Image</div></div>
+              </div></div>
+        </div>
+
+        <div class="panel-heading" style="background-color: #fff;" data-toggle="collapse" href="#js">
+          <h4 class="panel-title"><div class="row">
+            <div class="col-md-11">Functional Blocks - Javascript</div>
+            <div class="col-md-1"><span class="glyphicon glyphicon-chevron-down icons-padding"></span></div>
+          </div></h4>
+        </div>
+        <div id="js" class="panel-collapse collapse">
+          <div class="panel-body" data-toggle="collapse" href="#js-structure"><div class="row">
+            <div class="col-md-11">Structure</div>
+            <div class="col-md-1"><span class="glyphicon glyphicon-chevron-down icons-padding"></span></div>
+          </div></div>
+              <div id="js-structure" class="panel-collapse collapse"><div class="row">
+                <div class="col-md-6" id="title" draggable="true" ondragstart="onDrag(event)"><div class="panel-body">Title</div></div>
+                <div class="col-md-6" id="section" draggable="true" ondragstart="onDrag(event)"><div class="panel-body">Section</div></div>
+              </div></div>
+          <div class="panel-body" data-toggle="collapse" href="#js-items"><div class="row">
+            <div class="col-md-11">Items</div>
+            <div class="col-md-1"><span class="glyphicon glyphicon-chevron-down icons-padding"></span></div>
+          </div></div>
+              <div id="js-items" class="panel-collapse collapse"><div class="row">
+                <div class="col-md-6" id="video" draggable="true" ondragstart="onDrag(event)"><div class="panel-body">Video</div></div>
+                <div class="col-md-6" id="image" draggable="true" ondragstart="onDrag(event)"><div class="panel-body">Image</div></div>
+              </div></div>
+        </div>
+
+        <div class="panel-heading" style="background-color: #fff;" data-toggle="collapse" href="#boot">
+          <h4 class="panel-title"><div class="row">
+            <div class="col-md-11">Design Library Blocks - Bootstrap</div>
+            <div class="col-md-1"><span class="glyphicon glyphicon-chevron-down icons-padding"></span></div>
+          </div></h4>
+        </div>
+        <div id="boot" class="panel-collapse collapse">
+          <div class="panel-body" data-toggle="collapse" href="#boot-structure"><div class="row">
+            <div class="col-md-11">Structure</div>
+            <div class="col-md-1"><span class="glyphicon glyphicon-chevron-down icons-padding"></span></div>
+          </div></div>
+              <div id="boot-structure" class="panel-collapse collapse"><div class="row">
+                <div class="col-md-6" id="title" draggable="true" ondragstart="onDrag(event)"><div class="panel-body">Title</div></div>
+                <div class="col-md-6" id="section" draggable="true" ondragstart="onDrag(event)"><div class="panel-body">Section</div></div>
+              </div></div>
+          <div class="panel-body" data-toggle="collapse" href="#boot-items"><div class="row">
+            <div class="col-md-11">Items</div>
+            <div class="col-md-1"><span class="glyphicon glyphicon-chevron-down icons-padding"></span></div>
+          </div></div>
+              <div id="boot-items" class="panel-collapse collapse"><div class="row">
+                <div class="col-md-6" id="video" draggable="true" ondragstart="onDrag(event)"><div class="panel-body">Video</div></div>
+                <div class="col-md-6" id="image" draggable="true" ondragstart="onDrag(event)"><div class="panel-body">Image</div></div>
+              </div></div>
+        </div>
+      </div>
+      <div id="msg-box">
+        <div class="panel panel-default" style="height: 150px;">Hello Test</div>
+      </div>
+    </div>
+    <div id="bramble" class="full" style="border: 1px solid grey;"></div>
+  </div>
+  </nav>
+</div>
+
+<script src="thirdparty/require.min.js" data-main="hosted.js"></script>
 </body>
 </html>

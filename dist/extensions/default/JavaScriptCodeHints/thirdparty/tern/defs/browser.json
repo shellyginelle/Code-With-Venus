@@ -1,0 +1,1551 @@
+{
+  "!name": "browser",
+  "location": {
+    "assign": {
+      "!type": "fn(url: string)"    },
+    "replace": {
+      "!type": "fn(url: string)"    },
+    "reload": {
+      "!type": "fn()"    },
+    "origin": {
+      "!type": "string"    },
+    "hash": {
+      "!type": "string"    },
+    "search": {
+      "!type": "string"    },
+    "pathname": {
+      "!type": "string"    },
+    "port": {
+      "!type": "string"    },
+    "hostname": {
+      "!type": "string"    },
+    "host": {
+      "!type": "string"    },
+    "protocol": {
+      "!type": "string"    },
+    "href": {
+      "!type": "string"    }  },
+  "Node": {
+    "!type": "fn()",
+    "prototype": {
+      "parentElement": {
+        "!type": "+Element"      },
+      "textContent": {
+        "!type": "string"      },
+      "baseURI": {
+        "!type": "string"      },
+      "localName": {
+        "!type": "string"      },
+      "prefix": {
+        "!type": "string"      },
+      "namespaceURI": {
+        "!type": "string"      },
+      "ownerDocument": {
+        "!type": "+Document"      },
+      "attributes": {
+        "!type": "+NamedNodeMap"      },
+      "nextSibling": {
+        "!type": "+Element"      },
+      "previousSibling": {
+        "!type": "+Element"      },
+      "lastChild": {
+        "!type": "+Element"      },
+      "firstChild": {
+        "!type": "+Element"      },
+      "childNodes": {
+        "!type": "+NodeList"      },
+      "parentNode": {
+        "!type": "+Element"      },
+      "nodeType": {
+        "!type": "number"      },
+      "nodeValue": {
+        "!type": "string"      },
+      "nodeName": {
+        "!type": "string"      },
+      "tagName": {
+        "!type": "string"      },
+      "insertBefore": {
+        "!type": "fn(newElt: +Element, before: +Element) -> +Element"      },
+      "replaceChild": {
+        "!type": "fn(newElt: +Element, oldElt: +Element) -> +Element"      },
+      "removeChild": {
+        "!type": "fn(oldElt: +Element) -> +Element"      },
+      "appendChild": {
+        "!type": "fn(newElt: +Element) -> +Element"      },
+      "hasChildNodes": {
+        "!type": "fn() -> bool"      },
+      "cloneNode": {
+        "!type": "fn(deep: bool) -> +Element"      },
+      "normalize": {
+        "!type": "fn()"      },
+      "isSupported": {
+        "!type": "fn(features: string, version: number) -> bool"      },
+      "hasAttributes": {
+        "!type": "fn() -> bool"      },
+      "lookupPrefix": {
+        "!type": "fn(uri: string) -> string"      },
+      "isDefaultNamespace": {
+        "!type": "fn(uri: string) -> bool"      },
+      "lookupNamespaceURI": {
+        "!type": "fn(uri: string) -> string"      },
+      "addEventListener": {
+        "!type": "fn(type: string, listener: fn(e: +Event), capture: bool)"      },
+      "removeEventListener": {
+        "!type": "fn(type: string, listener: fn(), capture: bool)"      },
+      "isSameNode": {
+        "!type": "fn(other: +Node) -> bool"      },
+      "isEqualNode": {
+        "!type": "fn(other: +Node) -> bool"      },
+      "compareDocumentPosition": {
+        "!type": "fn(other: +Node) -> number"      },
+      "contains": {
+        "!type": "fn(other: +Node) -> bool"      },
+      "dispatchEvent": {
+        "!type": "fn(event: +Event) -> bool"      },
+      "ELEMENT_NODE": "number",
+      "ATTRIBUTE_NODE": "number",
+      "TEXT_NODE": "number",
+      "CDATA_SECTION_NODE": "number",
+      "ENTITY_REFERENCE_NODE": "number",
+      "ENTITY_NODE": "number",
+      "PROCESSING_INSTRUCTION_NODE": "number",
+      "COMMENT_NODE": "number",
+      "DOCUMENT_NODE": "number",
+      "DOCUMENT_TYPE_NODE": "number",
+      "DOCUMENT_FRAGMENT_NODE": "number",
+      "NOTATION_NODE": "number",
+      "DOCUMENT_POSITION_DISCONNECTED": "number",
+      "DOCUMENT_POSITION_PRECEDING": "number",
+      "DOCUMENT_POSITION_FOLLOWING": "number",
+      "DOCUMENT_POSITION_CONTAINS": "number",
+      "DOCUMENT_POSITION_CONTAINED_BY": "number",
+      "DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC": "number"
+    }  },
+  "Element": {
+    "!type": "fn()",
+    "prototype": {
+      "!proto": "Node.prototype",
+      "getAttribute": {
+        "!type": "fn(name: string) -> string"      },
+      "setAttribute": {
+        "!type": "fn(name: string, value: string)"      },
+      "removeAttribute": {
+        "!type": "fn(name: string)"      },
+      "getAttributeNode": {
+        "!type": "fn(name: string) -> +Attr"      },
+      "getElementsByTagName": {
+        "!type": "fn(tagName: string) -> +NodeList"      },
+      "getElementsByTagNameNS": {
+        "!type": "fn(ns: string, tagName: string) -> +NodeList"      },
+      "getAttributeNS": {
+        "!type": "fn(ns: string, name: string) -> string"      },
+      "setAttributeNS": {
+        "!type": "fn(ns: string, name: string, value: string)"      },
+      "removeAttributeNS": {
+        "!type": "fn(ns: string, name: string)"      },
+      "getAttributeNodeNS": {
+        "!type": "fn(ns: string, name: string) -> +Attr"      },
+      "hasAttribute": {
+        "!type": "fn(name: string) -> bool"      },
+      "hasAttributeNS": {
+        "!type": "fn(ns: string, name: string) -> bool"      },
+      "focus": {
+        "!type": "fn()"      },
+      "blur": {
+        "!type": "fn()"      },
+      "scrollIntoView": {
+        "!type": "fn(top: bool)"      },
+      "scrollByLines": {
+        "!type": "fn(lines: number)"      },
+      "scrollByPages": {
+        "!type": "fn(pages: number)"      },
+      "getElementsByClassName": {
+        "!type": "fn(name: string) -> +NodeList"      },
+      "querySelector": {
+        "!type": "fn(selectors: string) -> +Element"      },
+      "querySelectorAll": {
+        "!type": "fn(selectors: string) -> +NodeList"      },
+      "getClientRects": {
+        "!type": "fn() -> [+ClientRect]"      },
+      "getBoundingClientRect": {
+        "!type": "fn() -> +ClientRect"      },
+      "setAttributeNode": {
+        "!type": "fn(attr: +Attr) -> +Attr"      },
+      "removeAttributeNode": {
+        "!type": "fn(attr: +Attr) -> +Attr"      },
+      "setAttributeNodeNS": {
+        "!type": "fn(attr: +Attr) -> +Attr"      },
+      "insertAdjacentHTML": {
+        "!type": "fn(position: string, text: string)"      },
+      "children": {
+        "!type": "+HTMLCollection"      },
+      "childElementCount": {
+        "!type": "number"      },
+      "className": {
+        "!type": "string"      },
+      "style": {
+        "cssText": "string",
+        "alignmentBaseline": "string",
+        "background": "string",
+        "backgroundAttachment": "string",
+        "backgroundClip": "string",
+        "backgroundColor": "string",
+        "backgroundImage": "string",
+        "backgroundOrigin": "string",
+        "backgroundPosition": "string",
+        "backgroundPositionX": "string",
+        "backgroundPositionY": "string",
+        "backgroundRepeat": "string",
+        "backgroundRepeatX": "string",
+        "backgroundRepeatY": "string",
+        "backgroundSize": "string",
+        "baselineShift": "string",
+        "border": "string",
+        "borderBottom": "string",
+        "borderBottomColor": "string",
+        "borderBottomLeftRadius": "string",
+        "borderBottomRightRadius": "string",
+        "borderBottomStyle": "string",
+        "borderBottomWidth": "string",
+        "borderCollapse": "string",
+        "borderColor": "string",
+        "borderImage": "string",
+        "borderImageOutset": "string",
+        "borderImageRepeat": "string",
+        "borderImageSlice": "string",
+        "borderImageSource": "string",
+        "borderImageWidth": "string",
+        "borderLeft": "string",
+        "borderLeftColor": "string",
+        "borderLeftStyle": "string",
+        "borderLeftWidth": "string",
+        "borderRadius": "string",
+        "borderRight": "string",
+        "borderRightColor": "string",
+        "borderRightStyle": "string",
+        "borderRightWidth": "string",
+        "borderSpacing": "string",
+        "borderStyle": "string",
+        "borderTop": "string",
+        "borderTopColor": "string",
+        "borderTopLeftRadius": "string",
+        "borderTopRightRadius": "string",
+        "borderTopStyle": "string",
+        "borderTopWidth": "string",
+        "borderWidth": "string",
+        "bottom": "string",
+        "boxShadow": "string",
+        "boxSizing": "string",
+        "captionSide": "string",
+        "clear": "string",
+        "clip": "string",
+        "clipPath": "string",
+        "clipRule": "string",
+        "color": "string",
+        "colorInterpolation": "string",
+        "colorInterpolationFilters": "string",
+        "colorProfile": "string",
+        "colorRendering": "string",
+        "content": "string",
+        "counterIncrement": "string",
+        "counterReset": "string",
+        "cursor": "string",
+        "direction": "string",
+        "display": "string",
+        "dominantBaseline": "string",
+        "emptyCells": "string",
+        "enableBackground": "string",
+        "fill": "string",
+        "fillOpacity": "string",
+        "fillRule": "string",
+        "filter": "string",
+        "float": "string",
+        "floodColor": "string",
+        "floodOpacity": "string",
+        "font": "string",
+        "fontFamily": "string",
+        "fontSize": "string",
+        "fontStretch": "string",
+        "fontStyle": "string",
+        "fontVariant": "string",
+        "fontWeight": "string",
+        "glyphOrientationHorizontal": "string",
+        "glyphOrientationVertical": "string",
+        "height": "string",
+        "imageRendering": "string",
+        "kerning": "string",
+        "left": "string",
+        "letterSpacing": "string",
+        "lightingColor": "string",
+        "lineHeight": "string",
+        "listStyle": "string",
+        "listStyleImage": "string",
+        "listStylePosition": "string",
+        "listStyleType": "string",
+        "margin": "string",
+        "marginBottom": "string",
+        "marginLeft": "string",
+        "marginRight": "string",
+        "marginTop": "string",
+        "marker": "string",
+        "markerEnd": "string",
+        "markerMid": "string",
+        "markerStart": "string",
+        "mask": "string",
+        "maxHeight": "string",
+        "maxWidth": "string",
+        "minHeight": "string",
+        "minWidth": "string",
+        "opacity": "string",
+        "orphans": "string",
+        "outline": "string",
+        "outlineColor": "string",
+        "outlineOffset": "string",
+        "outlineStyle": "string",
+        "outlineWidth": "string",
+        "overflow": "string",
+        "overflowWrap": "string",
+        "overflowX": "string",
+        "overflowY": "string",
+        "padding": "string",
+        "paddingBottom": "string",
+        "paddingLeft": "string",
+        "paddingRight": "string",
+        "paddingTop": "string",
+        "page": "string",
+        "pageBreakAfter": "string",
+        "pageBreakBefore": "string",
+        "pageBreakInside": "string",
+        "pointerEvents": "string",
+        "position": "string",
+        "quotes": "string",
+        "resize": "string",
+        "right": "string",
+        "shapeRendering": "string",
+        "size": "string",
+        "speak": "string",
+        "src": "string",
+        "stopColor": "string",
+        "stopOpacity": "string",
+        "stroke": "string",
+        "strokeDasharray": "string",
+        "strokeDashoffset": "string",
+        "strokeLinecap": "string",
+        "strokeLinejoin": "string",
+        "strokeMiterlimit": "string",
+        "strokeOpacity": "string",
+        "strokeWidth": "string",
+        "tabSize": "string",
+        "tableLayout": "string",
+        "textAlign": "string",
+        "textAnchor": "string",
+        "textDecoration": "string",
+        "textIndent": "string",
+        "textLineThrough": "string",
+        "textLineThroughColor": "string",
+        "textLineThroughMode": "string",
+        "textLineThroughStyle": "string",
+        "textLineThroughWidth": "string",
+        "textOverflow": "string",
+        "textOverline": "string",
+        "textOverlineColor": "string",
+        "textOverlineMode": "string",
+        "textOverlineStyle": "string",
+        "textOverlineWidth": "string",
+        "textRendering": "string",
+        "textShadow": "string",
+        "textTransform": "string",
+        "textUnderline": "string",
+        "textUnderlineColor": "string",
+        "textUnderlineMode": "string",
+        "textUnderlineStyle": "string",
+        "textUnderlineWidth": "string",
+        "top": "string",
+        "unicodeBidi": "string",
+        "unicodeRange": "string",
+        "vectorEffect": "string",
+        "verticalAlign": "string",
+        "visibility": "string",
+        "whiteSpace": "string",
+        "width": "string",
+        "wordBreak": "string",
+        "wordSpacing": "string",
+        "wordWrap": "string",
+        "writingMode": "string",
+        "zIndex": "string",
+        "zoom": "string"      },
+      "classList": {
+        "!type": "+DOMTokenList"      },
+      "contentEditable": {
+        "!type": "bool"      },
+      "firstElementChild": {
+        "!type": "+Element"      },
+      "lastElementChild": {
+        "!type": "+Element"      },
+      "nextElementSibling": {
+        "!type": "+Element"      },
+      "previousElementSibling": {
+        "!type": "+Element"      },
+      "tabIndex": {
+        "!type": "number"      },
+      "title": {
+        "!type": "string"      },
+      "width": {
+        "!type": "number"      },
+      "height": {
+        "!type": "number"      },
+      "getContext": {
+        "!type": "fn(id: string) -> CanvasRenderingContext2D"      },
+      "supportsContext": "fn(id: string) -> bool",
+      "oncopy": {
+        "!type": "?"      },
+      "oncut": {
+        "!type": "?"      },
+      "onpaste": {
+        "!type": "?"      },
+      "onbeforeunload": {
+        "!type": "?"      },
+      "onfocus": {
+        "!type": "?"      },
+      "onblur": {
+        "!type": "?"      },
+      "onchange": {
+        "!type": "?"      },
+      "onclick": {
+        "!type": "?"      },
+      "ondblclick": {
+        "!type": "?"      },
+      "onmousedown": {
+        "!type": "?"      },
+      "onmouseup": {
+        "!type": "?"      },
+      "onmousewheel": {
+        "!type": "?"      },
+      "onmouseover": {
+        "!type": "?"      },
+      "onmouseout": {
+        "!type": "?"      },
+      "onmousemove": {
+        "!type": "?"      },
+      "oncontextmenu": {
+        "!type": "?"      },
+      "onkeydown": {
+        "!type": "?"      },
+      "onkeyup": {
+        "!type": "?"      },
+      "onkeypress": {
+        "!type": "?"      },
+      "onresize": {
+        "!type": "?"      },
+      "onscroll": {
+        "!type": "?"      },
+      "ondragstart": {
+        "!type": "?"      },
+      "ondragover": {
+        "!type": "?"      },
+      "ondragleave": {
+        "!type": "?"      },
+      "ondragenter": {
+        "!type": "?"      },
+      "ondragend": {
+        "!type": "?"      },
+      "ondrag": {
+        "!type": "?"      },
+      "offsetTop": {
+        "!type": "number"      },
+      "offsetLeft": {
+        "!type": "number"      },
+      "offsetHeight": {
+        "!type": "number"      },
+      "offsetWidth": {
+        "!type": "number"      },
+      "scrollTop": {
+        "!type": "number"      },
+      "scrollLeft": {
+        "!type": "number"      },
+      "scrollHeight": {
+        "!type": "number"      },
+      "scrollWidth": {
+        "!type": "number"      },
+      "clientTop": {
+        "!type": "number"      },
+      "clientLeft": {
+        "!type": "number"      },
+      "clientHeight": {
+        "!type": "number"      },
+      "clientWidth": {
+        "!type": "number"      },
+      "innerHTML": {
+        "!type": "string"      },
+      "createdCallback": {
+        "!type": "fn()"      },
+      "attachedCallback": {
+        "!type": "fn()"      },
+      "detachedCallback": {
+        "!type": "fn()"      },
+      "attributeChangedCallback": {
+        "!type": "fn()"      }
+    }  },
+  "Text": {
+    "!type": "fn()",
+    "prototype": {
+      "!proto": "Node.prototype",
+      "wholeText": {
+        "!type": "string"      },
+      "splitText": {
+        "!type": "fn(offset: number) -> +Text"      }
+    }  },
+  "Document": {
+    "!type": "fn()",
+    "prototype": {
+      "!proto": "Node.prototype",
+      "activeElement": {
+        "!type": "+Element"      },
+      "compatMode": {
+        "!type": "string"      },
+      "designMode": {
+        "!type": "string"      },
+      "dir": {
+        "!type": "string"      },
+      "height": {
+        "!type": "number"      },
+      "width": {
+        "!type": "number"      },
+      "characterSet": {
+        "!type": "string"      },
+      "readyState": {
+        "!type": "string"      },
+      "location": {
+        "!type": "location"      },
+      "lastModified": {
+        "!type": "string"      },
+      "head": {
+        "!type": "+Element"      },
+      "body": {
+        "!type": "+Element"      },
+      "cookie": {
+        "!type": "string"      },
+      "URL": "string",
+      "domain": {
+        "!type": "string"      },
+      "referrer": {
+        "!type": "string"      },
+      "title": {
+        "!type": "string"      },
+      "defaultView": {      },
+      "documentURI": {
+        "!type": "string"      },
+      "xmlStandalone": "bool",
+      "xmlVersion": {
+        "!type": "string"      },
+      "xmlEncoding": {
+        "!type": "string"      },
+      "inputEncoding": {
+        "!type": "string"      },
+      "documentElement": {
+        "!type": "+Element"      },
+      "implementation": {
+        "hasFeature": "fn(feature: string, version: number) -> bool",
+        "createDocumentType": {
+          "!type": "fn(qualifiedName: string, publicId: string, systemId: string) -> +Node"        },
+        "createHTMLDocument": {
+          "!type": "fn(title: string) -> +Document"        },
+        "createDocument": {
+          "!type": "fn(namespaceURI: string, qualifiedName: string, type: +Node) -> +Document"        }      },
+      "doctype": {
+        "!type": "+Node"      },
+      "open": {
+        "!type": "fn()"      },
+      "close": {
+        "!type": "fn()"      },
+      "write": {
+        "!type": "fn(html: string)"      },
+      "writeln": {
+        "!type": "fn(html: string)"      },
+      "clear": {
+        "!type": "fn()"      },
+      "hasFocus": {
+        "!type": "fn() -> bool"      },
+      "createElement": {
+        "!type": "fn(tagName: string) -> +Element"      },
+      "createElementNS": {
+        "!type": "fn(ns: string, tagName: string) -> +Element"      },
+      "createDocumentFragment": {
+        "!type": "fn() -> +DocumentFragment"      },
+      "createTextNode": {
+        "!type": "fn(content: string) -> +Text"      },
+      "createComment": {
+        "!type": "fn(content: string) -> +Node"      },
+      "createCDATASection": {
+        "!type": "fn(content: string) -> +Node"      },
+      "createProcessingInstruction": {
+        "!type": "fn(content: string) -> +Node"      },
+      "createAttribute": {
+        "!type": "fn(name: string) -> +Attr"      },
+      "createAttributeNS": {
+        "!type": "fn(ns: string, name: string) -> +Attr"      },
+      "importNode": {
+        "!type": "fn(node: +Node, deep: bool) -> +Element"      },
+      "getElementById": {
+        "!type": "fn(id: string) -> +Element"      },
+      "getElementsByTagName": {
+        "!type": "fn(tagName: string) -> +NodeList"      },
+      "getElementsByTagNameNS": {
+        "!type": "fn(ns: string, tagName: string) -> +NodeList"      },
+      "createEvent": {
+        "!type": "fn(type: string) -> +Event"      },
+      "createRange": {
+        "!type": "fn() -> +Range"      },
+      "evaluate": {
+        "!type": "fn(expr: ?) -> +XPathResult"      },
+      "execCommand": {
+        "!type": "fn(cmd: string)"      },
+      "queryCommandEnabled": {
+        "!type": "fn(cmd: string) -> bool"      },
+      "queryCommandIndeterm": {
+        "!type": "fn(cmd: string) -> bool"      },
+      "queryCommandState": {
+        "!type": "fn(cmd: string) -> bool"      },
+      "queryCommandSupported": {
+        "!type": "fn(cmd: string) -> bool"      },
+      "queryCommandValue": {
+        "!type": "fn(cmd: string) -> string"      },
+      "getElementsByName": {
+        "!type": "fn(name: string) -> +HTMLCollection"      },
+      "elementFromPoint": {
+        "!type": "fn(x: number, y: number) -> +Element"      },
+      "getSelection": {
+        "!type": "fn() -> +Selection"      },
+      "adoptNode": {
+        "!type": "fn(node: +Node) -> +Element"      },
+      "createTreeWalker": {
+        "!type": "fn(root: +Node, mask: number) -> ?"      },
+      "createExpression": {
+        "!type": "fn(text: string) -> ?"      },
+      "createNSResolver": {
+        "!type": "fn(node: +Node)"      },
+      "scripts": {
+        "!type": "+HTMLCollection"      },
+      "plugins": {
+        "!type": "+HTMLCollection"      },
+      "embeds": {
+        "!type": "+HTMLCollection"      },
+      "anchors": {
+        "!type": "+HTMLCollection"      },
+      "links": {
+        "!type": "+HTMLCollection"      },
+      "forms": {
+        "!type": "+HTMLCollection"      },
+      "styleSheets": {
+        "!type": "+HTMLCollection"      },
+      "currentScript": {
+        "!type": "+Node"      },
+      "registerElement": {
+        "!type": "fn(type: string, options?: ?)"      },
+      "querySelector": "Element.prototype.querySelector",
+      "querySelectorAll": "Element.prototype.querySelectorAll"
+    }  },
+  "document": {
+    "!type": "+Document"  },
+  "XMLDocument": {
+    "!type": "fn()",
+    "prototype": "Document.prototype"  },
+  "HTMLElement": {
+    "!type": "Element"  },
+  "HTMLAnchorElement": {
+    "!type": "Element"  },
+  "HTMLAreaElement": {
+    "!type": "Element"  },
+  "HTMLAudioElement": {
+    "!type": "Element"  },
+  "HTMLBaseElement": {
+    "!type": "Element"  },
+  "HTMLBodyElement": {
+    "!type": "Element"  },
+  "HTMLBRElement": {
+    "!type": "Element"  },
+  "HTMLButtonElement": {
+    "!type": "Element"  },
+  "HTMLCanvasElement": {
+    "!type": "Element"  },
+  "HTMLDataElement": {
+    "!type": "Element"  },
+  "HTMLDataListElement": {
+    "!type": "Element"  },
+  "HTMLDivElement": {
+    "!type": "Element"  },
+  "HTMLDListElement": {
+    "!type": "Element"  },
+  "HTMLDocument": {
+    "!type": "Document"  },
+  "HTMLEmbedElement": {
+    "!type": "Element"  },
+  "HTMLFieldSetElement": {
+    "!type": "Element"  },
+  "HTMLFormControlsCollection": {
+    "!type": "Element"  },
+  "HTMLFormElement": {
+    "!type": "Element"  },
+  "HTMLHeadElement": {
+    "!type": "Element"  },
+  "HTMLHeadingElement": {
+    "!type": "Element"  },
+  "HTMLHRElement": {
+    "!type": "Element"  },
+  "HTMLHtmlElement": {
+    "!type": "Element"  },
+  "HTMLIFrameElement": {
+    "!type": "Element"  },
+  "HTMLImageElement": {
+    "!type": "Element"  },
+  "HTMLInputElement": {
+    "!type": "Element"  },
+  "HTMLKeygenElement": {
+    "!type": "Element"  },
+  "HTMLLabelElement": {
+    "!type": "Element"  },
+  "HTMLLegendElement": {
+    "!type": "Element"  },
+  "HTMLLIElement": {
+    "!type": "Element"  },
+  "HTMLLinkElement": {
+    "!type": "Element"  },
+  "HTMLMapElement": {
+    "!type": "Element"  },
+  "HTMLMediaElement": {
+    "!type": "Element"  },
+  "HTMLMetaElement": {
+    "!type": "Element"  },
+  "HTMLMeterElement": {
+    "!type": "Element"  },
+  "HTMLModElement": {
+    "!type": "Element"  },
+  "HTMLObjectElement": {
+    "!type": "Element"  },
+  "HTMLOListElement": {
+    "!type": "Element"  },
+  "HTMLOptGroupElement": {
+    "!type": "Element"  },
+  "HTMLOptionElement": {
+    "!type": "Element"  },
+  "HTMLOptionsCollection": {
+    "!type": "Element"  },
+  "HTMLOutputElement": {
+    "!type": "Element"  },
+  "HTMLParagraphElement": {
+    "!type": "Element"  },
+  "HTMLParamElement": {
+    "!type": "Element"  },
+  "HTMLPreElement": {
+    "!type": "Element"  },
+  "HTMLProgressElement": {
+    "!type": "Element"  },
+  "HTMLQuoteElement": {
+    "!type": "Element"  },
+  "HTMLScriptElement": {
+    "!type": "Element"  },
+  "HTMLSelectElement": {
+    "!type": "Element"  },
+  "HTMLSourceElement": {
+    "!type": "Element"  },
+  "HTMLSpanElement": {
+    "!type": "Element"  },
+  "HTMLStyleElement": {
+    "!type": "Element"  },
+  "HTMLTableCaptionElement": {
+    "!type": "Element"  },
+  "HTMLTableCellElement": {
+    "!type": "Element"  },
+  "HTMLTableColElement": {
+    "!type": "Element"  },
+  "HTMLTableDataCellElement": {
+    "!type": "Element"  },
+  "HTMLTableElement": {
+    "!type": "Element"  },
+  "HTMLTableHeaderCellElement": {
+    "!type": "Element"  },
+  "HTMLTableRowElement": {
+    "!type": "Element"  },
+  "HTMLTableSectionElement": {
+    "!type": "Element"  },
+  "HTMLTextAreaElement": {
+    "!type": "Element"  },
+  "HTMLTimeElement": {
+    "!type": "Element"  },
+  "HTMLTitleElement": {
+    "!type": "Element"  },
+  "HTMLTrackElement": {
+    "!type": "Element"  },
+  "HTMLUListElement": {
+    "!type": "Element"  },
+  "HTMLUnknownElement": {
+    "!type": "Element"  },
+  "HTMLVideoElement": {
+    "!type": "Element"  },
+  "Attr": {
+    "!type": "fn()",
+    "prototype": {
+      "isId": {
+        "!type": "bool"      },
+      "name": {
+        "!type": "string"      },
+      "value": {
+        "!type": "string"      }
+    }  },
+  "NodeList": {
+    "!type": "fn()",
+    "prototype": {
+      "length": {
+        "!type": "number"      },
+      "item": {
+        "!type": "fn(i: number) -> +Element"      },
+      "<i>": "+Element"
+    }  },
+  "HTMLCollection": {
+    "!type": "fn()",
+    "prototype": {
+      "length": {
+        "!type": "number"      },
+      "item": {
+        "!type": "fn(i: number) -> +Element"      },
+      "namedItem": {
+        "!type": "fn(name: string) -> +Element"      },
+      "<i>": "+Element"
+    }  },
+  "NamedNodeMap": {
+    "!type": "fn()",
+    "prototype": {
+      "length": {
+        "!type": "number"      },
+      "getNamedItem": {
+        "!type": "fn(name: string) -> +Node"      },
+      "setNamedItem": {
+        "!type": "fn(node: +Node) -> +Node"      },
+      "removeNamedItem": {
+        "!type": "fn(name: string) -> +Node"      },
+      "item": {
+        "!type": "fn(i: number) -> +Node"      },
+      "getNamedItemNS": {
+        "!type": "fn(ns: string, name: string) -> +Node"      },
+      "setNamedItemNS": {
+        "!type": "fn(node: +Node) -> +Node"      },
+      "removeNamedItemNS": {
+        "!type": "fn(ns: string, name: string) -> +Node"      },
+      "<i>": "+Node"
+    }  },
+  "DocumentFragment": {
+    "!type": "fn()",
+    "prototype": {
+      "!proto": "Node.prototype"
+    }  },
+  "DOMTokenList": {
+    "!type": "fn()",
+    "prototype": {
+      "length": {
+        "!type": "number"      },
+      "item": {
+        "!type": "fn(i: number) -> string"      },
+      "contains": {
+        "!type": "fn(token: string) -> bool"      },
+      "add": {
+        "!type": "fn(token: string)"      },
+      "remove": {
+        "!type": "fn(token: string)"      },
+      "toggle": {
+        "!type": "fn(token: string) -> bool"      },
+      "<i>": "string"
+    }  },
+  "XPathResult": {
+    "!type": "fn()",
+    "prototype": {
+      "boolValue": "bool",
+      "invalidIteratorState": {
+        "!type": "bool"      },
+      "numberValue": {
+        "!type": "number"      },
+      "resultType": {
+        "!type": "number"      },
+      "singleNodeValue": {
+        "!type": "+Element"      },
+      "snapshotLength": {
+        "!type": "number"      },
+      "stringValue": {
+        "!type": "string"      },
+      "iterateNext": {
+        "!type": "fn()"      },
+      "snapshotItem": {
+        "!type": "fn()"      },
+      "ANY_TYPE": "number",
+      "NUMBER_TYPE": "number",
+      "STRING_TYPE": "number",
+      "BOOL_TYPE": "number",
+      "UNORDERED_NODE_ITERATOR_TYPE": "number",
+      "ORDERED_NODE_ITERATOR_TYPE": "number",
+      "UNORDERED_NODE_SNAPSHOT_TYPE": "number",
+      "ORDERED_NODE_SNAPSHOT_TYPE": "number",
+      "ANY_UNORDERED_NODE_TYPE": "number",
+      "FIRST_ORDERED_NODE_TYPE": "number"
+    }  },
+  "ClientRect": {
+    "!type": "fn()",
+    "prototype": {
+      "top": {
+        "!type": "number"      },
+      "left": {
+        "!type": "number"      },
+      "bottom": {
+        "!type": "number"      },
+      "right": {
+        "!type": "number"      }
+    }  },
+  "Event": {
+    "!type": "fn()",
+    "prototype": {
+      "stopPropagation": {
+        "!type": "fn()"      },
+      "preventDefault": {
+        "!type": "fn()"      },
+      "initEvent": {
+        "!type": "fn(type: string, bubbles: bool, cancelable: bool)"      },
+      "stopImmediatePropagation": {
+        "!type": "fn()"      },
+      "type": {
+        "!type": "string"      },
+      "NONE": "number",
+      "CAPTURING_PHASE": "number",
+      "AT_TARGET": "number",
+      "BUBBLING_PHASE": "number",
+      "MOUSEDOWN": "number",
+      "MOUSEUP": "number",
+      "MOUSEOVER": "number",
+      "MOUSEOUT": "number",
+      "MOUSEMOVE": "number",
+      "MOUSEDRAG": "number",
+      "CLICK": "number",
+      "DBLCLICK": "number",
+      "KEYDOWN": "number",
+      "KEYUP": "number",
+      "KEYPRESS": "number",
+      "DRAGDROP": "number",
+      "FOCUS": "number",
+      "BLUR": "number",
+      "SELECT": "number",
+      "CHANGE": "number",
+      "target": {
+        "!type": "+Element"      },
+      "relatedTarget": {
+        "!type": "+Element"      },
+      "pageX": {
+        "!type": "number"      },
+      "pageY": {
+        "!type": "number"      },
+      "clientX": {
+        "!type": "number"      },
+      "clientY": {
+        "!type": "number"      },
+      "keyCode": {
+        "!type": "number"      },
+      "charCode": {
+        "!type": "number"      },
+      "which": {
+        "!type": "number"      },
+      "button": {
+        "!type": "number"      },
+      "shiftKey": {
+        "!type": "bool"      },
+      "ctrlKey": {
+        "!type": "bool"      },
+      "altKey": {
+        "!type": "bool"      },
+      "metaKey": {
+        "!type": "bool"      },
+      "returnValue": {
+        "!type": "bool"      },
+      "cancelBubble": {
+        "!type": "bool"      },
+      "dataTransfer": {
+        "dropEffect": {
+          "!type": "string"        },
+        "effectAllowed": {
+          "!type": "string"        },
+        "files": {
+          "!type": "+FileList"        },
+        "types": {
+          "!type": "[string]"        },
+        "addElement": {
+          "!type": "fn(element: +Element)"        },
+        "clearData": {
+          "!type": "fn(type?: string)"        },
+        "getData": {
+          "!type": "fn(type: string) -> string"        },
+        "setData": {
+          "!type": "fn(type: string, data: string)"        },
+        "setDragImage": {
+          "!type": "fn(image: +Element)"        }      }
+    }  },
+  "TouchEvent": {
+    "!type": "fn()",
+    "prototype": "Event.prototype"  },
+  "WheelEvent": {
+    "!type": "fn()",
+    "prototype": "Event.prototype"  },
+  "MouseEvent": {
+    "!type": "fn()",
+    "prototype": "Event.prototype"  },
+  "KeyboardEvent": {
+    "!type": "fn()",
+    "prototype": "Event.prototype"  },
+  "HashChangeEvent": {
+    "!type": "fn()",
+    "prototype": "Event.prototype"  },
+  "ErrorEvent": {
+    "!type": "fn()",
+    "prototype": "Event.prototype"  },
+  "CustomEvent": {
+    "!type": "fn()",
+    "prototype": "Event.prototype"  },
+  "BeforeLoadEvent": {
+    "!type": "fn()",
+    "prototype": "Event.prototype"  },
+  "WebSocket": {
+    "!type": "fn(url: string)",
+    "prototype": {
+      "close": {
+        "!type": "fn()"      },
+      "send": {
+        "!type": "fn(data: string)"      },
+      "binaryType": {
+        "!type": "string"      },
+      "bufferedAmount": {
+        "!type": "number"      },
+      "extensions": {
+        "!type": "string"      },
+      "onclose": {
+        "!type": "?"      },
+      "onerror": {
+        "!type": "?"      },
+      "onmessage": {
+        "!type": "?"      },
+      "onopen": {
+        "!type": "?"      },
+      "protocol": {
+        "!type": "string"      },
+      "url": {
+        "!type": "string"      },
+      "CONNECTING": "number",
+      "OPEN": "number",
+      "CLOSING": "number",
+      "CLOSED": "number"
+    }  },
+  "Worker": {
+    "!type": "fn(scriptURL: string)",
+    "prototype": {
+      "postMessage": {
+        "!type": "fn(message: ?)"      },
+      "terminate": {
+        "!type": "fn()"      },
+      "onmessage": {
+        "!type": "?"      },
+      "onerror": {
+        "!type": "?"      }
+    }  },
+  "localStorage": {
+    "setItem": {
+      "!type": "fn(name: string, value: string)"    },
+    "getItem": {
+      "!type": "fn(name: string) -> string"    }  },
+  "sessionStorage": {
+    "setItem": {
+      "!type": "fn(name: string, value: string)"    },
+    "getItem": {
+      "!type": "fn(name: string) -> string"    }  },
+  "FileList": {
+    "!type": "fn()",
+    "prototype": {
+      "length": {
+        "!type": "number"      },
+      "item": {
+        "!type": "fn(i: number) -> +File"      },
+      "<i>": "+File"
+    }  },
+  "File": {
+    "!type": "fn()",
+    "prototype": {
+      "!proto": "Blob.prototype",
+      "fileName": {
+        "!type": "string"      },
+      "fileSize": {
+        "!type": "number"      },
+      "lastModifiedDate": {
+        "!type": "?"      },
+      "name": {
+        "!type": "string"      }
+    }  },
+  "Blob": {
+    "!type": "fn(parts: [?], properties?: ?)",
+    "prototype": {
+      "size": {
+        "!type": "number"      },
+      "type": {
+        "!type": "string"      },
+      "slice": {
+        "!type": "fn(start: number, end?: number, type?: string) -> +Blob"      }
+    }  },
+  "FileReader": {
+    "!type": "fn()",
+    "prototype": {
+      "abort": {
+        "!type": "fn()"      },
+      "readAsArrayBuffer": {
+        "!type": "fn(blob: +Blob)"      },
+      "readAsBinaryString": {
+        "!type": "fn(blob: +Blob)"      },
+      "readAsDataURL": {
+        "!type": "fn(blob: +Blob)"      },
+      "readAsText": {
+        "!type": "fn(blob: +Blob, encoding?: string)"      },
+      "EMPTY": "number",
+      "LOADING": "number",
+      "DONE": "number",
+      "error": {
+        "!type": "?"      },
+      "readyState": {
+        "!type": "number"      },
+      "result": {
+        "!type": "?"      },
+      "onabort": {
+        "!type": "?"      },
+      "onerror": {
+        "!type": "?"      },
+      "onload": {
+        "!type": "?"      },
+      "onloadend": {
+        "!type": "?"      },
+      "onloadstart": {
+        "!type": "?"      },
+      "onprogress": {
+        "!type": "?"      }
+    }  },
+  "URL": {
+    "createObjectURL": {
+      "!type": "fn(blob: +Blob) -> string"
+    },
+    "revokeObjectURL": {
+      "!type": "fn(string)"    }
+  },
+  "Range": {
+    "!type": "fn()",
+    "prototype": {
+      "collapsed": {
+        "!type": "bool"      },
+      "commonAncestorContainer": {
+        "!type": "+Element"      },
+      "endContainer": {
+        "!type": "+Element"      },
+      "endOffset": {
+        "!type": "number"      },
+      "startContainer": {
+        "!type": "+Element"      },
+      "startOffset": {
+        "!type": "number"      },
+      "setStart": {
+        "!type": "fn(node: +Element, offset: number)"      },
+      "setEnd": {
+        "!type": "fn(node: +Element, offset: number)"      },
+      "setStartBefore": {
+        "!type": "fn(node: +Element)"      },
+      "setStartAfter": {
+        "!type": "fn(node: +Element)"      },
+      "setEndBefore": {
+        "!type": "fn(node: +Element)"      },
+      "setEndAfter": {
+        "!type": "fn(node: +Element)"      },
+      "selectNode": {
+        "!type": "fn(node: +Element)"      },
+      "selectNodeContents": {
+        "!type": "fn(node: +Element)"      },
+      "collapse": {
+        "!type": "fn(toStart: bool)"      },
+      "cloneContents": {
+        "!type": "fn() -> +DocumentFragment"      },
+      "deleteContents": {
+        "!type": "fn()"      },
+      "extractContents": {
+        "!type": "fn() -> +DocumentFragment"      },
+      "insertNode": {
+        "!type": "fn(node: +Element)"      },
+      "surroundContents": {
+        "!type": "fn(node: +Element)"      },
+      "compareBoundaryPoints": {
+        "!type": "fn(how: number, other: +Range) -> number"      },
+      "cloneRange": {
+        "!type": "fn() -> +Range"      },
+      "detach": {
+        "!type": "fn()"      },
+      "END_TO_END": "number",
+      "END_TO_START": "number",
+      "START_TO_END": "number",
+      "START_TO_START": "number"
+    }  },
+  "XMLHttpRequest": {
+    "!type": "fn()",
+    "prototype": {
+      "abort": {
+        "!type": "fn()"      },
+      "getAllResponseHeaders": {
+        "!type": "fn() -> string"      },
+      "getResponseHeader": {
+        "!type": "fn(header: string) -> string"      },
+      "open": {
+        "!type": "fn(method: string, url: string, async?: bool, user?: string, password?: string)"      },
+      "overrideMimeType": {
+        "!type": "fn(type: string)"      },
+      "send": {
+        "!type": "fn(data?: string)"      },
+      "setRequestHeader": {
+        "!type": "fn(header: string, value: string)"      },
+      "onreadystatechange": {
+        "!type": "fn()"      },
+      "readyState": {
+        "!type": "number"      },
+      "response": {
+        "!type": "+Document"      },
+      "responseText": {
+        "!type": "string"      },
+      "responseType": {
+        "!type": "string"      },
+      "responseXML": {
+        "!type": "+Document"      },
+      "status": {
+        "!type": "number"      },
+      "statusText": {
+        "!type": "string"      },
+      "timeout": {
+        "!type": "number"      },
+      "UNSENT": "number",
+      "OPENED": "number",
+      "HEADERS_RECEIVED": "number",
+      "LOADING": "number",
+      "DONE": "number"
+    }  },
+  "DOMParser": {
+    "!type": "fn()",
+    "prototype": {
+      "parseFromString": {
+        "!type": "fn(data: string, mime: string) -> +Document"      }
+    }  },
+  "Selection": {
+    "!type": "fn()",
+    "prototype": {
+      "anchorNode": {
+        "!type": "+Element"      },
+      "anchorOffset": {
+        "!type": "number"      },
+      "focusNode": {
+        "!type": "+Element"      },
+      "focusOffset": {
+        "!type": "number"      },
+      "isCollapsed": {
+        "!type": "bool"      },
+      "rangeCount": {
+        "!type": "number"      },
+      "getRangeAt": {
+        "!type": "fn(i: number) -> +Range"      },
+      "collapse": {
+        "!type": "fn()"      },
+      "extend": {
+        "!type": "fn(node: +Element, offset: number)"      },
+      "collapseToStart": {
+        "!type": "fn()"      },
+      "collapseToEnd": {
+        "!type": "fn()"      },
+      "selectAllChildren": {
+        "!type": "fn(node: +Element)"      },
+      "addRange": {
+        "!type": "fn(range: +Range)"      },
+      "removeRange": {
+        "!type": "fn(range: +Range)"      },
+      "removeAllRanges": {
+        "!type": "fn()"      },
+      "deleteFromDocument": {
+        "!type": "fn()"      },
+      "containsNode": {
+        "!type": "fn(node: +Element) -> bool"      }
+    }  },
+  "console": {
+    "error": {
+      "!type": "fn(text: string)"    },
+    "info": {
+      "!type": "fn(text: string)"    },
+    "log": {
+      "!type": "fn(text: string)"    },
+    "warn": {
+      "!type": "fn(text: string)"    }  },
+  "top": {
+    "!type": "<top>"  },
+  "parent": {
+    "!type": "<top>"  },
+  "window": {
+    "!type": "<top>"  },
+  "opener": {
+    "!type": "<top>"  },
+  "self": {
+    "!type": "<top>"  },
+  "devicePixelRatio": "number",
+  "name": {
+    "!type": "string"  },
+  "closed": {
+    "!type": "bool"  },
+  "pageYOffset": {
+    "!type": "number"  },
+  "pageXOffset": {
+    "!type": "number"  },
+  "scrollY": {
+    "!type": "number"  },
+  "scrollX": {
+    "!type": "number"  },
+  "screenTop": {
+    "!type": "number"  },
+  "screenLeft": {
+    "!type": "number"  },
+  "screenY": {
+    "!type": "number"  },
+  "screenX": {
+    "!type": "number"  },
+  "innerWidth": {
+    "!type": "number"  },
+  "innerHeight": {
+    "!type": "number"  },
+  "outerWidth": {
+    "!type": "number"  },
+  "outerHeight": {
+    "!type": "number"  },
+  "frameElement": {
+    "!type": "+Element"  },
+  "crypto": {
+    "getRandomValues": {
+      "!type": "fn([number])"    }  },
+  "navigator": {
+    "appName": {
+      "!type": "string"    },
+    "appVersion": {
+      "!type": "string"    },
+    "language": {
+      "!type": "string"    },
+    "platform": {
+      "!type": "string"    },
+    "plugins": {
+      "!type": "[?]"    },
+    "userAgent": {
+      "!type": "string"    },
+    "vendor": {
+      "!type": "string"    },
+    "javaEnabled": {
+      "!type": "bool"    }  },
+  "history": {
+    "state": {
+      "!type": "?"    },
+    "length": {
+      "!type": "number"    },
+    "go": {
+      "!type": "fn(delta: number)"    },
+    "forward": {
+      "!type": "fn()"    },
+    "back": {
+      "!type": "fn()"    },
+    "pushState": {
+      "!type": "fn(data: ?, title: string, url?: string)"    },
+    "replaceState": {
+      "!type": "fn(data: ?, title: string, url?: string)"    }  },
+  "screen": {
+    "availWidth": {
+      "!type": "number"    },
+    "availHeight": {
+      "!type": "number"    },
+    "availTop": {
+      "!type": "number"    },
+    "availLeft": {
+      "!type": "number"    },
+    "pixelDepth": {
+      "!type": "number"    },
+    "colorDepth": {
+      "!type": "number"    },
+    "width": {
+      "!type": "number"    },
+    "height": {
+      "!type": "number"    }  },
+  "postMessage": {
+    "!type": "fn(message: string, targetOrigin: string)"  },
+  "close": {
+    "!type": "fn()"  },
+  "blur": {
+    "!type": "fn()"  },
+  "focus": {
+    "!type": "fn()"  },
+  "onload": {
+    "!type": "?"  },
+  "onunload": {
+    "!type": "?"  },
+  "onscroll": {
+    "!type": "?"  },
+  "onresize": {
+    "!type": "?"  },
+  "ononline": {
+    "!type": "?"  },
+  "onoffline": {
+    "!type": "?"  },
+  "onmousewheel": {
+    "!type": "?"  },
+  "onmouseup": {
+    "!type": "?"  },
+  "onmouseover": {
+    "!type": "?"  },
+  "onmouseout": {
+    "!type": "?"  },
+  "onmousemove": {
+    "!type": "?"  },
+  "onmousedown": {
+    "!type": "?"  },
+  "onclick": {
+    "!type": "?"  },
+  "ondblclick": {
+    "!type": "?"  },
+  "onmessage": {
+    "!type": "?"  },
+  "onkeyup": {
+    "!type": "?"  },
+  "onkeypress": {
+    "!type": "?"  },
+  "onkeydown": {
+    "!type": "?"  },
+  "oninput": {
+    "!type": "?"  },
+  "onpopstate": {
+    "!type": "?"  },
+  "onhashchange": {
+    "!type": "?"  },
+  "onfocus": {
+    "!type": "?"  },
+  "onblur": {
+    "!type": "?"  },
+  "onerror": {
+    "!type": "?"  },
+  "ondrop": {
+    "!type": "?"  },
+  "ondragstart": {
+    "!type": "?"  },
+  "ondragover": {
+    "!type": "?"  },
+  "ondragleave": {
+    "!type": "?"  },
+  "ondragenter": {
+    "!type": "?"  },
+  "ondragend": {
+    "!type": "?"  },
+  "ondrag": {
+    "!type": "?"  },
+  "oncontextmenu": {
+    "!type": "?"  },
+  "onchange": {
+    "!type": "?"  },
+  "onbeforeunload": {
+    "!type": "?"  },
+  "onabort": {
+    "!type": "?"  },
+  "getSelection": {
+    "!type": "fn() -> +Selection"  },
+  "alert": {
+    "!type": "fn(message: string)"  },
+  "confirm": {
+    "!type": "fn(message: string) -> bool"  },
+  "prompt": {
+    "!type": "fn(message: string, value: string) -> string"  },
+  "scrollBy": {
+    "!type": "fn(x: number, y: number)"  },
+  "scrollTo": {
+    "!type": "fn(x: number, y: number)"  },
+  "scroll": {
+    "!type": "fn(x: number, y: number)"  },
+  "setTimeout": {
+    "!type": "fn(f: fn(), ms: number) -> number"  },
+  "clearTimeout": {
+    "!type": "fn(timeout: number)"  },
+  "setInterval": {
+    "!type": "fn(f: fn(), ms: number) -> number"  },
+  "clearInterval": {
+    "!type": "fn(interval: number)"  },
+  "atob": {
+    "!type": "fn(encoded: string) -> string"  },
+  "btoa": {
+    "!type": "fn(data: string) -> string"  },
+  "addEventListener": {
+    "!type": "fn(type: string, listener: fn(e: +Event), capture: bool)"  },
+  "removeEventListener": {
+    "!type": "fn(type: string, listener: fn(), capture: bool)"  },
+  "dispatchEvent": {
+    "!type": "fn(event: +Event) -> bool"  },
+  "getComputedStyle": {
+    "!type": "fn(node: +Element, pseudo?: string) -> Element.prototype.style"  },
+  "CanvasRenderingContext2D": {
+    "canvas": "+Element",
+    "width": "number",
+    "height": "number",
+    "commit": "fn()",
+    "save": "fn()",
+    "restore": "fn()",
+    "currentTransform": "?",
+    "scale": "fn(x: number, y: number)",
+    "rotate": "fn(angle: number)",
+    "translate": "fn(x: number, y: number)",
+    "transform": "fn(a: number, b: number, c: number, d: number, e: number, f: number)",
+    "setTransform": "fn(a: number, b: number, c: number, d: number, e: number, f: number)",
+    "resetTransform": "fn()",
+    "globalAlpha": "number",
+    "globalCompositeOperation": "string",
+    "imageSmoothingEnabled": "bool",
+    "strokeStyle": "string",
+    "fillStyle": "string",
+    "createLinearGradient": "fn(x0: number, y0: number, x1: number, y1: number) -> ?",
+    "createPattern": "fn(image: ?, repetition: string) -> ?",
+    "shadowOffsetX": "number",
+    "shadowOffsetY": "number",
+    "shadowBlur": "number",
+    "shadowColor": "string",
+    "clearRect": "fn(x: number, y: number, w: number, h: number)",
+    "fillRect": "fn(x: number, y: number, w: number, h: number)",
+    "strokeRect": "fn(x: number, y: number, w: number, h: number)",
+    "fillRule": "string",
+    "fill": "fn()",
+    "beginPath": "fn()",
+    "stroke": "fn()",
+    "clip": "fn()",
+    "resetClip": "fn()",
+    "fillText": "fn(text: string, x: number, y: number, maxWidth: number)",
+    "strokeText": "fn(text: string, x: number, y: number, maxWidth: number)",
+    "measureText": "fn(text: string) -> ?",
+    "drawImage": "fn(image: ?, dx: number, dy: number)",
+    "createImageData": "fn(sw: number, sh: number) -> ?",
+    "getImageData": "fn(sx: number, sy: number, sw: number, sh: number) -> ?",
+    "putImageData": "fn(imagedata: ?, dx: number, dy: number)",
+    "lineWidth": "number",
+    "lineCap": "string",
+    "lineJoin": "string",
+    "miterLimit": "number",
+    "setLineDash": "fn(segments: [number])",
+    "getLineDash": "fn() -> [number]",
+    "lineDashOffset": "number",
+    "font": "string",
+    "textAlign": "string",
+    "textBaseline": "string",
+    "direction": "string",
+    "closePath": "fn()",
+    "moveTo": "fn(x: number, y: number)",
+    "lineTo": "fn(x: number, y: number)",
+    "quadraticCurveTo": "fn(cpx: number, cpy: number, x: number, y: number)",
+    "bezierCurveTo": "fn(cp1x: number, cp1y: number, cp2x: number, cp2y: number, x: number, y: number)",
+    "arcTo": "fn(x1: number, y1: number, x2: number, y2: number, radius: number)",
+    "rect": "fn(x: number, y: number, w: number, h: number)",
+    "arc": "fn(x: number, y: number, radius: number, startAngle: number, endAngle: number, anticlockwise?: bool)",
+    "ellipse": "fn(x: number, y: number, radiusX: number, radiusY: number, rotation: number, startAngle: number, endAngle: number, anticlockwise: bool)"
+  }
+}

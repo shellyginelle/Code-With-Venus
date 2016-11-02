@@ -1,0 +1,429 @@
+{
+  "!name": "ecma5",
+  "!define": {"Error.prototype": "Error.prototype"},
+  "Infinity": {
+    "!type": "number"  },
+  "undefined": {
+    "!type": "?"  },
+  "NaN": {
+    "!type": "number"  },
+  "Object": {
+    "!type": "fn()",
+    "getPrototypeOf": {
+      "!type": "fn(obj: ?) -> ?"    },
+    "create": {
+      "!type": "fn(proto: ?) -> !custom:Object_create"    },
+    "defineProperty": {
+      "!type": "fn(obj: ?, prop: string, desc: ?) -> !custom:Object_defineProperty"    },
+    "defineProperties": {
+      "!type": "fn(obj: ?, props: ?)"    },
+    "getOwnPropertyDescriptor": {
+      "!type": "fn(obj: ?, prop: string) -> ?"    },
+    "keys": {
+      "!type": "fn(obj: ?) -> [string]"    },
+    "getOwnPropertyNames": {
+      "!type": "fn(obj: ?) -> [string]"    },
+    "seal": {
+      "!type": "fn(obj: ?)"    },
+    "isSealed": {
+      "!type": "fn(obj: ?) -> bool"    },
+    "freeze": {
+      "!type": "fn(obj: ?)"    },
+    "isFrozen": {
+      "!type": "fn(obj: ?) -> bool"    },
+    "preventExtensions": {
+      "!type": "fn(obj: ?)"    },
+    "isExtensible": {
+      "!type": "fn(obj: ?) -> bool"    },
+    "prototype": {
+      "!stdProto": "Object",
+      "toString": {
+        "!type": "fn() -> string"      },
+      "toLocaleString": {
+        "!type": "fn() -> string"      },
+      "valueOf": {
+        "!type": "fn() -> number"      },
+      "hasOwnProperty": {
+        "!type": "fn(prop: string) -> bool"      },
+      "propertyIsEnumerable": {
+        "!type": "fn(prop: string) -> bool"      },
+      "isPrototypeOf": {
+        "!type": "fn(obj: ?) -> bool"      }
+    }  },
+  "Function": {
+    "!type": "fn(body: string) -> fn()",
+    "prototype": {
+      "!stdProto": "Function",
+      "apply": {
+        "!type": "fn(this: ?, args: [?])",
+        "!effects": [
+          "call and return !this this=!0 !1.<i> !1.<i> !1.<i>"
+        ]      },
+      "call": {
+        "!type": "fn(this: ?, args?: ?) -> !this.!ret",
+        "!effects": [
+          "call and return !this this=!0 !1 !2 !3 !4"
+        ]      },
+      "bind": {
+        "!type": "fn(this: ?, args?: ?) -> !custom:Function_bind"      },
+      "prototype": "?"
+    }  },
+  "Array": {
+    "!type": "fn(size: number) -> !custom:Array_ctor",
+    "isArray": {
+      "!type": "fn(value: ?) -> bool"    },
+    "prototype": {
+      "!stdProto": "Array",
+      "length": {
+        "!type": "number"      },
+      "concat": {
+        "!type": "fn(other: [?]) -> !this"      },
+      "join": {
+        "!type": "fn(separator?: string) -> string"      },
+      "splice": {
+        "!type": "fn(pos: number, amount: number)"      },
+      "pop": {
+        "!type": "fn() -> !this.<i>"      },
+      "push": {
+        "!type": "fn(newelt: ?) -> number",
+        "!effects": [
+          "propagate !0 !this.<i>"
+        ]      },
+      "shift": {
+        "!type": "fn() -> !this.<i>"      },
+      "unshift": {
+        "!type": "fn(newelt: ?) -> number",
+        "!effects": [
+          "propagate !0 !this.<i>"
+        ]      },
+      "slice": {
+        "!type": "fn(from: number, to?: number) -> !this"      },
+      "reverse": {
+        "!type": "fn()"      },
+      "sort": {
+        "!type": "fn(compare?: fn(a: ?, b: ?) -> number)",
+        "!effects": [
+          "call !0 !this.<i> !this.<i>"
+        ]      },
+      "indexOf": {
+        "!type": "fn(elt: ?, from?: number) -> number"      },
+      "lastIndexOf": {
+        "!type": "fn(elt: ?, from?: number) -> number"      },
+      "every": {
+        "!type": "fn(test: fn(elt: ?, i: number) -> bool, context?: ?) -> bool",
+        "!effects": [
+          "call !0 this=!1 !this.<i> number"
+        ]      },
+      "some": {
+        "!type": "fn(test: fn(elt: ?, i: number) -> bool, context?: ?) -> bool",
+        "!effects": [
+          "call !0 this=!1 !this.<i> number"
+        ]      },
+      "filter": {
+        "!type": "fn(test: fn(elt: ?, i: number) -> bool, context?: ?) -> !this",
+        "!effects": [
+          "call !0 this=!1 !this.<i> number"
+        ]      },
+      "forEach": {
+        "!type": "fn(f: fn(elt: ?, i: number), context?: ?)",
+        "!effects": [
+          "call !0 this=!1 !this.<i> number"
+        ]      },
+      "map": {
+        "!type": "fn(f: fn(elt: ?, i: number) -> ?, context?: ?) -> [!0.!ret]",
+        "!effects": [
+          "call !0 this=!1 !this.<i> number"
+        ]      },
+      "reduce": {
+        "!type": "fn(combine: fn(sum: ?, elt: ?, i: number) -> ?, init?: ?) -> !0.!ret",
+        "!effects": [
+          "call !0 !1 !this.<i> number"
+        ]      },
+      "reduceRight": {
+        "!type": "fn(combine: fn(sum: ?, elt: ?, i: number) -> ?, init?: ?) -> !0.!ret",
+        "!effects": [
+          "call !0 !1 !this.<i> number"
+        ]      }
+    }  },
+  "String": {
+    "!type": "fn(value: ?) -> string",
+    "fromCharCode": {
+      "!type": "fn(code: number) -> string"    },
+    "prototype": {
+      "!stdProto": "String",
+      "length": {
+        "!type": "number"      },
+      "<i>": "string",
+      "charAt": {
+        "!type": "fn(i: number) -> string"      },
+      "charCodeAt": {
+        "!type": "fn(i: number) -> number"      },
+      "indexOf": {
+        "!type": "fn(char: string, from?: number) -> number"      },
+      "lastIndexOf": {
+        "!type": "fn(char: string, from?: number) -> number"      },
+      "substring": {
+        "!type": "fn(from: number, to?: number) -> string"      },
+      "substr": {
+        "!type": "fn(from: number, length?: number) -> string"      },
+      "slice": {
+        "!type": "fn(from: number, to?: number) -> string"      },
+      "trim": {
+        "!type": "fn() -> string"      },
+      "toUpperCase": {
+        "!type": "fn() -> string"      },
+      "toLowerCase": {
+        "!type": "fn() -> string"      },
+      "toLocaleUpperCase": {
+        "!type": "fn() -> string"      },
+      "toLocaleLowerCase": {
+        "!type": "fn() -> string"      },
+      "split": {
+        "!type": "fn(pattern: string) -> [string]"      },
+      "concat": {
+        "!type": "fn(other: string) -> string"      },
+      "localeCompare": {
+        "!type": "fn(other: string) -> number"      },
+      "match": {
+        "!type": "fn(pattern: +RegExp) -> [string]"      },
+      "replace": {
+        "!type": "fn(pattern: +RegExp, replacement: string) -> string"      },
+      "search": {
+        "!type": "fn(pattern: +RegExp) -> number"      }
+    }  },
+  "Number": {
+    "!type": "fn(value: ?) -> number",
+    "MAX_VALUE": {
+      "!type": "number"    },
+    "MIN_VALUE": {
+      "!type": "number"    },
+    "POSITIVE_INFINITY": {
+      "!type": "number"    },
+    "NEGATIVE_INFINITY": {
+      "!type": "number"    },
+    "prototype": {
+      "!stdProto": "Number",
+      "toString": {
+        "!type": "fn(radix?: number) -> string"      },
+      "toFixed": {
+        "!type": "fn(digits: number) -> string"      },
+      "toExponential": {
+        "!type": "fn(digits: number) -> string"      },
+      "toPrecision": {
+        "!type": "fn(digits: number) -> string"      }
+    }  },
+  "Boolean": {
+    "!type": "fn(value: ?) -> bool",
+    "prototype": {
+      "!stdProto": "Boolean"
+    }  },
+  "RegExp": {
+    "!type": "fn(source: string, flags?: string)",
+    "prototype": {
+      "!stdProto": "RegExp",
+      "exec": {
+        "!type": "fn(input: string) -> [string]"      },
+      "test": {
+        "!type": "fn(input: string) -> bool"      },
+      "global": {
+        "!type": "bool"      },
+      "ignoreCase": {
+        "!type": "bool"      },
+      "multiline": {
+        "!type": "bool"      },
+      "source": {
+        "!type": "string"      },
+      "lastIndex": {
+        "!type": "number"      }
+    }  },
+  "Date": {
+    "!type": "fn(ms: number)",
+    "parse": {
+      "!type": "fn(source: string) -> +Date"    },
+    "UTC": {
+      "!type": "fn(year: number, month: number, date: number, hour?: number, min?: number, sec?: number, ms?: number) -> number"    },
+    "now": {
+      "!type": "fn() -> number"    },
+    "prototype": {
+      "toUTCString": {
+        "!type": "fn() -> string"      },
+      "toISOString": {
+        "!type": "fn() -> string"      },
+      "toDateString": {
+        "!type": "fn() -> string"      },
+      "toTimeString": {
+        "!type": "fn() -> string"      },
+      "toLocaleDateString": {
+        "!type": "fn() -> string"      },
+      "toLocaleTimeString": {
+        "!type": "fn() -> string"      },
+      "getTime": {
+        "!type": "fn() -> number"      },
+      "getFullYear": {
+        "!type": "fn() -> number"      },
+      "getYear": {
+        "!type": "fn() -> number"      },
+      "getMonth": {
+        "!type": "fn() -> number"      },
+      "getUTCMonth": {
+        "!type": "fn() -> number"      },
+      "getDate": {
+        "!type": "fn() -> number"      },
+      "getUTCDate": {
+        "!type": "fn() -> number"      },
+      "getDay": {
+        "!type": "fn() -> number"      },
+      "getUTCDay": {
+        "!type": "fn() -> number"      },
+      "getHours": {
+        "!type": "fn() -> number"      },
+      "getUTCHours": {
+        "!type": "fn() -> number"      },
+      "getMinutes": {
+        "!type": "fn() -> number"      },
+      "getUTCMinutes": {
+        "!type": "fn() -> number"      },
+      "getSeconds": {
+        "!type": "fn() -> number"      },
+      "getUTCSeconds": {
+        "!type": "fn() -> number"      },
+      "getMilliseconds": {
+        "!type": "fn() -> number"      },
+      "getUTCMilliseconds": {
+        "!type": "fn() -> number"      },
+      "getTimezoneOffset": {
+        "!type": "fn() -> number"      },
+      "setTime": {
+        "!type": "fn(date: +Date) -> number"      },
+      "setFullYear": {
+        "!type": "fn(year: number) -> number"      },
+      "setUTCFullYear": {
+        "!type": "fn(year: number) -> number"      },
+      "setMonth": {
+        "!type": "fn(month: number) -> number"      },
+      "setUTCMonth": {
+        "!type": "fn(month: number) -> number"      },
+      "setDate": {
+        "!type": "fn(day: number) -> number"      },
+      "setUTCDate": {
+        "!type": "fn(day: number) -> number"      },
+      "setHours": {
+        "!type": "fn(hour: number) -> number"      },
+      "setUTCHours": {
+        "!type": "fn(hour: number) -> number"      },
+      "setMinutes": {
+        "!type": "fn(min: number) -> number"      },
+      "setUTCMinutes": {
+        "!type": "fn(min: number) -> number"      },
+      "setSeconds": {
+        "!type": "fn(sec: number) -> number"      },
+      "setUTCSeconds": {
+        "!type": "fn(sec: number) -> number"      },
+      "setMilliseconds": {
+        "!type": "fn(ms: number) -> number"      },
+      "setUTCMilliseconds": {
+        "!type": "fn(ms: number) -> number"      }
+    }  },
+  "Error": {
+    "!type": "fn(message: string)",
+    "prototype": {
+      "name": {
+        "!type": "string"      },
+      "message": {
+        "!type": "string"      }
+    }  },
+  "SyntaxError": {
+    "!type": "fn(message: string)",
+    "prototype": "Error.prototype"  },
+  "ReferenceError": {
+    "!type": "fn(message: string)",
+    "prototype": "Error.prototype"  },
+  "URIError": {
+    "!type": "fn(message: string)",
+    "prototype": "Error.prototype"  },
+  "EvalError": {
+    "!type": "fn(message: string)",
+    "prototype": "Error.prototype"  },
+  "RangeError": {
+    "!type": "fn(message: string)",
+    "prototype": "Error.prototype"  },
+  "TypeError": {
+    "!type": "fn(message: string)",
+    "prototype": "Error.prototype"  },
+  "parseInt": {
+    "!type": "fn(string: string, radix?: number) -> number"  },
+  "parseFloat": {
+    "!type": "fn(string: string) -> number"  },
+  "isNaN": {
+    "!type": "fn(value: number) -> bool"  },
+  "isFinite": {
+    "!type": "fn(value: number) -> bool"  },
+  "eval": {
+    "!type": "fn(code: string) -> ?"  },
+  "encodeURI": {
+    "!type": "fn(uri: string) -> string"  },
+  "encodeURIComponent": {
+    "!type": "fn(uri: string) -> string"  },
+  "decodeURI": {
+    "!type": "fn(uri: string) -> string"  },
+  "decodeURIComponent": {
+    "!type": "fn(uri: string) -> string"  },
+  "Math": {
+    "E": {
+      "!type": "number"    },
+    "LN2": {
+      "!type": "number"    },
+    "LN10": {
+      "!type": "number"    },
+    "LOG2E": {
+      "!type": "number"    },
+    "LOG10E": {
+      "!type": "number"    },
+    "SQRT1_2": {
+      "!type": "number"    },
+    "SQRT2": {
+      "!type": "number"    },
+    "PI": {
+      "!type": "number"    },
+    "abs": {
+      "!type": "fn(number) -> number"    },
+    "cos": {
+      "!type": "fn(number) -> number"    },
+    "sin": {
+      "!type": "fn(number) -> number"    },
+    "tan": {
+      "!type": "fn(number) -> number"    },
+    "acos": {
+      "!type": "fn(number) -> number"    },
+    "asin": {
+      "!type": "fn(number) -> number"    },
+    "atan": {
+      "!type": "fn(number) -> number"    },
+    "atan2": {
+      "!type": "fn(y: number, x: number) -> number"    },
+    "ceil": {
+      "!type": "fn(number) -> number"    },
+    "floor": {
+      "!type": "fn(number) -> number"    },
+    "round": {
+      "!type": "fn(number) -> number"    },
+    "exp": {
+      "!type": "fn(number) -> number"    },
+    "log": {
+      "!type": "fn(number) -> number"    },
+    "sqrt": {
+      "!type": "fn(number) -> number"    },
+    "pow": {
+      "!type": "fn(number, number) -> number"    },
+    "max": {
+      "!type": "fn(number, number) -> number"    },
+    "min": {
+      "!type": "fn(number, number) -> number"    },
+    "random": {
+      "!type": "fn() -> number"    }  },
+  "JSON": {
+    "parse": {
+      "!type": "fn(json: string) -> ?"    },
+    "stringify": {
+      "!type": "fn(value: ?) -> string"    }  }
+}

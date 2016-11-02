@@ -1,0 +1,75 @@
+{
+    "unknown": {
+        "name": "Text",
+        "mode": ["null", "text/plain"]
+    },
+
+    "css": {
+        "name": "CSS",
+        "mode": "css",
+        "fileExtensions": ["css", "css.erb", "less"],
+        "blockComment": ["/*", "*/"]
+    },
+
+    "html": {
+        "name": "HTML",
+        "mode": ["htmlmixed", "text/x-brackets-html"],
+        "fileExtensions": ["html", "htm", "shtm", "shtml", "xhtml", "cfm", "cfml", "cfc", "dhtml", "xht", "tpl", "twig", "hbs", "handlebars", "kit", "jsp", "aspx", "ascx", "asp", "master", "cshtml", "vbhtml"],
+        "blockComment": ["<!--", "-->"]
+    },
+    
+    "javascript": {
+        "name": "JavaScript",
+        "mode": "javascript",
+        "fileExtensions": ["js", "jsx", "js.erb", "jsm", "_js"],
+        "blockComment": ["/*", "*/"],
+        "lineComment": ["//"]
+    },
+
+    "json": {
+        "name": "JSON",
+        "mode": ["javascript", "application/json"],
+        "fileExtensions": ["json"],
+        "fileNames": [".jshintrc", ".bowerrc"]
+    },
+
+     "svg": {
+        "name": "SVG",
+        "mode": ["xml", "image/svg+xml"],
+        "fileExtensions": ["svg"],
+        "blockComment": ["<!--", "-->"]
+    },
+
+    "markdown": {
+        "name": "Markdown",
+        "mode": "markdown",
+        "fileExtensions": ["md", "markdown", "mdown", "mkdn"],
+        "blockComment": ["<!--", "-->"]
+    },
+  
+    "image": {
+        "name": "Image",
+        "fileExtensions": ["gif", "png", "jpe", "jpeg", "jpg", "ico", "bmp", "webp"],
+        "isBinary": true
+    },
+    
+    "audio": {
+        "name": "Audio",
+        "fileExtensions": ["mp3", "wav", "aif", "aiff", "ogg"],
+        "isBinary": true
+    },
+    
+    "binary": {
+        "name": "Other Binary",
+        "fileExtensions": [
+            "a", "ai", "avi", "bin", "cab", "com", "db", "dll", "dmg",
+            "doc", "docx", "dot", "dotx", "dsym", "dylib", "egg", "epub", "eot",
+            "exe", "flv", "gz", "gzip", "htmz", "htmlz", "ipch", "iso", "jar",
+            "jsz", "lib", "mpeg", "mpg", "mp4", "msi", "node", "o", "obj", "odc",
+            "odb", "odf", "odg", "odp", "ods", "odt", "otf", "pak", "pdb", "pdf",
+            "pdi", "ppt", "pptx", "psd", "rar", "sdf", "so", "sqlite", "suo", "svgz",
+            "swf", "tar", "tif", "tiff", "ttf", "woff", "xls", "xlsx", "zip"
+        ],
+        "isBinary": true
+    }
+}

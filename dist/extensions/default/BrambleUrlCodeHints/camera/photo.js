@@ -1,0 +1,1 @@
+define(function(require,exports,module){"use strict";function Photo(context){this.context=context;this.canvas={};this.data=null}Photo.prototype.update=function(){this.data=this.canvas.interface.toDataURL("image/png");this.interface.setAttribute("src",this.data)};module.exports=Photo});

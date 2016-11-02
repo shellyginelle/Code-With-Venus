@@ -1,0 +1,1 @@
+define(function(require,exports,module){"use strict";var PreferencesManager=brackets.getModule("preferences/PreferencesManager");PreferencesManager.set("openSVGasXML",true)});

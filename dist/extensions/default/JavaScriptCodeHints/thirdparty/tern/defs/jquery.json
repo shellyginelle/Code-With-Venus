@@ -1,0 +1,592 @@
+{
+  "!name": "jQuery",
+  "!define": {
+    "offset": {
+      "top": "number",
+      "left": "number"
+    },
+    "keyvalue": {
+      "name": "string",
+      "value": "string"
+    }
+  },
+  "jQuery": {
+    "!type": "fn(selector: string, context?: frameElement) -> jQuery.fn"    "fn": {
+      "add": {
+        "!type": "fn(selector: string) -> jQuery.fn"      },
+      "addBack": {
+        "!type": "fn(selector?: string) -> jQuery.fn"      },
+      "addClass": {
+        "!type": "fn(className: string) -> jQuery.fn"      },
+      "after": {
+        "!type": "fn(content: ?) -> jQuery.fn"      },
+      "ajaxComplete": {
+        "!type": "fn(handler: fn(event: +jQuery.Event, req: +XMLHttpRequest)) -> jQuery.fn"      },
+      "ajaxError": {
+        "!type": "fn(handler: fn(event: +jQuery.Event, req: +XMLHttpRequest)) -> jQuery.fn"      },
+      "ajaxSend": {
+        "!type": "fn(handler: fn(event: +jQuery.Event, req: +XMLHttpRequest)) -> jQuery.fn"      },
+      "ajaxStart": {
+        "!type": "fn(handler: fn()) -> jQuery.fn"      },
+      "ajaxStop": {
+        "!type": "fn(handler: fn()) -> jQuery.fn"      },
+      "ajaxSuccess": {
+        "!type": "fn(handler: fn(event: +jQuery.Event, req: +XMLHttpRequest)) -> jQuery.fn"      },
+      "andSelf": {
+        "!type": "fn() -> jQuery.fn"      },
+      "animate": {
+        "!type": "fn(properties: ?, duration?: number, easing?: string, complete?: fn()) -> jQuery.fn"      },
+      "append": {
+        "!type": "fn(content: ?) -> jQuery.fn"      },
+      "appendTo": {
+        "!type": "fn(target: ?) -> jQuery.fn"      },
+      "attr": {
+        "!type": "fn(name: string, value?: string) -> string"      },
+      "before": {
+        "!type": "fn(content: ?) -> jQuery.fn"      },
+      "bind": {
+        "!type": "fn(eventType: string, handler: fn(+jQuery.Event)) -> jQuery.fn"      },
+      "blur": {
+        "!type": "fn(handler: fn(+jQuery.Event)) -> jQuery.fn"      },
+      "change": {
+        "!type": "fn(handler: fn(+jQuery.Event)) -> jQuery.fn"      },
+      "children": {
+        "!type": "fn(selector?: string) -> jQuery.fn"      },
+      "click": {
+        "!type": "fn(handler: fn(+jQuery.Event)) -> jQuery.fn"      },
+      "clone": {
+        "!type": "fn(dataAndEvents?: bool, deep?: bool) -> jQuery.fn"      },
+      "closest": {
+        "!type": "fn(selector: string) -> jQuery.fn"      },
+      "contents": {
+        "!type": "fn() -> jQuery.fn"      },
+      "context": {
+        "!type": "fn() -> +Element"      },
+      "css": {
+        "!type": "fn(name: string, value?: string) -> string"      },
+      "data": {
+        "!type": "fn(key: string, value?: ?) -> !1"      },
+      "dblclick": {
+        "!type": "fn(handler: fn(+jQuery.Event)) -> jQuery.fn"      },
+      "delay": {
+        "!type": "fn(duration: number, queue?: string) -> jQuery.fn"      },
+      "delegate": {
+        "!type": "fn(selector: string, eventType: string, handler: fn(+jQuery.Event)) -> jQuery.fn"      },
+      "dequeue": {
+        "!type": "fn(queue?: string) -> jQuery.fn"      },
+      "detach": {
+        "!type": "fn(selector?: string) -> jQuery.fn"      },
+      "die": {
+        "!type": "fn() -> jQuery.fn"      },
+      "each": {
+        "!type": "fn(callback: fn(i: number, element: +Element)) -> jQuery.fn"      },
+      "empty": {
+        "!type": "fn() -> jQuery.fn"      },
+      "end": {
+        "!type": "fn() -> jQuery.fn"      },
+      "eq": {
+        "!type": "fn(i: number) -> jQuery.fn"      },
+      "error": {
+        "!type": "fn(handler: fn(+jQuery.Event)) -> jQuery.fn"      },
+      "fadeIn": {
+        "!type": "fn(duration?: number, complete?: fn()) -> jQuery.fn"      },
+      "fadeOut": {
+        "!type": "fn(duration?: number, complete?: fn()) -> jQuery.fn"      },
+      "fadeTo": {
+        "!type": "fn(duration: number, opacity: number, complete?: fn()) -> jQuery.fn"      },
+      "fadeToggle": {
+        "!type": "fn(duration?: number, easing?: string, complete?: fn()) -> jQuery.fn"      },
+      "filter": {
+        "!type": "fn(selector: string) -> jQuery.fn"      },
+      "find": {
+        "!type": "fn(selector: string) -> jQuery.fn"      },
+      "finish": {
+        "!type": "fn(queue?: string) -> jQuery.fn"      },
+      "first": {
+        "!type": "fn() -> jQuery.fn"      },
+      "focusin": {
+        "!type": "fn(handler: fn(+jQuery.Event)) -> jQuery.fn"      },
+      "focusout": {
+        "!type": "fn(handler: fn(+jQuery.Event)) -> jQuery.fn"      },
+      "get": {
+        "!type": "fn(i: number) -> +Element"      },
+      "has": {
+        "!type": "fn(selector: string) -> jQuery.fn"      },
+      "hasClass": {
+        "!type": "fn(className: string) -> bool"      },
+      "height": {
+        "!type": "fn() -> number"      },
+      "hide": {
+        "!type": "fn() -> jQuery.fn"      },
+      "hover": {
+        "!type": "fn(fnOver: fn(+jQuery.Event), fnOut?: fn(+jQuery.Event)) -> jQuery.fn"      },
+      "html": {
+        "!type": "fn() -> string"      },
+      "index": {
+        "!type": "fn(selector?: string) -> number"      },
+      "innerHeight": {
+        "!type": "fn() -> number"      },
+      "innerWidth": {
+        "!type": "fn() -> number"      },
+      "insertAfter": {
+        "!type": "fn(target: ?) -> jQuery.fn"      },
+      "insertBefore": {
+        "!type": "fn(target: ?) -> jQuery.fn"      },
+      "is": {
+        "!type": "fn(selector: ?) -> bool"      },
+      "jquery": {
+        "!type": "string"      },
+      "keydown": {
+        "!type": "fn(handler: fn(+jQuery.Event)) -> jQuery.fn"      },
+      "keypress": {
+        "!type": "fn(handler: fn(+jQuery.Event)) -> jQuery.fn"      },
+      "keyup": {
+        "!type": "fn(handler: fn(+jQuery.Event)) -> jQuery.fn"      },
+      "last": {
+        "!type": "fn() -> jQuery.fn"      },
+      "length": {
+        "!type": "number"      },
+      "live": {
+        "!type": "fn(selector: string, handler: fn(+jQuery.Event)) -> jQuery.fn"      },
+      "load": {
+        "!type": "fn(handler: fn()) -> jQuery.fn"      },
+      "map": {
+        "!type": "fn(callback: fn(i: number, element: +Element)) -> jQuery.fn"      },
+      "mousedown": {
+        "!type": "fn(handler: fn(+jQuery.Event)) -> jQuery.fn"      },
+      "mouseenter": {
+        "!type": "fn(handler: fn(+jQuery.Event)) -> jQuery.fn"      },
+      "mouseleave": {
+        "!type": "fn(handler: fn(+jQuery.Event)) -> jQuery.fn"      },
+      "mousemove": {
+        "!type": "fn(handler: fn(+jQuery.Event)) -> jQuery.fn"      },
+      "mouseout": {
+        "!type": "fn(handler: fn(+jQuery.Event)) -> jQuery.fn"      },
+      "mouseover": {
+        "!type": "fn(handler: fn(+jQuery.Event)) -> jQuery.fn"      },
+      "mouseup": {
+        "!type": "fn(handler: fn(+jQuery.Event)) -> jQuery.fn"      },
+      "next": {
+        "!type": "fn(selector?: string) -> jQuery.fn"      },
+      "nextAll": {
+        "!type": "fn(selector?: string) -> jQuery.fn"      },
+      "nextUntil": {
+        "!type": "fn(selector?: string, filter?: string) -> jQuery.fn"      },
+      "not": {
+        "!type": "fn(selector: string) -> jQuery.fn"      },
+      "off": {
+        "!type": "fn(events: string, selector?: string, handler: fn(+jQuery.Event)) -> jQuery.fn"      },
+      "offset": {
+        "!type": "fn() -> offset"      },
+      "offsetParent": {
+        "!type": "fn() -> jQuery.fn"      },
+      "on": {
+        "!type": "fn(events: string, handler: fn(+jQuery.Event)) -> jQuery.fn"      },
+      "one": {
+        "!type": "fn(events: string, data?: ?, handler: fn(+jQuery.Event)) -> jQuery.fn"      },
+      "outerHeight": {
+        "!type": "fn(includeMargin?: bool) -> number"      },
+      "outerWidth": {
+        "!type": "fn(includeMargin?: bool) -> number"      },
+      "parent": {
+        "!type": "fn(selector?: string) -> jQuery.fn"      },
+      "parents": {
+        "!type": "fn(selector?: string) -> jQuery.fn"      },
+      "parentsUntil": {
+        "!type": "fn(selector?: string, filter?: string) -> jQuery.fn"      },
+      "position": {
+        "!type": "fn() -> offset"      },
+      "prepend": {
+        "!type": "fn(content: ?) -> jQuery.fn"      },
+      "prependTo": {
+        "!type": "fn(target: ?) -> jQuery.fn"      },
+      "prev": {
+        "!type": "fn(selector?: string) -> jQuery.fn"      },
+      "prevAll": {
+        "!type": "fn(selector?: string) -> jQuery.fn"      },
+      "prevUntil": {
+        "!type": "fn(selector?: string, filter?: string) -> jQuery.fn"      },
+      "promise": {
+        "!type": "fn(type?: string, target: ?) -> +jQuery.Promise"      },
+      "prop": {
+        "!type": "fn(name: string, value?: string) -> string"      },
+      "pushStack": {
+        "!type": "fn(elements: [+Element]) -> jQuery.fn"      },
+      "queue": {
+        "!type": "fn(queue?: string) -> [?]"      },
+      "ready": {
+        "!type": "fn(fn: fn()) -> jQuery.fn"      },
+      "remove": {
+        "!type": "fn(selector?: string) -> jQuery.fn"      },
+      "removeAttr": {
+        "!type": "fn(attrName: string) -> jQuery.fn"      },
+      "removeClass": {
+        "!type": "fn(className?: string) -> jQuery.fn"      },
+      "removeData": {
+        "!type": "fn(name?: string) -> jQuery.fn"      },
+      "removeProp": {
+        "!type": "fn(propName: string) -> jQuery.fn"      },
+      "replaceAll": {
+        "!type": "fn(target: ?) -> jQuery.fn"      },
+      "replaceWith": {
+        "!type": "fn(newContent: ?) -> jQuery.fn"      },
+      "resize": {
+        "!type": "fn(handler: fn(+jQuery.Event)) -> jQuery.fn"      },
+      "scroll": {
+        "!type": "fn(handler: fn(+jQuery.Event)) -> jQuery.fn"      },
+      "scrollLeft": {
+        "!type": "number"      },
+      "scrollTop": {
+        "!type": "number"      },
+      "select": {
+        "!type": "fn(handler: fn(+jQuery.Event)) -> jQuery.fn"      },
+      "selector": {
+        "!type": "string"      },
+      "serialize": {
+        "!type": "fn() -> string"      },
+      "serializeArray": {
+        "!type": "fn() -> [keyvalue]"      },
+      "show": {
+        "!type": "fn() -> jQuery.fn"      },
+      "siblings": {
+        "!type": "fn(selector?: string) -> jQuery.fn"      },
+      "size": {
+        "!type": "fn() -> number"      },
+      "slice": {
+        "!type": "fn(start: number, end?: number) -> jQuery.fn"      },
+      "slideDown": {
+        "!type": "fn(duration?: number, complete?: fn()) -> jQuery.fn"      },
+      "slideToggle": {
+        "!type": "fn(duration?: number, complete?: fn()) -> jQuery.fn"      },
+      "slideUp": {
+        "!type": "fn(duration?: number, complete?: fn()) -> jQuery.fn"      },
+      "stop": {
+        "!type": "fn(clearQueue?: bool, jumpToEnd?: bool) -> jQuery.fn"      },
+      "submit": {
+        "!type": "fn(handler: fn(+jQuery.Event)) -> jQuery.fn"      },
+      "text": {
+        "!type": "fn() -> string"      },
+      "toArray": {
+        "!type": "fn() -> [+Element]"      },
+      "toggle": {
+        "!type": "fn(duration?: number, complete?: fn()) -> jQuery.fn"      },
+      "toggleClass": {
+        "!type": "fn(className: string) -> jQuery.fn"      },
+      "trigger": {
+        "!type": "fn(eventType: string, params: ?) -> jQuery.fn"      },
+      "triggerHandler": {
+        "!type": "fn(eventType: string, params: ?) -> ?"      },
+      "unbind": {
+        "!type": "fn(eventType?: string, handler?: fn()) -> jQuery.fn"      },
+      "undelegate": {
+        "!type": "fn() -> jQuery.fn"      },
+      "unload": {
+        "!type": "fn(handler: fn(+jQuery.Event)) -> jQuery.fn"      },
+      "unwrap": {
+        "!type": "fn() -> jQuery.fn"      },
+      "val": {
+        "!type": "fn() -> string"      },
+      "width": {
+        "!type": "fn() -> number"      },
+      "wrap": {
+        "!type": "fn(wrappingElement: ?) -> jQuery.fn"      },
+      "wrapAll": {
+        "!type": "fn(wrappingElement: ?) -> jQuery.fn"      },
+      "wrapInner": {
+        "!type": "fn(wrappingElement: ?) -> jQuery.fn"      },
+
+      "slice": {
+        "!type": "fn(start: number, end: number) -> jQuery.fn"      },
+      "push": {
+        "!type": "Array.prototype.push"      },
+      "sort": {
+        "!type": "Array.prototype.sort"      },
+      "splice": {
+        "!type": "Array.prototype.splice"      }
+    },
+    "ajax": {
+      "!type": "fn(url: string, settings: ?) -> +jQuery.jqXHR"    },
+    "ajaxPrefilter": {
+      "!type": "fn(dataTypes?: string, handler: fn(options: ?, originalOptions: ?, req: +XMLHttpRequest))"    },
+    "ajaxSetup": {
+      "!type": "fn(options: ?)"    },
+    "ajaxTransport": {
+      "!type": "fn(dataType: string, handler: fn(options: ?, originalOptions: ?, req: +XMLHttpRequest))"    },
+    "Callbacks": {
+      "!type": "fn(flags: string) -> +jQuery.Callbacks"      "prototype": {
+        "add":{
+          "!type": "fn(callbacks: ?) -> +jQuery.Callbacks"        },
+        "disable":{
+          "!type": "fn() -> +jQuery.Callbacks"        },
+        "disabled":{
+          "!type": "fn() -> bool"        },
+        "empty":{
+          "!type": "fn() -> +jQuery.Callbacks"        },
+        "fire":{
+          "!type": "fn(arguments: ?) -> +jQuery.Callbacks"        },
+        "fired":{
+          "!type": "fn() -> bool"        },
+        "fireWith":{
+          "!type": "fn(context?: ?, args?: ?) -> +jQuery.Callbacks"        },
+        "has":{
+          "!type": "fn(callback: fn()) -> bool"        },
+        "lock":{
+          "!type": "fn() -> +jQuery.Callbacks"        },
+        "locked":{
+          "!type": "fn() -> bool"        },
+        "remove":{
+          "!type": "fn(callbacks: ?) -> +jQuery.Callbacks"        }
+      }
+    },
+    "contains": {
+      "!type": "fn(container: +Element, contained: +Element) -> bool"    },
+    "cssHooks": {
+      "!type": "?"    },
+    "data": {
+      "!type": "fn(element: +Element, key: string, value: ?) -> !2"    },
+    "Event": {
+      "!type": "fn(type: ?, props?: ?) -> +jQuery.Event"      "prototype": {
+        "currentTarget":{
+          "!type": "+Element"        },
+        "data":{
+          "!type": "?"        },
+        "delegateTarget":{
+          "!type": "+Element"        },
+        "isDefaultPrevented":{
+          "!type": "fn() -> bool"        },
+        "isImmediatePropagationStopped":{
+          "!type": "fn() -> bool"        },
+        "isPropagationStopped":{
+          "!type": "fn() -> bool"        },
+        "metaKey":{
+          "!type": "bool"        },
+        "namespace":{
+          "!type": "string"        },
+        "pageX":{
+          "!type": "number"        },
+        "pageY":{
+          "!type": "number"        },
+        "preventDefault":{
+          "!type": "fn()"        },
+        "relatedTarget":{
+          "!type": "+Element"        },
+        "result":{
+          "!type": "?"        },
+        "stopImmediatePropagation":{
+          "!type": "fn()"        },
+        "stopPropagation":{
+          "!type": "fn()"        },
+        "target":{
+          "!type": "+Element"        },
+        "timeStamp":{
+          "!type": "number"        },
+        "type":{
+          "!type": "string"        },
+        "which":{
+          "!type": "number"        }
+      }
+    },
+    "Deferred": {
+      "!type": "fn(beforeStart?: fn(deferred: +jQuery.Deferred)) -> +jQuery.Deferred"      "prototype": {
+        "always":{
+          "!type": "fn(callback: fn()) -> +jQuery.Deferred"        },
+        "done":{
+          "!type": "fn(callback: fn()) -> +jQuery.Deferred"        },
+        "fail":{
+          "!type": "fn(callback: fn()) -> +jQuery.Deferred"        },
+        "isRejected":{
+          "!type": "fn() -> bool"        },
+        "isResolved":{
+          "!type": "fn() -> bool"        },
+        "notify":{
+          "!type": "fn(args?: ?) -> +jQuery.Deferred"        },
+        "notifyWith":{
+          "!type": "fn(context?: ?, args?: ?) -> +jQuery.Deferred"        },
+        "pipe":{
+          "!type": "fn(doneFilter?: fn(), failFilter?: fn()) -> +jQuery.Promise"        },
+        "progress":{
+          "!type": "fn(callback: fn()) -> +jQuery.Deferred"        },
+        "promise":{
+          "!type": "fn(target: ?) -> +jQuery.Promise"        },
+        "reject":{
+          "!type": "fn(args?: ?) -> +jQuery.Deferred"        },
+        "rejectWith":{
+          "!type": "fn(context?: ?, args?: ?) -> +jQuery.Deferred"        },
+        "resolve":{
+          "!type": "fn(args?: ?) -> +jQuery.Deferred"        },
+        "resolveWith":{
+          "!type": "fn(context?: ?, args?: ?) -> +jQuery.Deferred"        },
+        "state":{
+          "!type": "fn() -> string"        },
+        "then":{
+          "!type": "fn(doneFilter: fn(), failFilter?: fn(), progressFilter?: fn()) -> +jQuery.Promise"        }
+      }
+    },
+    "Promise": {      "prototype": {
+        "always": "fn(callback: fn()) -> +jQuery.Promise",
+        "done": "fn(callback: fn()) -> +jQuery.Promise",
+        "fail": "fn(callback: fn()) -> +jQuery.Promise",
+        "isRejected": "fn() -> bool",
+        "isResolved": "fn() -> bool",
+        "pipe": "fn(doneFilter?: fn(), failFilter?: fn()) -> +jQuery.Promise",
+        "promise": "fn(target: ?) -> +jQuery.Deferred",
+        "state": "fn() -> string",
+        "then": "fn(doneFilter: fn(), failFilter?: fn(), progressFilter?: fn()) -> +jQuery.Promise"
+      }
+    },
+    "jqXHR": {
+      "prototype": {
+        "always": "fn(callback: fn()) -> +jQuery.jqXHR",
+        "done": "fn(callback: fn()) -> +jQuery.jqXHR",
+        "fail": "fn(callback: fn()) -> +jQuery.jqXHR",
+        "isRejected": "fn() -> bool",
+        "isResolved": "fn() -> bool",
+        "pipe": "fn(doneFilter?: fn(), failFilter?: fn()) -> +jQuery.Promise",
+        "promise": "fn(target: ?) -> +jQuery.Promise",
+        "state": "fn() -> string",
+        "then": "fn(doneFilter: fn(), failFilter?: fn(), progressFilter?: fn()) -> +jQuery.Promise",
+        "readyState": "number",
+        "status": "number",
+        "statusText": "string",
+        "resoponseText": "string",
+        "resoponseXML": "string",
+        "setRequestHeader": "fn(name: string, val: string)",
+        "getAllResponseHeader": "fn() ->",
+        "getResponseHeader": "fn() ->",
+        "statusCode": "fn() -> number",
+        "abort": "fn()"
+      }
+    },
+    "dequeue": {
+        "!type": "fn(queue?: string) -> jQuery.fn"    },
+    "each": {
+      "!type": "fn(collection: ?, callback: fn(i: number, elt: ?)) -> !0",
+      "!effects": ["call !1 number !0.<i>"]    },
+    "error": "fn(message: string)",
+    "extend": {
+      "!type": "fn(target: ?, source: ?) -> !0",
+      "!effects": ["copy !1 !0"]
+    },
+    "fx": {
+      "!type": "fn(elem: +Element, options: ?, prop: string, end?: number, easing?: bool)",
+      "interval":{
+        "!type": "number"      },
+      "off":{
+        "!type": "bool"      },
+      "speeds": {
+        "slow": "number",
+        "fast": "number",
+        "_default": "number"
+      },
+      "stop": "fn()",
+      "tick": "fn()",
+      "start": "fn()"
+    },
+    "get":{
+      "!type": "fn(url: string, data?: ?, success: fn(data: string, textStatus: string, req: +XMLHttpRequest), dataType?: string) -> +jQuery.jqXHR"    },
+    "getJSON": {
+      "!type": "fn(url: string, data?: ?, success: fn(data: ?, textStatus: string, req: +XMLHttpRequest)) -> +jQuery.jqXHR"    },
+    "getScript": {
+      "!type": "fn(url: string, success?: fn(script: string, textStatus: string, req: +XMLHttpRequest)) -> +jQuery.jqXHR"    },
+    "globalEval": {
+      "!type": "fn(code: string)"    },
+    "grep": {
+      "!type": "fn(array: [?], filter: fn(elt: ?, i: number), invert?: bool) -> !0",
+      "!effects": ["call !1 !0.<i> number"]    },
+    "hasData": {
+      "!type": "fn(element: +Element) -> bool"    },
+    "holdReady": {
+      "!type": "fn(hold: bool)"    },
+    "inArray": {
+      "!type": "fn(value: ?, array: [?], from?: number) -> number"    },
+    "isArray": {
+      "!type": "fn(obj: ?) -> bool"    },
+    "isEmptyObject": {
+      "!type": "fn(obj: ?) -> bool"    },
+    "isFunction": {
+      "!type": "fn(obj: ?) -> bool"    },
+    "isNumeric": {
+      "!type": "fn(obj: ?) -> bool"    },
+    "isPlainObject": {
+      "!type": "fn(obj: ?) -> bool"    },
+    "isWindow": {
+      "!type": "fn(obj: ?) -> bool"    },
+    "isXMLDoc": {
+      "!type": "fn(obj: ?) -> bool"    },
+    "isFunction": {
+      "!type": "fn(obj: ?) -> bool"    },
+    "makeArray": {
+      "!type": "fn(obj: ?) -> [!0.<i>]"    },
+    "map": {
+      "!type": "fn(array: [?], callback: fn(element: ?, i: number) -> ?) -> [!1.!ret]",
+      "!effects": ["call !1 !0.<i> number"]    },
+    "merge": {
+      "!type": "fn(first: [?], second: [?]) -> !0"    },
+    "noConflict": {
+      "!type": "fn(removeAll?: bool) -> jQuery"    },
+    "noop": {
+      "!type": "fn()"    },
+    "now": {
+      "!type": "fn() -> number"    },
+    "param": {
+      "!type": "fn(obj: ?) -> string"    },
+    "parseHTML": {
+      "!type": "fn(data: string, context?: +Element, keepScripts?: bool) -> [+Element]"    },
+    "parseJSON": {
+      "!type": "fn(json: string) -> ?"    },
+    "parseXML": {
+      "!type": "fn(xml: string) -> +XMLDocument"    },
+    "post": {
+      "!type": "fn(url: string, data?: ?, success: fn(data: string, textStatus: string, req: +XMLHttpRequest), dataType?: string) -> +jQuery.jqXHR"    },
+    "proxy": {
+      "!type": "fn(function: fn(), context: ?) -> fn()"    },
+    "queue": {
+      "!type": "fn(element: +Element, queue?: string) -> [?]"    },
+    "removeData": {
+      "!type": "fn(element: +Element, name?: string)"    },
+    "sub": {
+      "!type": "fn() -> jQuery"    },
+    "support": {      "getSetAttribute": "bool",
+      "leadingWhitespace": "bool",
+      "tbody": "bool",
+      "htmlSerialize": "bool",
+      "style": "bool",
+      "hrefNormalized": "bool",
+      "opacity": "bool",
+      "cssFloat": "bool",
+      "checkOn": "bool",
+      "optSelected": "bool",
+      "enctype": "bool",
+      "html5Clone": "bool",
+      "boxModel": "bool",
+      "deleteExpando": "bool",
+      "noCloneEvent": "bool",
+      "inlineBlockNeedsLayout": "bool",
+      "shrinkWrapBlocks": "bool",
+      "reliableMarginRight": "bool",
+      "boxSizingReliable": "bool",
+      "pixelPosition": "bool",
+      "noCloneChecked": "bool",
+      "optDisabled": "bool",
+      "input": "bool",
+      "radioValue": "bool",
+      "appendChecked": "bool",
+      "checkClone": "bool",
+      "clearCloneStyle": "bool",
+      "reliableHiddenOffsets": "bool",
+      "boxSizing": "bool",
+      "doesNotIncludeMarginInBodyOffset": "bool",
+      "cors": "bool",
+      "ajax": "bool"
+    },
+    "trim": {
+      "!type": "fn(str: string) -> string"    },
+    "type": {
+      "!type": "fn(obj: ?) -> string"    },
+    "unique": {
+      "!type": "fn(array: [?]) -> !0"    },
+    "when": {
+      "!type": "fn(deferred: +jQuery.Deferred) -> +jQuery.Promise"    }
+  },
+  "$": "jQuery"
+}

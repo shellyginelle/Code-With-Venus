@@ -1,0 +1,12 @@
+{
+  "name": "szdc.cdn-suggestions",
+  "title": "JavaScript & CSS CDN Suggestions",
+  "description": "Provides JavaScript and CSS suggestions/hints for libraries hosted on CDNs by Google, CDNJS and jsDelivr.",
+  "homepage": "https://github.com/szdc/brackets-cdn-suggestions",
+  "version": "2.0.3",
+  "author": "Jack (https://github.com/szdc)",
+  "license": "MIT",
+  "engines": {
+    "brackets": ">=0.24.0"
+  }
+}

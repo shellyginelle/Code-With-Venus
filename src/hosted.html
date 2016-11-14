@@ -26,10 +26,16 @@ This page is a helper for local development.
           margin: 0;
       }
 
-      .full {
-          height:100vh;
-          min-height:100vh;
+      .bramble-full {
+          width: 70%;
+          height: 82vh;
           overflow: hidden;
+      }
+
+      .col-md-1.code-tools {
+          width: 400px;
+          display:auto;
+          background-color: #eaeaea;
       }
 
       #wrapper {
@@ -97,43 +103,35 @@ This page is a helper for local development.
         </div>
     </div>
   </div>
-  <div id="content" style="height: 100vh;">
-    <div id="code-toolbox" class="col-md-1" style="width: 400px; display:auto; background-color: #eaeaea;">
-      <div id="tools" style="height: 325px;">
-        <ul class="nav nav-tabs">
-          <li role="code-html" class="active"><a href="#html-contents">HTML</a></li>
-          <li role="code-css" class="active"><a href="#css-contents">CSS</a></li>
-          <li role="code-js" class="active"><a href="#js-contents">JavaScript</a></li>
-          <li role="code-bt" class="active"><a href="#bt-contents">BootStrap</a></li>
-        </ul>
-        <div id="html-contents">
-          <p>HTML Contents</p>
-          <button type="button" id="header" onclick="writeHTML()" class="btn btn-info">Header</button>
-        </div>
-        <div id="css-contents">
-          <p>CSS Contents</p>
-        </div>
-        <div id="js-contents">
-          <p>JavaScript Contents</p>
-        </div>
-        <div id="bt-contents">
-          <p>Bootstrap Contents</p>
-        </div>
-      </div>
-
-
-      <div id="msg-box">
-        <div class="panel panel-default" style="height: 150px;">
-          <div class="panel-heading" style="background-color: #999;">
-          <h3 class="panel-title"><span class="glyphicon glyphicon-console icons-padding"></span> Interactive Messages</h3>
+  <div id="content">
+    <div id="code-toolbox" class="col-md-1 code-tools">
+        <div class="panel with-nav-tabs panel-info">
+            <div class="panel-heading">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#html-tab" data-toggle="tab">HTML</a></li>
+                        <li><a href="#css-tab" data-toggle="tab">CSS</a></li>
+                        <li><a href="#js-tab" data-toggle="tab">JavaScript</a></li>
+                    </ul>
+            </div>
+            <div class="panel-body" style="overflow: scroll; overflow-x: hidden; height: 420px;">
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="html-tab">
+                      <button class="btn" data-toggle="collapse" data-target="#demo">Header</button>
+                      <div id="demo" class="collapse">Hello</div>
+                    </div>
+                    <div class="tab-pane fade" id="css-tab">
+                      CSS
+                    </div>
+                    <div class="tab-pane fade" id="js-tab">
+                      JavaScript
+                    </div>
+                </div>
+            </div>
           </div>
-            TO DO
         </div>
-      </div>
-
     </div>
 
-    <div id="bramble" class="full" style="border: 1px solid grey;">
+    <div id="bramble" class="bramble-full" style="border: 1px solid grey;">
     </div>
 
   </div>

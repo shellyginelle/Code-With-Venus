@@ -1,163 +1,236 @@
 <!doctype html>
-<html>
+
+<!--
+Bramble must be hosted in an iframe vs. loaded directly.
+This page is a helper for local development.
+-->
+<!--Bootstrap Stylesheet and Script-->
+
+<html spellcheck="false">
 <head>
-<meta charset="utf-8">
+  <meta charset="UTF-8">
+  <title>Code with Venus</title>
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script>
-    <script src="http://www.skulpt.org/static/skulpt.min.js" type="text/javascript"></script>
-    <script src="http://www.skulpt.org/static/skulpt-stdlib.js" type="text/javascript"></script>
-    <script src="https://www.cs.princeton.edu/~dp6/CodeMirror/lib/codemirror.js" type="text/javascript"></script>
-    <script src="https://www.cs.princeton.edu/~dp6/CodeMirror/mode/python/python.js" type="text/javascript"></script>
-    <script src="skulpt-codemirror.js" type="text/javascript"></script>
-    <script src="load-save-py.js" type="text/javascript"></script>
-    <script src="insert.js" type="text/javascript"></script>
-    <link href="https://www.cs.princeton.edu/~dp6/CodeMirror/lib/codemirror.css" rel="stylesheet" type="text/css">
-    <title>Python Editor</title>
-<style type='text/css'>
-.CodeMirror {
-    float: left;
-    width: 50%;
-    border: 1px solid black;}
+  <!--Main Stylesheet and Script-->
+  <!--link rel="stylesheet" href="style.css" type='text/css' />-->
+  <script type="text/javascript" src="code-with-venus/scripts.js"></script>
+  <script type="text/javascript" src="file/CodeToolsWrite.js"></script>
 
-iframe {
-    width: 49%;
-    float: left;
-    height: 300px;
-    border: 1px solid black;
-    border-left: 0px;}
-</style>
+  <!--Bootstrap Stylesheet and Script-->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type='text/css' />
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <style>
+      body {
+          margin: 0;
+      }
+
+      .full {
+          height:100vh;
+          min-height:100vh;
+          overflow: hidden;
+      }
+
+      #wrapper {
+          margin: 53px auto;
+      }
+  </style>
+
 </head>
+
 <body>
 
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-link" href="hosted.html" title="homepage"><img id="venus" src="imgs/Venus-Diamond-transparent.png" style="width: 85px; height:auto; margin: 15px"></a>
+            <button type="button" class="btn navbar-toggle btn-xs" data-toggle="collapse" data-target="#Navbar"><span class="glyphicon glyphicon-menu-hamburger"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse navbar-right" id="Navbar">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"> <span class="glyphicon glyphicon-user icons-padding"></span>  Profile</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Settings</a></li>
+                        <li><a href="#">Sign Out</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
+<div id="wrapper">
+  <nav class="navbar navbar-default">
+  <div id="secondary-nav" class="container-fluid" style="padding:5px; background-color: #d2eef2;">
+    <div id="toolbox-nav" class="col-md-4" style="width: 380px; display:auto">
+      <div class="panel-heading pull-left" style="background-color: #9ad1e1">
+         <h3 class="panel-title"><span class="glyphicon glyphicon-scissors icons-padding"></span> Code Toolbox</h3>
+      </div>
+    </div>
+    <div id="filetree-nav" class="col-md-8" style="width: 520px; display: auto;">
+      <div class="panel-heading pull-left" style="background-color: #bcbcbc">
+        <h3 class="panel-title"><span class="glyphicon glyphicon-console icons-padding"></span> Editor</h3>
+      </div>
+        <div class="pull-right">
+           <div class="dropdown">
+             <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown">Create File
+            <span class="caret"></span></button>
+            <ul class="dropdown dropdown-menu">
+              <li><a href="#">HTML</a></li>
+              <li><a href="#">CSS</a></li>
+              <li><a href="#">JavaScript</a></li>
+            </ul>
+            <button class="btn btn-info" type="submit">Start Preview</button>
+            <button class="btn btn-info" type="submit"><span class="glyphicon glyphicon-resize-full"></span></button>
+          </div>
+        </div>
+    </div>
+    <div id="editor-nav" class="col-md-4" style="width: 435px; display: auto;">
+      <div class="panel-heading pull-left" style="background-color: #f2f2f2">
+        <h3 class="panel-title"><span class="glyphicon glyphicon-globe icons-padding"></span> Website</h3>
+      </div>
+        <div class="pull-right">
+           <button class="btn btn-info" type="submit"><span class="glyphicon glyphicon-resize-full"></span></button>
+        </div>
+    </div>
+  </div>
+  <div id="content" style="height: 100vh;">
+    <div id="code-toolbox" class="col-md-1" style="width: 400px; display:auto; background-color: #eaeaea;">
+      <div id="tools" style="height: 325px;">
+        <div class="panel-heading" style="background-color: #fff;" data-toggle="collapse" href="#html">
+          <h4 class="panel-title"><div class="row">
+            <div class="col-md-11">Basic Building Blocks - HTML</div>
+            <div class="col-md-1"><span class="glyphicon glyphicon-chevron-down icons-padding"></span></div>
+          </div></h4>
+        </div>
+        <div id="html" class="panel-collapse collapse">
+          <div class="panel-body" data-toggle="collapse" href="#html-structure"><div class="row">
+            <div class="col-md-11">Structure</div>
+            <div class="col-md-1"><span class="glyphicon glyphicon-chevron-down icons-padding"></span></div>
+          </div></div>
+              <div id="html-structure" class="panel-collapse collapse">
+                <div class="row">
+                  <div class="col-md-4" id="document">
+                    <button type="button" draggable="true" ondragstart="onDrag(event)" class="btn btn-info">Document</button>
+                  </div>
+                  <div class="col-md-4" id="title">
+                    <button type="button" draggable="true" ondragstart="onDrag(event)" class="btn btn-info">Title</button>
+                  </div>
+                  <div class="col-md-4" id="section">
+                    <button type="button" draggable="true" ondragstart="onDrag(event)" class="btn btn-info">Section</button>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4" id="header">
+                    <button type="button" draggable="true" ondragstart="onDrag(event)" class="btn btn-info">Header</button>
+                  </div>
+                  <div class="col-md-4" id="paragraph">
+                    <button type="button" draggable="true" ondragstart="onDrag(event)" class="btn btn-info">Paragraph</button>
+                  </div>
+              </div>
+            </div>
+          <div class="panel-body" data-toggle="collapse" href="#html-items"><div class="row">
+            <div class="col-md-11">Items</div>
+            <div class="col-md-1"><span class="glyphicon glyphicon-chevron-down icons-padding"></span></div>
+          </div></div>
+              <div id="html-items" class="panel-collapse collapse"><div class="row">
+                <div class="col-md-6" id="video" draggable="true" ondragstart="onDrag(event)"><div class="panel-body">Video</div></div>
+                <div class="col-md-6" id="image" draggable="true" ondragstart="onDrag(event)"><div class="panel-body">Image</div></div>
+              </div></div>
+        </div>
 
-    <input id="toup" type="file" onchange="loadfile(this)">
-    <button type="button" onclick="runit()">Run</button>
-    Enter File name to save as<input id="pile" placeholder=" ....without .py extension">.py
-    <button type="button"  onclick='saveTextAsFile()'>Save/Download</button><br><br><br>
-    <textarea id="code" name="code"></textarea><br>
+        <div class="panel-heading" style="background-color: #fff;" data-toggle="collapse" href="#css">
+          <h4 class="panel-title"><div class="row">
+            <div class="col-md-11">Basic Design Blocks - CSS</div>
+            <div class="col-md-1"><span class="glyphicon glyphicon-chevron-down icons-padding"></span></div>
+          </div></h4>
+        </div>
+        <div id="css" class="panel-collapse collapse">
+          <div class="panel-body" data-toggle="collapse" href="#css-structure"><div class="row">
+            <div class="col-md-11">Structure</div>
+            <div class="col-md-1"><span class="glyphicon glyphicon-chevron-down icons-padding"></span></div>
+          </div></div>
+              <div id="css-structure" class="panel-collapse collapse"><div class="row">
+                <div class="col-md-6" id="title" draggable="true" ondragstart="onDrag(event)"><div class="panel-body">Title</div></div>
+                <div class="col-md-6" id="section" draggable="true" ondragstart="onDrag(event)"><div class="panel-body">Section</div></div>
+              </div></div>
+          <div class="panel-body" data-toggle="collapse" href="#css-items"><div class="row">
+            <div class="col-md-11">Items</div>
+            <div class="col-md-1"><span class="glyphicon glyphicon-chevron-down icons-padding"></span></div>
+          </div></div>
+              <div id="css-items" class="panel-collapse collapse"><div class="row">
+                <div class="col-md-6" id="video" draggable="true" ondragstart="onDrag(event)"><div class="panel-body">Video</div></div>
+                <div class="col-md-6" id="image" draggable="true" ondragstart="onDrag(event)"><div class="panel-body">Image</div></div>
+              </div></div>
+        </div>
 
+        <div class="panel-heading" style="background-color: #fff;" data-toggle="collapse" href="#js">
+          <h4 class="panel-title"><div class="row">
+            <div class="col-md-11">Functional Blocks - Javascript</div>
+            <div class="col-md-1"><span class="glyphicon glyphicon-chevron-down icons-padding"></span></div>
+          </div></h4>
+        </div>
+        <div id="js" class="panel-collapse collapse">
+          <div class="panel-body" data-toggle="collapse" href="#js-structure"><div class="row">
+            <div class="col-md-11">Structure</div>
+            <div class="col-md-1"><span class="glyphicon glyphicon-chevron-down icons-padding"></span></div>
+          </div></div>
+              <div id="js-structure" class="panel-collapse collapse"><div class="row">
+                <div class="col-md-6" id="title" draggable="true" ondragstart="onDrag(event)"><div class="panel-body">Title</div></div>
+                <div class="col-md-6" id="section" draggable="true" ondragstart="onDrag(event)"><div class="panel-body">Section</div></div>
+              </div></div>
+          <div class="panel-body" data-toggle="collapse" href="#js-items"><div class="row">
+            <div class="col-md-11">Items</div>
+            <div class="col-md-1"><span class="glyphicon glyphicon-chevron-down icons-padding"></span></div>
+          </div></div>
+              <div id="js-items" class="panel-collapse collapse"><div class="row">
+                <div class="col-md-6" id="video" draggable="true" ondragstart="onDrag(event)"><div class="panel-body">Video</div></div>
+                <div class="col-md-6" id="image" draggable="true" ondragstart="onDrag(event)"><div class="panel-body">Image</div></div>
+              </div></div>
+        </div>
 
+        <div class="panel-heading" style="background-color: #fff;" data-toggle="collapse" href="#boot">
+          <h4 class="panel-title"><div class="row">
+            <div class="col-md-11">Design Library Blocks - Bootstrap</div>
+            <div class="col-md-1"><span class="glyphicon glyphicon-chevron-down icons-padding"></span></div>
+          </div></h4>
+        </div>
+        <div id="boot" class="panel-collapse collapse">
+          <div class="panel-body" data-toggle="collapse" href="#boot-structure"><div class="row">
+            <div class="col-md-11">Structure</div>
+            <div class="col-md-1"><span class="glyphicon glyphicon-chevron-down icons-padding"></span></div>
+          </div></div>
+              <div id="boot-structure" class="panel-collapse collapse"><div class="row">
+                <div class="col-md-6" id="title" draggable="true" ondragstart="onDrag(event)"><div class="panel-body">Title</div></div>
+                <div class="col-md-6" id="section" draggable="true" ondragstart="onDrag(event)"><div class="panel-body">Section</div></div>
+              </div></div>
+          <div class="panel-body" data-toggle="collapse" href="#boot-items"><div class="row">
+            <div class="col-md-11">Items</div>
+            <div class="col-md-1"><span class="glyphicon glyphicon-chevron-down icons-padding"></span></div>
+          </div></div>
+              <div id="boot-items" class="panel-collapse collapse"><div class="row">
+                <div class="col-md-6" id="video" draggable="true" ondragstart="onDrag(event)"><div class="panel-body">Video</div></div>
+                <div class="col-md-6" id="image" draggable="true" ondragstart="onDrag(event)"><div class="panel-body">Image</div></div>
+              </div></div>
+        </div>
+      </div>
+      <div id="msg-box">
+        <div class="panel panel-default" style="height: 150px;">
+          <div class="panel-heading" style="background-color: #999;">
+          <h3 class="panel-title"><span class="glyphicon glyphicon-console icons-padding"></span> Interactive Messages</h3>
+        </div>
+        TO DO
+      </div>
+      </div>
+    </div>
+    <div id="bramble" class="full" ondrop="onDrop(event)" ondragover="allowDrop(event)" style="border: 1px solid grey;"></div>
+  </div>
+  </nav>
+</div>
 
-<pre id="output" ></pre>
-<!-- If you want turtle graphics include a canvas -->
-<div id="mycanvas"></div>
-
-
-<script>
-var delay;
-
-// Initialize CodeMirror editor
-var editor = CodeMirror.fromTextArea(document.getElementById('code'), {
-    mode: {
-                name: "python",
-                version: 2,
-                singleLineStringErrors: false
-            },
-    tabMode: 'indent',
-    lineNumbers: true,
-    lineWrapping: true,
-    autoCloseTags: true
-});
-
-// Live preview
-editor.on("change", function() {
-    clearTimeout(delay);
-    delay = setTimeout(updatePreview, 300);
-});
-
-function updatePreview() {
-    var previewFrame = document.getElementById('preview');
-    var preview =  previewFrame.contentDocument ||  previewFrame.contentWindow.document;
-    preview.open();
-    preview.write(editor.getValue());
-    preview.close();
-}
-setTimeout(updatePreview, 300);
-
-function saveTextAsFile() {
-    var textToWrite = editor.getValue();
-    var textFileAsBlob = new Blob([textToWrite], {type:"text/plain;charset=utf-8"});
-    var fileNameToSaveAs = document.getElementById("pile").value + ".py";
-
-    var downloadLink = document.createElement("a");
-    downloadLink.download = fileNameToSaveAs;
-    downloadLink.innerHTML = "Download File";
-    if (window.webkitURL != null)
-    {
-        // Chrome allows the link to be clicked
-        // without actually adding it to the DOM.
-        downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
-    }
-    else
-    {
-        // Firefox requires the link to be added to the DOM
-        // before it can be clicked.
-        downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
-        downloadLink.onclick = destroyClickedElement;
-        downloadLink.style.display = "none";
-        document.body.appendChild(downloadLink);
-    }
-
-    downloadLink.click();}
-
-function destroyClickedElement(event) {
-    document.body.removeChild(event.target);}
-
-function loadfile(input){
-    var reader = new FileReader();
-    reader.onload = function(e) {
-        editor.setValue(e.target.result);};
-    reader.readAsText(input.files[0]);}
-
-    var input = document.getElementById("select");
-
-    function selectTheme() {
-      var theme = input.options[input.selectedIndex].innerHTML;
-      editor.setOption("theme", theme);
-    }
-
-    var choice = document.location.search &&
-               decodeURIComponent(document.location.search.slice(1));
-    if (choice) {
-      input.value = choice;
-      editor.setOption("theme", choice);
-    }
-
-    //COPIED AND EDITED ALL THE BELOW FROM SKULPT
-    // output functions are configurable.  This one just appends some text
-// to a pre element.
-function outf(text) {
-    var mypre = document.getElementById("output");
-    mypre.innerHTML = mypre.innerHTML + text;
-}
-function builtinRead(x) {
-    if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
-            throw "File not found: '" + x + "'";
-    return Sk.builtinFiles["files"][x];
-}
-// Here's everything you need to run a python program in skulpt
-// grab the code from your textarea
-// get a reference to your pre element for output
-// configure the output function
-// call Sk.importMainWithBody()
-function runit() {
-   var prog = editor.getValue();
-   var mypre = document.getElementById("output");
-   mypre.innerHTML = '';
-   Sk.pre = "output";
-   Sk.configure({output:outf, read:builtinRead});
-   (Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = 'mycanvas';
-   var myPromise = Sk.misceval.asyncToPromise(function() {
-       return Sk.importMainWithBody("<stdin>", false, prog, true);
-   });
-   myPromise.then(function(mod) {
-       console.log('success');
-   },
-       function(err) {
-       console.log(err.toString());
-   });
-}
-</script>
+<script src="thirdparty/require.min.js" data-main="hosted.js"></script>
 </body>
 </html>

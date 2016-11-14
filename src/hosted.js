@@ -46,6 +46,10 @@
                  "  return a|0 + b|0;\n"                                  +
                  "}";
 
+    var header = '<h1>\n' +
+                 'Enter Header Text Here\n'+
+                 '</h1>\n';
+
     function installDefaultFiles(Bramble, callback) {
         var fs = Bramble.getFileSystem();
         var sh = new fs.Shell();
@@ -80,6 +84,35 @@
                 });
             });
         });
+    }
+
+    function writeHTML() {
+      var fs = Bramble.getFileSystem();
+      var sh = new fs.Shell();
+      var Path = Bramble.Filer.Path;
+
+      // Simulate a more complex root, like Thimble does
+      sh.mkdirp(projectRoot, function(err) {
+          // If we run this multiple times, the dir will exist
+          if (err && err.code !== "EEXIST") {
+              throw err;
+          }
+
+          // Stick things in the project root
+          function writeProjectFile(path, data, callback) {
+              path = Path.join(projectRoot, path);
+
+              fs.writeFile(path, data, function(err) {
+                  if(err) {
+                      throw err;
+                  }
+                  callback();
+              });
+          }
+
+          writeProjectFile("index.html", header, function() {
+          });
+      });
     }
 
     function ensureFiles(Bramble, callback) {

@@ -14,6 +14,7 @@ This page is a helper for local development.
   <!--Main Stylesheet and Script-->
   <!--link rel="stylesheet" href="style.css" type='text/css' />-->
   <script type="text/javascript" src="code-with-venus/scripts.js"></script>
+  <script type="text/javascript" src="hosted.js"></script>
 
   <!--Bootstrap Stylesheet and Script-->
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type='text/css' />
@@ -99,133 +100,42 @@ This page is a helper for local development.
   <div id="content" style="height: 100vh;">
     <div id="code-toolbox" class="col-md-1" style="width: 400px; display:auto; background-color: #eaeaea;">
       <div id="tools" style="height: 325px;">
-        <div class="panel-heading" style="background-color: #fff;" data-toggle="collapse" href="#html">
-          <h4 class="panel-title"><div class="row">
-            <div class="col-md-11">Basic Building Blocks - HTML</div>
-            <div class="col-md-1"><span class="glyphicon glyphicon-chevron-down icons-padding"></span></div>
-          </div></h4>
+        <ul class="nav nav-tabs">
+          <li role="code-html" class="active"><a href="#html-contents">HTML</a></li>
+          <li role="code-css" class="active"><a href="#css-contents">CSS</a></li>
+          <li role="code-js" class="active"><a href="#js-contents">JavaScript</a></li>
+          <li role="code-bt" class="active"><a href="#bt-contents">BootStrap</a></li>
+        </ul>
+        <div id="html-contents">
+          <p>HTML Contents</p>
+          <button type="button" id="header" onclick="writeHTML()" class="btn btn-info">Header</button>
         </div>
-        <div id="html" class="panel-collapse collapse">
-          <div class="panel-body" data-toggle="collapse" href="#html-structure"><div class="row">
-            <div class="col-md-11">Structure</div>
-            <div class="col-md-1"><span class="glyphicon glyphicon-chevron-down icons-padding"></span></div>
-          </div></div>
-              <div id="html-structure" class="panel-collapse collapse">
-                <div class="row">
-                  <div class="col-md-4" id="document">
-                    <button type="button" draggable="true" ondragstart="onDrag(event)" class="btn btn-info">Document</button>
-                  </div>
-                  <div class="col-md-4" id="title">
-                    <button type="button" draggable="true" ondragstart="onDrag(event)" class="btn btn-info">Title</button>
-                  </div>
-                  <div class="col-md-4" id="section">
-                    <button type="button" draggable="true" ondragstart="onDrag(event)" class="btn btn-info">Section</button>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-4" id="header">
-                    <button type="button" draggable="true" ondragstart="onDrag(event)" class="btn btn-info">Header</button>
-                  </div>
-                  <div class="col-md-4" id="paragraph">
-                    <button type="button" draggable="true" ondragstart="onDrag(event)" class="btn btn-info">Paragraph</button>
-                  </div>
-              </div>
-            </div>
-          <div class="panel-body" data-toggle="collapse" href="#html-items"><div class="row">
-            <div class="col-md-11">Items</div>
-            <div class="col-md-1"><span class="glyphicon glyphicon-chevron-down icons-padding"></span></div>
-          </div></div>
-              <div id="html-items" class="panel-collapse collapse"><div class="row">
-                <div class="col-md-6" id="video" draggable="true" ondragstart="onDrag(event)"><div class="panel-body">Video</div></div>
-                <div class="col-md-6" id="image" draggable="true" ondragstart="onDrag(event)"><div class="panel-body">Image</div></div>
-              </div></div>
+        <div id="css-contents">
+          <p>CSS Contents</p>
         </div>
-
-        <div class="panel-heading" style="background-color: #fff;" data-toggle="collapse" href="#css">
-          <h4 class="panel-title"><div class="row">
-            <div class="col-md-11">Basic Design Blocks - CSS</div>
-            <div class="col-md-1"><span class="glyphicon glyphicon-chevron-down icons-padding"></span></div>
-          </div></h4>
+        <div id="js-contents">
+          <p>JavaScript Contents</p>
         </div>
-        <div id="css" class="panel-collapse collapse">
-          <div class="panel-body" data-toggle="collapse" href="#css-structure"><div class="row">
-            <div class="col-md-11">Structure</div>
-            <div class="col-md-1"><span class="glyphicon glyphicon-chevron-down icons-padding"></span></div>
-          </div></div>
-              <div id="css-structure" class="panel-collapse collapse"><div class="row">
-                <div class="col-md-6" id="title" draggable="true" ondragstart="onDrag(event)"><div class="panel-body">Title</div></div>
-                <div class="col-md-6" id="section" draggable="true" ondragstart="onDrag(event)"><div class="panel-body">Section</div></div>
-              </div></div>
-          <div class="panel-body" data-toggle="collapse" href="#css-items"><div class="row">
-            <div class="col-md-11">Items</div>
-            <div class="col-md-1"><span class="glyphicon glyphicon-chevron-down icons-padding"></span></div>
-          </div></div>
-              <div id="css-items" class="panel-collapse collapse"><div class="row">
-                <div class="col-md-6" id="video" draggable="true" ondragstart="onDrag(event)"><div class="panel-body">Video</div></div>
-                <div class="col-md-6" id="image" draggable="true" ondragstart="onDrag(event)"><div class="panel-body">Image</div></div>
-              </div></div>
-        </div>
-
-        <div class="panel-heading" style="background-color: #fff;" data-toggle="collapse" href="#js">
-          <h4 class="panel-title"><div class="row">
-            <div class="col-md-11">Functional Blocks - Javascript</div>
-            <div class="col-md-1"><span class="glyphicon glyphicon-chevron-down icons-padding"></span></div>
-          </div></h4>
-        </div>
-        <div id="js" class="panel-collapse collapse">
-          <div class="panel-body" data-toggle="collapse" href="#js-structure"><div class="row">
-            <div class="col-md-11">Structure</div>
-            <div class="col-md-1"><span class="glyphicon glyphicon-chevron-down icons-padding"></span></div>
-          </div></div>
-              <div id="js-structure" class="panel-collapse collapse"><div class="row">
-                <div class="col-md-6" id="title" draggable="true" ondragstart="onDrag(event)"><div class="panel-body">Title</div></div>
-                <div class="col-md-6" id="section" draggable="true" ondragstart="onDrag(event)"><div class="panel-body">Section</div></div>
-              </div></div>
-          <div class="panel-body" data-toggle="collapse" href="#js-items"><div class="row">
-            <div class="col-md-11">Items</div>
-            <div class="col-md-1"><span class="glyphicon glyphicon-chevron-down icons-padding"></span></div>
-          </div></div>
-              <div id="js-items" class="panel-collapse collapse"><div class="row">
-                <div class="col-md-6" id="video" draggable="true" ondragstart="onDrag(event)"><div class="panel-body">Video</div></div>
-                <div class="col-md-6" id="image" draggable="true" ondragstart="onDrag(event)"><div class="panel-body">Image</div></div>
-              </div></div>
-        </div>
-
-        <div class="panel-heading" style="background-color: #fff;" data-toggle="collapse" href="#boot">
-          <h4 class="panel-title"><div class="row">
-            <div class="col-md-11">Design Library Blocks - Bootstrap</div>
-            <div class="col-md-1"><span class="glyphicon glyphicon-chevron-down icons-padding"></span></div>
-          </div></h4>
-        </div>
-        <div id="boot" class="panel-collapse collapse">
-          <div class="panel-body" data-toggle="collapse" href="#boot-structure"><div class="row">
-            <div class="col-md-11">Structure</div>
-            <div class="col-md-1"><span class="glyphicon glyphicon-chevron-down icons-padding"></span></div>
-          </div></div>
-              <div id="boot-structure" class="panel-collapse collapse"><div class="row">
-                <div class="col-md-6" id="title" draggable="true" ondragstart="onDrag(event)"><div class="panel-body">Title</div></div>
-                <div class="col-md-6" id="section" draggable="true" ondragstart="onDrag(event)"><div class="panel-body">Section</div></div>
-              </div></div>
-          <div class="panel-body" data-toggle="collapse" href="#boot-items"><div class="row">
-            <div class="col-md-11">Items</div>
-            <div class="col-md-1"><span class="glyphicon glyphicon-chevron-down icons-padding"></span></div>
-          </div></div>
-              <div id="boot-items" class="panel-collapse collapse"><div class="row">
-                <div class="col-md-6" id="video" draggable="true" ondragstart="onDrag(event)"><div class="panel-body">Video</div></div>
-                <div class="col-md-6" id="image" draggable="true" ondragstart="onDrag(event)"><div class="panel-body">Image</div></div>
-              </div></div>
+        <div id="bt-contents">
+          <p>Bootstrap Contents</p>
         </div>
       </div>
+
+
       <div id="msg-box">
         <div class="panel panel-default" style="height: 150px;">
           <div class="panel-heading" style="background-color: #999;">
           <h3 class="panel-title"><span class="glyphicon glyphicon-console icons-padding"></span> Interactive Messages</h3>
+          </div>
+            TO DO
         </div>
-        TO DO
       </div>
-      </div>
+
     </div>
-    <div id="bramble" class="full" ondrop="onDrop(event)" ondragover="allowDrop(event)" style="border: 1px solid grey;"></div>
+
+    <div id="bramble" class="full" style="border: 1px solid grey;">
+    </div>
+
   </div>
   </nav>
 </div>

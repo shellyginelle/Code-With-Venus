@@ -12,8 +12,8 @@ This page is a helper for local development.
   <title>Code with Venus</title>
 
   <!--Main Stylesheet and Script-->
-  <!--link rel="stylesheet" href="style.css" type='text/css' />
-  <script type="text/javascript" src="scripts.js"></script>-->
+  <!--link rel="stylesheet" href="style.css" type='text/css' />-->
+  <script type="text/javascript" src="code-with-venus/scripts.js"></script>
 
   <!--Bootstrap Stylesheet and Script-->
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type='text/css' />
@@ -33,7 +33,7 @@ This page is a helper for local development.
 
       #wrapper {
           margin: 53px auto;
-}
+      }
   </style>
 
 </head>
@@ -43,7 +43,7 @@ This page is a helper for local development.
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-link" href="index.html" title="homepage"><img id="venus" src="imgs/Venus-Diamond-transparent.png" style="width: 85px; height:auto; margin: 15px"></a>
+            <a class="navbar-link" href="hosted.html" title="homepage"><img id="venus" src="imgs/Venus-Diamond-transparent.png" style="width: 85px; height:auto; margin: 15px"></a>
             <button type="button" class="btn navbar-toggle btn-xs" data-toggle="collapse" data-target="#Navbar"><span class="glyphicon glyphicon-menu-hamburger"></span>
             </button>
         </div>
@@ -110,10 +110,27 @@ This page is a helper for local development.
             <div class="col-md-11">Structure</div>
             <div class="col-md-1"><span class="glyphicon glyphicon-chevron-down icons-padding"></span></div>
           </div></div>
-              <div id="html-structure" class="panel-collapse collapse"><div class="row">
-                <div class="col-md-6" id="title" draggable="true" ondragstart="onDrag(event)"><div class="panel-body">Title</div></div>
-                <div class="col-md-6" id="section" draggable="true" ondragstart="onDrag(event)"><div class="panel-body">Section</div></div>
-              </div></div>
+              <div id="html-structure" class="panel-collapse collapse">
+                <div class="row">
+                  <div class="col-md-4" id="document">
+                    <button type="button" draggable="true" ondragstart="onDrag(event)" class="btn btn-info">Document</button>
+                  </div>
+                  <div class="col-md-4" id="title">
+                    <button type="button" draggable="true" ondragstart="onDrag(event)" class="btn btn-info">Title</button>
+                  </div>
+                  <div class="col-md-4" id="section">
+                    <button type="button" draggable="true" ondragstart="onDrag(event)" class="btn btn-info">Section</button>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4" id="header">
+                    <button type="button" draggable="true" ondragstart="onDrag(event)" class="btn btn-info">Header</button>
+                  </div>
+                  <div class="col-md-4" id="paragraph">
+                    <button type="button" draggable="true" ondragstart="onDrag(event)" class="btn btn-info">Paragraph</button>
+                  </div>
+              </div>
+            </div>
           <div class="panel-body" data-toggle="collapse" href="#html-items"><div class="row">
             <div class="col-md-11">Items</div>
             <div class="col-md-1"><span class="glyphicon glyphicon-chevron-down icons-padding"></span></div>
@@ -200,10 +217,15 @@ This page is a helper for local development.
         </div>
       </div>
       <div id="msg-box">
-        <div class="panel panel-default" style="height: 150px;">Hello Test</div>
+        <div class="panel panel-default" style="height: 150px;">
+          <div class="panel-heading" style="background-color: #999;">
+          <h3 class="panel-title"><span class="glyphicon glyphicon-console icons-padding"></span> Interactive Messages</h3>
+        </div>
+        TO DO
+      </div>
       </div>
     </div>
-    <div id="bramble" class="full" style="border: 1px solid grey;"></div>
+    <div id="bramble" class="full" ondrop="onDrop(event)" ondragover="allowDrop(event)" style="border: 1px solid grey;"></div>
   </div>
   </nav>
 </div>

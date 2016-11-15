@@ -11,40 +11,19 @@ This page is a helper for local development.
   <meta charset="UTF-8">
   <title>Code with Venus</title>
 
-  <!--Highlight.JS Stylesheet and Script-->
-  <link rel="stylesheet" href="thirdparty/highlight/styles/mono-blue.css">
-  <script type="text/javascript" src="hosted.js"></script>
+  <!--Main Stylesheet-->
+  <link rel="stylesheet" href="styles/hosted-styles.css" type='text/css'>
 
-  <!--Bootstrap Stylesheet and Script-->
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type='text/css' />
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <!--Highlight.JS Stylesheet-->
+  <link rel="stylesheet" href="thirdparty/highlight/styles/mono-blue.css" type='text/css'>
 
-  <style>
-      body {
-          margin: 0;
-      }
-
-      .bramble-full {
-          width: 70%;
-          height: 82vh;
-          overflow: hidden;
-      }
-
-      .col-md-1.code-tools {
-          width: 400px;
-          display:auto;
-          background-color: #eaeaea;
-      }
-
-      #wrapper {
-          margin: 53px auto;
-      }
-  </style>
+  <!--Bootstrap Stylesheet-->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type='text/css'/>
 </head>
 
 <body>
 
+<!--Top Navigation Bar-->
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -65,8 +44,11 @@ This page is a helper for local development.
         </div>
     </div>
 </nav>
+<!--Top Navigation Bar End-->
 
+<!--Main Content Wrapper-->
 <div id="wrapper">
+  <!--Secondary Navigation Bar-->
   <nav class="navbar navbar-default">
   <div id="secondary-nav" class="container-fluid" style="padding:5px; background-color: #d2eef2;">
     <div id="toolbox-nav" class="col-md-4" style="width: 380px; display:auto">
@@ -113,26 +95,56 @@ This page is a helper for local development.
         </div>
     </div>
   </div>
+  <!--Secondary Navigation Bar End-->
+
   <div id="content">
+    <!--Code Toolbox Sidebar-->
     <div id="code-toolbox" class="col-md-1 code-tools">
+      <!--Code Toolbox Navigation-->
         <div class="panel panel-default">
             <div class="panel-heading">
               <div class="input-group">
+                <span class="input-group-btn">
+                <button class="btn btn-default" type="button" href="#html-tab" data-toggle="tab">
+                  <span class="glyphicon glyphicon-home icons-padding"></span>
+                </button>
+              </span>
                 <input type="text" class="form-control" placeholder="Search for...">
                 <span class="input-group-btn">
                   <button class="btn btn-default" type="button">Go!</button>
                 </span>
               </div>
             </div>
+            <!--Code Toolbox Navigation End-->
             <div class="panel-body" style="overflow: scroll; overflow-x: hidden; height: 420px;">
                 <div class="tab-content">
+                  <!--HTML Tabbed Content-->
                     <div class="tab-pane fade in active" id="html-tab">
+                      <center><h1>HTML</h1></center>
+                      <button class="btn btn-default" type="button" href="#html-basic-tab" data-toggle="tab" style="width: 100px; height: 100px; margin: 2px; margin-bottom: 5px;">
+                        <span class="glyphicon glyphicon-book icons-padding"></span><br>Basic
+                      </button>
+                      <button class="btn btn-default" type="button" href="#html-struc-tab" data-toggle="tab" style="width: 100px; height: 100px; margin: 2px; margin-bottom: 5px;">
+                        <span class="glyphicon glyphicon-th icons-padding"></span><br>Structure
+                      </button>
+                      <button class="btn btn-default" type="button" href="#html-tablist-tab" data-toggle="tab" style="width: 100px; height: 100px; margin: 2px; margin-bottom: 5px;">
+                        <span class="glyphicon glyphicon-list-alt icons-padding"></span><br>Tables/Lists
+                      </button>
+                      <button class="btn btn-default" type="button" href="#html-text-tab" data-toggle="tab" style="width: 100px; height: 100px; margin: 2px; margin-bottom: 5px;">
+                        <span class="glyphicon glyphicon-text-color icons-padding"></span><br>Titles/Text
+                      </button>
+                      <button class="btn btn-default" type="button" href="#html-hyper-tab" data-toggle="tab" style="width: 100px; height: 100px; margin: 2px; margin-bottom: 5px;">
+                        <span class="glyphicon glyphicon-link icons-padding"></span><br>Hyperlinks
+                      </button>
+                      <button class="btn btn-default" type="button" href="#html-media-tab" data-toggle="tab" style="width: 100px; height: 100px; margin: 2px; margin-bottom: 5px;">
+                        <span class="glyphicon glyphicon-film icons-padding"></span><br>Media
+                      </button>
+                    </div>
+                    <div class="tab-pane fade" id="html-basic-tab">
                         <div class="panel panel-default">
                           <div class="panel-body">
                             <b>EXAMPLE</b>
-                            <h1>Header 1</h1>
-                            <h2>Header 2</h2>
-                            <h3>Header 3</h3>
+                            <h1>Basic</h1>
                           </div>
                           <div class="panel-footer">
                             <pre><code class="html" style="overflow: hidden; overflow-x: hidden;">
@@ -143,7 +155,105 @@ This page is a helper for local development.
                           </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="css-tab">
+                    <div class="tab-pane fade" id="html-struc-tab">
+                        <div class="panel panel-default">
+                          <div class="panel-body">
+                            <b>EXAMPLE</b>
+                            <h1>Structure</h1>
+                          </div>
+                          <div class="panel-footer">
+                            <pre><code class="html" style="overflow: hidden; overflow-x: hidden;">
+                                &lt;h1&gt;Header 1&lt;/h1&gt;
+                                &lt;h2&gt;Header 2&lt;/h2&gt;
+                                &lt;h3&gt;Header 3&lt;/h3&gt;
+                            </code></pre>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="html-tablist-tab">
+                        <div class="panel panel-default">
+                          <div class="panel-body">
+                            <b>EXAMPLE</b>
+                            <h1>Tables/Lists</h1>
+                          </div>
+                          <div class="panel-footer">
+                            <pre><code class="html" style="overflow: hidden; overflow-x: hidden;">
+                                &lt;h1&gt;Header 1&lt;/h1&gt;
+                                &lt;h2&gt;Header 2&lt;/h2&gt;
+                                &lt;h3&gt;Header 3&lt;/h3&gt;
+                            </code></pre>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="html-text-tab">
+                        <div class="panel panel-default">
+                          <div class="panel-body">
+                            <b>EXAMPLE</b>
+                            <h1>Titles/Text</h1>
+                          </div>
+                          <div class="panel-footer">
+                            <pre><code class="html" style="overflow: hidden; overflow-x: hidden;">
+                                &lt;h1&gt;Header 1&lt;/h1&gt;
+                                &lt;h2&gt;Header 2&lt;/h2&gt;
+                                &lt;h3&gt;Header 3&lt;/h3&gt;
+                            </code></pre>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="html-hyper-tab">
+                        <div class="panel panel-default">
+                          <div class="panel-body">
+                            <b>EXAMPLE</b>
+                            <h1>Hyperlinks</h1>
+                          </div>
+                          <div class="panel-footer">
+                            <pre><code class="html" style="overflow: hidden; overflow-x: hidden;">
+                                &lt;h1&gt;Header 1&lt;/h1&gt;
+                                &lt;h2&gt;Header 2&lt;/h2&gt;
+                                &lt;h3&gt;Header 3&lt;/h3&gt;
+                            </code></pre>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="html-media-tab">
+                      <div class="panel panel-default">
+                        <div class="panel-body">
+                          <b>EXAMPLE</b>
+                          <h1>Media</h1>
+                        </div>
+                        <div class="panel-footer">
+                          <pre><code class="html" style="overflow: hidden; overflow-x: hidden;">
+                              &lt;h1&gt;Header 1&lt;/h1&gt;
+                              &lt;h2&gt;Header 2&lt;/h2&gt;
+                              &lt;h3&gt;Header 3&lt;/h3&gt;
+                          </code></pre>
+                        </div>
+                      </div>
+                  </div>
+                  <!--HTML Tabbed Content End-->
+                  <!--CSS Tabbed Content End-->
+                  <div class="tab-pane fade" id="css-tab">
+                    <center><h1>CSS</h1></center>
+                    <button class="btn btn-default" type="button" href="#css-basic-tab" data-toggle="tab" style="width: 100px; height: 100px; margin: 2px; margin-bottom: 5px;">
+                      <span class="glyphicon glyphicon-book icons-padding"></span><br>Basic
+                    </button>
+                    <button class="btn btn-default" type="button" href="#css-struc-tab" data-toggle="tab" style="width: 100px; height: 100px; margin: 2px; margin-bottom: 5px;">
+                      <span class="glyphicon glyphicon-th icons-padding"></span><br>Structure
+                    </button>
+                    <button class="btn btn-default" type="button" href="#css-tablist-tab" data-toggle="tab" style="width: 100px; height: 100px; margin: 2px; margin-bottom: 5px;">
+                      <span class="glyphicon glyphicon-list-alt icons-padding"></span><br>Tables/Lists
+                    </button>
+                    <button class="btn btn-default" type="button" href="#css-text-tab" data-toggle="tab" style="width: 100px; height: 100px; margin: 2px; margin-bottom: 5px;">
+                      <span class="glyphicon glyphicon-text-color icons-padding"></span><br>Titles/Text
+                    </button>
+                    <button class="btn btn-default" type="button" href="#css-hyper-tab" data-toggle="tab" style="width: 100px; height: 100px; margin: 2px; margin-bottom: 5px;">
+                      <span class="glyphicon glyphicon-link icons-padding"></span><br>Hyperlinks
+                    </button>
+                    <button class="btn btn-default" type="button" href="#css-media-tab" data-toggle="tab" style="width: 100px; height: 100px; margin: 2px; margin-bottom: 5px;">
+                      <span class="glyphicon glyphicon-film icons-padding"></span><br>Media
+                    </button>
+                  </div>
+                    <div class="tab-pane fade" id="css-basic-tab">
                       <div class="panel panel-default">
                         <div class="panel-body">
                           <b>EXAMPLE</b>
@@ -160,8 +270,30 @@ This page is a helper for local development.
                         </div>
                       </div>
                     </div>
+                    <!--CSS Tabbed Content End-->
+                    <!--Javascript Tabbed Content End-->
                     <div class="tab-pane fade" id="js-tab">
-                      <div class="tab-pane fade" id="css-tab">
+                      <center><h1>CSS</h1></center>
+                      <button class="btn btn-default" type="button" href="#js-basic-tab" data-toggle="tab" style="width: 100px; height: 100px; margin: 2px; margin-bottom: 5px;">
+                        <span class="glyphicon glyphicon-book icons-padding"></span><br>Basic
+                      </button>
+                      <button class="btn btn-default" type="button" href="#js-struc-tab" data-toggle="tab" style="width: 100px; height: 100px; margin: 2px; margin-bottom: 5px;">
+                        <span class="glyphicon glyphicon-th icons-padding"></span><br>Structure
+                      </button>
+                      <button class="btn btn-default" type="button" href="#js-tablist-tab" data-toggle="tab" style="width: 100px; height: 100px; margin: 2px; margin-bottom: 5px;">
+                        <span class="glyphicon glyphicon-list-alt icons-padding"></span><br>Tables/Lists
+                      </button>
+                      <button class="btn btn-default" type="button" href="#js-text-tab" data-toggle="tab" style="width: 100px; height: 100px; margin: 2px; margin-bottom: 5px;">
+                        <span class="glyphicon glyphicon-text-color icons-padding"></span><br>Titles/Text
+                      </button>
+                      <button class="btn btn-default" type="button" href="#js-hyper-tab" data-toggle="tab" style="width: 100px; height: 100px; margin: 2px; margin-bottom: 5px;">
+                        <span class="glyphicon glyphicon-link icons-padding"></span><br>Hyperlinks
+                      </button>
+                      <button class="btn btn-default" type="button" href="#js-media-tab" data-toggle="tab" style="width: 100px; height: 100px; margin: 2px; margin-bottom: 5px;">
+                        <span class="glyphicon glyphicon-film icons-padding"></span><br>Media
+                      </button>
+                    </div>
+                    <div class="tab-pane fade" id="js-tab">
                         <div class="panel panel-default">
                           <div class="panel-body">
                             <b>EXAMPLE</b>
@@ -170,7 +302,7 @@ This page is a helper for local development.
                             <h3>Header 3</h3>
                           </div>
                           <div class="panel-footer">
-                            <pre><code class="html" style="overflow: hidden; overflow-x: hidden;">
+                            <pre><code id="code" class="html">
                                 &lt;h1&gt;Header 1&lt;/h1&gt;
                                 &lt;h2&gt;Header 2&lt;/h2&gt;
                                 &lt;h3&gt;Header 3&lt;/h3&gt;
@@ -183,20 +315,27 @@ This page is a helper for local development.
             </div>
           </div>
         </div>
-    </div>
+    <!--Code Toolbox Sidebar End-->
 
-    <div id="bramble" class="bramble-full" style="border: 1px solid grey;">
+    <!--File System, Editor and Preview-->
+    <div id="bramble" class="bramble-full">
     </div>
+    <!--File System, Editor and Preview End-->
 
-  </div>
   </nav>
 </div>
+<!--Main Content Wrapper End-->
 
+<!--Main and Thirdparty Scripts-->
 <script src="thirdparty/require.min.js" data-main="hosted.js"></script>
 <script src="thirdparty/clipboard/dist/clipboard.min.js"></script>
 <script src="thirdparty/highlight/highlight.pack.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
 <script>
     hljs.initHighlightingOnLoad();
 </script>
+
 </body>
 </html>

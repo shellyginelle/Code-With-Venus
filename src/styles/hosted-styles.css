@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+}
+
+#wrapper {
+    margin: 53px auto;
+}
+
+.bramble-full {
+    width: 70%;
+    height: 82vh;
+    overflow: hidden;
+    border: 1px solid grey;
+}
+
+.col-md-1.code-tools {
+    width: 400px;
+    display:auto;
+    background-color: #eaeaea;
+}
+
+#code {
+    overflow: hidden;
+    overflow-x: hidden;
+}
+
+#code-tools-btns {
+    width: 200px;
+    height: 200px;
+}

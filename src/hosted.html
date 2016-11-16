@@ -21,6 +21,43 @@ This page is a helper for local development.
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type='text/css'/>
 </head>
 
+<style>
+    body {
+        margin: 0;
+    }
+    .full {
+        width: 70%;
+        height: 82vh;
+        overflow: hidden;
+        border: 1px solid grey;
+    }
+    .btn-circle {
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        padding: 6px 0;
+        font-size: 12px;
+        line-height: 1.428571429;
+        border-radius: 15px;
+      }
+    .btn-circle.btn-lg {
+        width: 50px;
+        height: 50px;
+        padding: 10px 16px;
+        font-size: 18px;
+        line-height: 1.33;
+        border-radius: 25px;
+      }
+    .btn-circle.btn-xl {
+        width: 70px;
+        height: 70px;
+        padding: 10px 16px;
+        font-size: 24px;
+        line-height: 1.33;
+        border-radius: 35px;
+      }
+</style>
+
 <body>
 
 <!--Top Navigation Bar-->
@@ -54,18 +91,6 @@ This page is a helper for local development.
     <div id="toolbox-nav" class="col-md-4" style="width: 380px; display:auto">
       <div class="panel-heading pull-left" style="background-color: #9ad1e1">
          <h3 class="panel-title"><span class="glyphicon glyphicon-scissors icons-padding"></span> Code Library</h3>
-      </div>
-      <div class="pull-right">
-        <div class="btn-group">
-          <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown">
-            Select a Language <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu">
-            <li><a href="#html-tab" data-toggle="tab">HTML</a></li>
-            <li><a href="#css-tab" data-toggle="tab">CSS</a></li>
-            <li><a href="#js-tab" data-toggle="tab">JavaScript</a></li>
-          </ul>
-        </div>
       </div>
     </div>
     <div id="filetree-nav" class="col-md-8" style="width: 520px; display: auto;">
@@ -105,7 +130,7 @@ This page is a helper for local development.
             <div class="panel-heading">
               <div class="input-group">
                 <span class="input-group-btn">
-                <button class="btn btn-default" type="button" href="#html-tab" data-toggle="tab">
+                <button class="btn btn-default" type="button" href="#home-tab" data-toggle="tab">
                   <span class="glyphicon glyphicon-home icons-padding"></span>
                 </button>
               </span>
@@ -118,9 +143,10 @@ This page is a helper for local development.
             <!--Code Toolbox Navigation End-->
             <div class="panel-body" style="overflow: scroll; overflow-x: hidden; height: 420px;">
                 <div class="tab-content">
-                  <!--HTML Tabbed Content-->
-                    <div class="tab-pane fade in active" id="html-tab">
-                      <center><h1>HTML</h1></center>
+                  <!--Home Tabbed Content-->
+                  <div class="tab-pane fade in active" id="home-tab">
+                    <!--HTML Options-->
+                      <center><h2>HTML</h2></center>
                       <button class="btn btn-default" type="button" href="#html-basic-tab" data-toggle="tab" style="width: 100px; height: 100px; margin: 2px; margin-bottom: 5px;">
                         <span class="glyphicon glyphicon-book icons-padding"></span><br>Basic
                       </button>
@@ -139,195 +165,365 @@ This page is a helper for local development.
                       <button class="btn btn-default" type="button" href="#html-media-tab" data-toggle="tab" style="width: 100px; height: 100px; margin: 2px; margin-bottom: 5px;">
                         <span class="glyphicon glyphicon-film icons-padding"></span><br>Media
                       </button>
-                    </div>
-                    <div class="tab-pane fade" id="html-basic-tab">
-                        <div class="panel panel-default">
-                          <div class="panel-body">
-                            <b>EXAMPLE</b>
-                            <h1>Basic</h1>
-                          </div>
-                          <div class="panel-footer">
-                            <pre><code class="html" style="overflow: hidden; overflow-x: hidden;">
-                                &lt;h1&gt;Header 1&lt;/h1&gt;
-                                &lt;h2&gt;Header 2&lt;/h2&gt;
-                                &lt;h3&gt;Header 3&lt;/h3&gt;
-                            </code></pre>
-                          </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="html-struc-tab">
-                        <div class="panel panel-default">
-                          <div class="panel-body">
-                            <b>EXAMPLE</b>
-                            <h1>Structure</h1>
-                          </div>
-                          <div class="panel-footer">
-                            <pre><code class="html" style="overflow: hidden; overflow-x: hidden;">
-                                &lt;h1&gt;Header 1&lt;/h1&gt;
-                                &lt;h2&gt;Header 2&lt;/h2&gt;
-                                &lt;h3&gt;Header 3&lt;/h3&gt;
-                            </code></pre>
-                          </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="html-tablist-tab">
-                        <div class="panel panel-default">
-                          <div class="panel-body">
-                            <b>EXAMPLE</b>
-                            <h1>Tables/Lists</h1>
-                          </div>
-                          <div class="panel-footer">
-                            <pre><code class="html" style="overflow: hidden; overflow-x: hidden;">
-                                &lt;h1&gt;Header 1&lt;/h1&gt;
-                                &lt;h2&gt;Header 2&lt;/h2&gt;
-                                &lt;h3&gt;Header 3&lt;/h3&gt;
-                            </code></pre>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="tab-pane fade" id="html-text-tab">
-                        <div class="panel panel-default">
-                          <div class="panel-body">
-                            <b>EXAMPLE</b>
-                            <h1>Titles/Text</h1>
-                          </div>
-                          <div class="panel-footer">
-                            <pre><code class="html" style="overflow: hidden; overflow-x: hidden;">
-                                &lt;h1&gt;Header 1&lt;/h1&gt;
-                                &lt;h2&gt;Header 2&lt;/h2&gt;
-                                &lt;h3&gt;Header 3&lt;/h3&gt;
-                            </code></pre>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="tab-pane fade" id="html-hyper-tab">
-                        <div class="panel panel-default">
-                          <div class="panel-body">
-                            <b>EXAMPLE</b>
-                            <h1>Hyperlinks</h1>
-                          </div>
-                          <div class="panel-footer">
-                            <pre><code class="html" style="overflow: hidden; overflow-x: hidden;">
-                                &lt;h1&gt;Header 1&lt;/h1&gt;
-                                &lt;h2&gt;Header 2&lt;/h2&gt;
-                                &lt;h3&gt;Header 3&lt;/h3&gt;
-                            </code></pre>
-                          </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="html-media-tab">
-                      <div class="panel panel-default">
-                        <div class="panel-body">
-                          <b>EXAMPLE</b>
-                          <h1>Media</h1>
-                        </div>
-                        <div class="panel-footer">
-                          <pre><code class="html" style="overflow: hidden; overflow-x: hidden;">
-                              &lt;h1&gt;Header 1&lt;/h1&gt;
-                              &lt;h2&gt;Header 2&lt;/h2&gt;
-                              &lt;h3&gt;Header 3&lt;/h3&gt;
-                          </code></pre>
-                        </div>
-                      </div>
-                  </div>
-                  <!--HTML Tabbed Content End-->
-                  <!--CSS Tabbed Content End-->
-                  <div class="tab-pane fade" id="css-tab">
-                    <center><h1>CSS</h1></center>
-                    <button class="btn btn-default" type="button" href="#css-basic-tab" data-toggle="tab" style="width: 100px; height: 100px; margin: 2px; margin-bottom: 5px;">
-                      <span class="glyphicon glyphicon-book icons-padding"></span><br>Basic
-                    </button>
-                    <button class="btn btn-default" type="button" href="#css-struc-tab" data-toggle="tab" style="width: 100px; height: 100px; margin: 2px; margin-bottom: 5px;">
-                      <span class="glyphicon glyphicon-th icons-padding"></span><br>Structure
-                    </button>
-                    <button class="btn btn-default" type="button" href="#css-tablist-tab" data-toggle="tab" style="width: 100px; height: 100px; margin: 2px; margin-bottom: 5px;">
-                      <span class="glyphicon glyphicon-list-alt icons-padding"></span><br>Tables/Lists
-                    </button>
-                    <button class="btn btn-default" type="button" href="#css-text-tab" data-toggle="tab" style="width: 100px; height: 100px; margin: 2px; margin-bottom: 5px;">
-                      <span class="glyphicon glyphicon-text-color icons-padding"></span><br>Titles/Text
-                    </button>
-                    <button class="btn btn-default" type="button" href="#css-hyper-tab" data-toggle="tab" style="width: 100px; height: 100px; margin: 2px; margin-bottom: 5px;">
-                      <span class="glyphicon glyphicon-link icons-padding"></span><br>Hyperlinks
-                    </button>
-                    <button class="btn btn-default" type="button" href="#css-media-tab" data-toggle="tab" style="width: 100px; height: 100px; margin: 2px; margin-bottom: 5px;">
-                      <span class="glyphicon glyphicon-film icons-padding"></span><br>Media
-                    </button>
-                  </div>
-                    <div class="tab-pane fade" id="css-basic-tab">
-                      <div class="panel panel-default">
-                        <div class="panel-body">
-                          <b>EXAMPLE</b>
-                          <h1>Header 1</h1>
-                          <h2>Header 2</h2>
-                          <h3>Header 3</h3>
-                        </div>
-                        <div class="panel-footer">
-                          <pre><code class="html" style="overflow: hidden; overflow-x: hidden;">
-                              &lt;h1&gt;Header 1&lt;/h1&gt;
-                              &lt;h2&gt;Header 2&lt;/h2&gt;
-                              &lt;h3&gt;Header 3&lt;/h3&gt;
-                          </code></pre>
-                        </div>
-                      </div>
-                    </div>
-                    <!--CSS Tabbed Content End-->
-                    <!--Javascript Tabbed Content End-->
-                    <div class="tab-pane fade" id="js-tab">
-                      <center><h1>CSS</h1></center>
-                      <button class="btn btn-default" type="button" href="#js-basic-tab" data-toggle="tab" style="width: 100px; height: 100px; margin: 2px; margin-bottom: 5px;">
+
+                    <!--CSS Options-->
+                      <center><h2>CSS</h2></center>
+                      <button class="btn btn-default" type="button" href="#css-basic-tab" data-toggle="tab" style="width: 100px; height: 100px; margin: 2px; margin-bottom: 5px;">
                         <span class="glyphicon glyphicon-book icons-padding"></span><br>Basic
                       </button>
-                      <button class="btn btn-default" type="button" href="#js-struc-tab" data-toggle="tab" style="width: 100px; height: 100px; margin: 2px; margin-bottom: 5px;">
+                      <button class="btn btn-default" type="button" href="#css-struc-tab" data-toggle="tab" style="width: 100px; height: 100px; margin: 2px; margin-bottom: 5px;">
                         <span class="glyphicon glyphicon-th icons-padding"></span><br>Structure
                       </button>
-                      <button class="btn btn-default" type="button" href="#js-tablist-tab" data-toggle="tab" style="width: 100px; height: 100px; margin: 2px; margin-bottom: 5px;">
+                      <button class="btn btn-default" type="button" href="#css-tablist-tab" data-toggle="tab" style="width: 100px; height: 100px; margin: 2px; margin-bottom: 5px;">
                         <span class="glyphicon glyphicon-list-alt icons-padding"></span><br>Tables/Lists
                       </button>
-                      <button class="btn btn-default" type="button" href="#js-text-tab" data-toggle="tab" style="width: 100px; height: 100px; margin: 2px; margin-bottom: 5px;">
+                      <button class="btn btn-default" type="button" href="#css-text-tab" data-toggle="tab" style="width: 100px; height: 100px; margin: 2px; margin-bottom: 5px;">
                         <span class="glyphicon glyphicon-text-color icons-padding"></span><br>Titles/Text
                       </button>
-                      <button class="btn btn-default" type="button" href="#js-hyper-tab" data-toggle="tab" style="width: 100px; height: 100px; margin: 2px; margin-bottom: 5px;">
+                      <button class="btn btn-default" type="button" href="#css-hyper-tab" data-toggle="tab" style="width: 100px; height: 100px; margin: 2px; margin-bottom: 5px;">
                         <span class="glyphicon glyphicon-link icons-padding"></span><br>Hyperlinks
                       </button>
-                      <button class="btn btn-default" type="button" href="#js-media-tab" data-toggle="tab" style="width: 100px; height: 100px; margin: 2px; margin-bottom: 5px;">
+                      <button class="btn btn-default" type="button" href="#css-media-tab" data-toggle="tab" style="width: 100px; height: 100px; margin: 2px; margin-bottom: 5px;">
+                        <span class="glyphicon glyphicon-film icons-padding"></span><br>Media
+                      </button>
+
+                    <!--JavaScript Options-->
+                      <center><h2>JavaScript</h2></center>
+                      <button class="btn btn-default" type="button" href="#css-basic-tab" data-toggle="tab" style="width: 100px; height: 100px; margin: 2px; margin-bottom: 5px;">
+                        <span class="glyphicon glyphicon-book icons-padding"></span><br>Basic
+                      </button>
+                      <button class="btn btn-default" type="button" href="#css-struc-tab" data-toggle="tab" style="width: 100px; height: 100px; margin: 2px; margin-bottom: 5px;">
+                        <span class="glyphicon glyphicon-th icons-padding"></span><br>Structure
+                      </button>
+                      <button class="btn btn-default" type="button" href="#css-tablist-tab" data-toggle="tab" style="width: 100px; height: 100px; margin: 2px; margin-bottom: 5px;">
+                        <span class="glyphicon glyphicon-list-alt icons-padding"></span><br>Tables/Lists
+                      </button>
+                      <button class="btn btn-default" type="button" href="#css-text-tab" data-toggle="tab" style="width: 100px; height: 100px; margin: 2px; margin-bottom: 5px;">
+                        <span class="glyphicon glyphicon-text-color icons-padding"></span><br>Titles/Text
+                      </button>
+                      <button class="btn btn-default" type="button" href="#css-hyper-tab" data-toggle="tab" style="width: 100px; height: 100px; margin: 2px; margin-bottom: 5px;">
+                        <span class="glyphicon glyphicon-link icons-padding"></span><br>Hyperlinks
+                      </button>
+                      <button class="btn btn-default" type="button" href="#css-media-tab" data-toggle="tab" style="width: 100px; height: 100px; margin: 2px; margin-bottom: 5px;">
                         <span class="glyphicon glyphicon-film icons-padding"></span><br>Media
                       </button>
                     </div>
-                    <div class="tab-pane fade" id="js-tab">
-                        <div class="panel panel-default">
-                          <div class="panel-body">
-                            <b>EXAMPLE</b>
-                            <h1>Header 1</h1>
-                            <h2>Header 2</h2>
-                            <h3>Header 3</h3>
-                          </div>
-                          <div class="panel-footer">
-                            <pre><code id="code" class="html">
-                                &lt;h1&gt;Header 1&lt;/h1&gt;
-                                &lt;h2&gt;Header 2&lt;/h2&gt;
-                                &lt;h3&gt;Header 3&lt;/h3&gt;
-                            </code></pre>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                </div>
-            </div>
-          </div>
-        </div>
-    <!--Code Toolbox Sidebar End-->
 
-    <!--File System, Editor and Preview-->
-    <div id="bramble" class="bramble-full">
-    </div>
-    <!--File System, Editor and Preview End-->
+<!--HTML Options In-Depth-->
+<!--Basic-->
+<div class="tab-pane fade" id="html-basic-tab">
+<div style="margin: 10px;"><center>
+<h4>HTML - Basic</h4>
+<button title="Basic" type="button" href="#html-basic-tab" data-toggle="tab" class="btn btn-info btn-circle disabled"><i class="glyphicon glyphicon-book"></i></button>
+<button title="Structure" type="button" href="#html-struc-tab" data-toggle="tab" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-th"></i></button>
+<button title="Tables/Lists" type="button" href="#html-tablist-tab" data-toggle="tab" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-list-alt"></i></button>
+<button title="Titles/Text" type="button" href="#html-text-tab" data-toggle="tab" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-text-color"></i></button>
+<button title="Hyperlinks" type="button" href="#html-hyper-tab" data-toggle="tab" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-link"></i></button>
+<button title="Media" type="button" href="#html-media-tab" data-toggle="tab" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-film"></i></button>
+</center></div>
+<div class="panel panel-default">
+<div class="panel-body">
+<b>PURPOSE</b>
+<p>All HTML documents must start with a document type declaration: &lt;!DOCTYPE html>.
+The HTML document itself begins with &lt;html> and ends with &lt;/html>.
+The visible part of the HTML document is between &lt;body> and &lt;/body>.</p>
+</div>
+<div class="panel-footer">
+<pre><code class="html" style="overflow: hidden; overflow-x: hidden;">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;h1>My First Heading&lt;/h1&gt;
+&lt;p>My first paragraph.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+</div>
+</div>
+</div>
+<!--HTML Options In-Depth-->
+<!--Structure-->
+<div class="tab-pane fade" id="html-struc-tab">
+<div style="margin: 10px;"><center>
+<h4>HTML - Structure</h4>
+<button title="Basic" type="button" href="#html-basic-tab" data-toggle="tab" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-book"></i></button>
+<button title="Structure" type="button" href="#html-struc-tab" data-toggle="tab" class="btn btn-info btn-circle disabled"><i class="glyphicon glyphicon-th"></i></button>
+<button title="Tables/Lists" type="button" href="#html-tablist-tab" data-toggle="tab" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-list-alt"></i></button>
+<button title="Titles/Text" type="button" href="#html-text-tab" data-toggle="tab" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-text-color"></i></button>
+<button title="Hyperlinks" type="button" href="#html-hyper-tab" data-toggle="tab" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-link"></i></button>
+<button title="Media" type="button" href="#html-media-tab" data-toggle="tab" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-film"></i></button>
+</center></div>
+<div class="panel panel-default">
+<div class="panel-body">
+<b>EXAMPLE</b>
+<h1>Structure</h1>
+</div>
+<div class="panel-footer">
+<pre><code class="html" style="overflow: hidden; overflow-x: hidden;">&lt;h1&gt;Header 1&lt;/h1&gt;
+&lt;h2&gt;Header 2&lt;/h2&gt;
+&lt;h3&gt;Header 3&lt;/h3&gt;
+</code></pre>
+</div>
+</div>
+</div>
+<!--HTML Options In-Depth-->
+<!--Tables and Lists-->
+<div class="tab-pane fade" id="html-tablist-tab">
+<div style="margin: 10px;"><center>
+<h4>HTML - Tables/Lists</h4>
+<button title="Basic" type="button" href="#html-basic-tab" data-toggle="tab" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-book"></i></button>
+<button title="Structure" type="button" href="#html-struc-tab" data-toggle="tab" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-th"></i></button>
+<button title="Tables/Lists" type="button" href="#html-tablist-tab" data-toggle="tab" class="btn btn-info btn-circle disabled"><i class="glyphicon glyphicon-list-alt"></i></button>
+<button title="Titles/Text" type="button" href="#html-text-tab" data-toggle="tab" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-text-color"></i></button>
+<button title="Hyperlinks" type="button" href="#html-hyper-tab" data-toggle="tab" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-link"></i></button>
+<button title="Media" type="button" href="#html-media-tab" data-toggle="tab" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-film"></i></button>
+</center></div>
+<div class="panel panel-default">
+<div class="panel-body">
+<b>EXAMPLE</b><br><br>
+  <table style="width: 300px; border: 1px solid black; border-collapse: collapse;">
+    <tr style="width: 300px; border: 1px solid black; border-collapse: collapse;">
+      <th style="width: 300px; border: 1px solid black; border-collapse: collapse;">Header 1</th>
+      <th style="width: 300px; border: 1px solid black; border-collapse: collapse;">Header 2</th>
+      <th style="width: 300px; border: 1px solid black; border-collapse: collapse;">Header 3</th>
+    </tr>
+    <tr style="width: 300px; border: 1px solid black; border-collapse: collapse;">
+      <td style="width: 300px; border: 1px solid black; border-collapse: collapse;">Content</td>
+      <td style="width: 300px; border: 1px solid black; border-collapse: collapse;">Content</td>
+      <td style="width: 300px; border: 1px solid black; border-collapse: collapse;">Content</td>
+    </tr>
+  </table>
+</div>
+<div class="panel-footer">
+<pre><code class="html" style="overflow: hidden; overflow-x: hidden;">&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Row 1&lt;/th&gt;
+    &lt;th&gt;Contact&lt;/th&gt;
+    &lt;th&gt;Country&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Alfreds Futterkiste&lt;/td&gt;
+    &lt;td&gt;Maria Anders&lt;/td&gt;
+    &lt;td&gt;Germany&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<b>EXAMPLE</b><br><br>
+  <ul>
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Milk</li>
+  </ul>
+</div>
+<div class="panel-footer">
+<pre><code class="html" style="overflow: hidden; overflow-x: hidden;">&lt;ul&gt;
+  &lt;li&gt;Coffee&lt;/li&gt;
+  &lt;li&gt;Tea&lt;/li&gt;
+  &lt;li&gt;Milk&lt;/li&gt;
+</ul>
+</code></pre>
+</div>
+</div>
+</div>
+<!--HTML Options In-Depth-->
+<!--Titles and Texts-->
+<div class="tab-pane fade" id="html-text-tab">
+<div style="margin: 10px;"><center>
+<h4>HTML - Titles/Text</h4>
+<button title="Basic" type="button" href="#html-basic-tab" data-toggle="tab" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-book"></i></button>
+<button title="Structure" type="button" href="#html-struc-tab" data-toggle="tab" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-th"></i></button>
+<button title="Tables/Lists" type="button" href="#html-tablist-tab" data-toggle="tab" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-list-alt"></i></button>
+<button title="Titles/Text" type="button" href="#html-text-tab" data-toggle="tab" class="btn btn-info btn-circle disabled"><i class="glyphicon glyphicon-text-color"></i></button>
+<button title="Hyperlinks" type="button" href="#html-hyper-tab" data-toggle="tab" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-link"></i></button>
+<button title="Media" type="button" href="#html-media-tab" data-toggle="tab" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-film"></i></button>
+</center></div>
+<div class="panel panel-default">
+<div class="panel-body">
+<b>EXAMPLE</b>
+<h1>Header 1</h1>
+<h2>Header 2 ...</h2>
+<h7>Header 7</h7>
+</div>
+<div class="panel-footer">
+<pre><code class="html" style="overflow: hidden; overflow-x: hidden;">&lt;h1&gt;Header 1&lt;/h1&gt;
+&lt;h2&gt;Header 2&lt;/h2&gt;
+...
+&lt;h7&gt;Header 7&lt;/h7&gt;
+</code></pre>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<b>EXAMPLE</b><br><br>
+<p>This is a paragraph</p>
+</div>
+<div class="panel-footer">
+<pre><code class="html" style="overflow: hidden; overflow-x: hidden;">&lt;p&gt;This is a paragraph&lt;p&gt;
+</code></pre>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<b>EXAMPLE</b><br><br>
+<p><b>This text is bold</b></p>
+<p><i>This text is italic</i></p>
+<p>This is<sub> subscript</sub> and <sup>superscript</sup></p>
+</div>
+<div class="panel-footer">
+<pre><code class="html" style="overflow: hidden; overflow-x: hidden;">&lt;b&gt;This text is bold&lt;/b&gt;
+&lt;i&gt;This text is italic&lt;/i&gt;
+This is &lt;sub&gt;subscript&lt;/sub&gt; and &lt;sup&gt;superscript&lt;/sup&gt;
+</code></pre>
+</div>
+</div>
+</div>
+<!--HTML Options In-Depth-->
+<!--Hyperlinks-->
+<div class="tab-pane fade" id="html-hyper-tab">
+<div style="margin: 10px;"><center>
+<h4>HTML - Hyperlinks</h4>
+<button title="Basic" type="button" href="#html-basic-tab" data-toggle="tab" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-book"></i></button>
+<button title="Structure" type="button" href="#html-struc-tab" data-toggle="tab" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-th"></i></button>
+<button title="Tables/Lists" type="button" href="#html-tablist-tab" data-toggle="tab" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-list-alt"></i></button>
+<button title="Titles/Text" type="button" href="#html-text-tab" data-toggle="tab" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-text-color"></i></button>
+<button title="Hyperlinks" type="button" href="#html-hyper-tab" data-toggle="tab" class="btn btn-info btn-circle disabled"><i class="glyphicon glyphicon-link"></i></button>
+<button title="Media" type="button" href="#html-media-tab" data-toggle="tab" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-film"></i></button>
+</center></div>
+<div class="panel panel-default">
+<div class="panel-body">
+<b>EXAMPLE</b><br><br>
+<a href="http://www.w3schools.com">This is a link</a>
+</div>
+<div class="panel-footer">
+<pre><code class="html" style="overflow: hidden; overflow-x: hidden;">&lt;a href="http://www.w3schools.com"&gt;This is a link&lt;/a&gt;
+</code></pre>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<b>EXAMPLE</b><br><br>
+<a href="http://www.w3schools.com">Button Hyperlink</a>
+</div>
+<div class="panel-footer">
+<pre><code class="html" style="overflow: hidden; overflow-x: hidden;">&lt;a href="http://www.w3schools.com"&gt;This is a link&lt;/a&gt;
+</code></pre>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<b>EXAMPLE</b><br><br>
+<a href="http://www.w3schools.com">Navigation Hyperlink</a>
+</div>
+<div class="panel-footer">
+<pre><code class="html" style="overflow: hidden; overflow-x: hidden;">&lt;a href="http://www.w3schools.com"&gt;This is a link&lt;/a&gt;
+</code></pre>
+</div>
+</div>
+</div>
+<!--HTML Options In-Depth-->
+<!--Media-->
+<div class="tab-pane fade" id="html-media-tab">
+<div style="margin: 10px;"><center>
+<h4>HTML - Media</h4>
+<button title="Basic" type="button" href="#html-basic-tab" data-toggle="tab" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-book"></i></button>
+<button title="Structure" type="button" href="#html-struc-tab" data-toggle="tab" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-th"></i></button>
+<button title="Tables/Lists" type="button" href="#html-tablist-tab" data-toggle="tab" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-list-alt"></i></button>
+<button title="Titles/Text" type="button" href="#html-text-tab" data-toggle="tab" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-text-color"></i></button>
+<button title="Hyperlinks" type="button" href="#html-hyper-tab" data-toggle="tab" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-link"></i></button>
+<button title="Media" type="button" href="#html-media-tab" data-toggle="tab" class="btn btn-info btn-circle disabled"><i class="glyphicon glyphicon-film"></i></button>
+</center></div>
+<div class="panel panel-default">
+<div class="panel-body">
+<b>EXAMPLE</b><br><br>
+<center><video width="250" height="150" controls><source src="Enter Video File.mp4" type="video/mp4"></video></center>
+</div>
+<div class="panel-footer">
+<pre><code class="html" style="overflow: hidden; overflow-x: hidden;">&lt;video width="320" height="240" controls&gt;&lt;source src="Enter Video File.mp4" type="video/mp4"&gt;&lt;/video&gt;
+</code></pre>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<b>EXAMPLE</b><br><br>
+<center><img src=" Enter Image File.jpeg" alt=" Enter Image Description " width="100" height="100"></center>
+</div>
+<div class="panel-footer">
+<pre><code class="html" style="overflow: hidden; overflow-x: hidden;">&lt;img src=" Enter Image File.jpeg" alt=" Enter Image Description " width="100" height="100"&gt;
+</code></pre>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<b>EXAMPLE</b><br><br>
+<center><audio controls><source src="Enter Audio File.mp3" type="audio/mpeg"></audio></center>
+</div>
+<div class="panel-footer">
+<pre><code class="html" style="overflow: hidden; overflow-x: hidden;">&lt;audio controls&gt;&lt;source src="Enter Audio File.mp3" type="audio/mpeg"&gt;&lt;/audio&gt;
+</code></pre>
+</div>
+</div>
+</div>
+<!--HTML Options In-Depth End-->
+<!--CSS Options In-Depth-->
+<!--Basic-->
+<div class="tab-pane fade" id="css-basic-tab">
+<div class="panel panel-default">
+<div class="panel-body">
+<b>EXAMPLE</b>
+<h1>Header 1</h1>
+<h2>Header 2</h2>
+<h3>Header 3</h3>
+</div>
+<div class="panel-footer">
+<pre><code class="html" style="overflow: hidden; overflow-x: hidden;">&lt;h1&gt;Header 1&lt;/h1&gt;
+&lt;h2&gt;Header 2&lt;/h2&gt;
+&lt;h3&gt;Header 3&lt;/h3&gt;
+</code></pre>
+</div>
+</div>
+</div>
+<!--CSS Options In-Depth End-->
+<!--JavaScript Options In-Depth-->
+<!--Basic-->
+<div class="tab-pane fade" id="js-basic-tab">
+<div class="panel panel-default">
+<div class="panel-body">
+<b>EXAMPLE</b>
+<h1>Header 1</h1>
+<h2>Header 2</h2>
+<h3>Header 3</h3>
+</div>
+<div class="panel-footer">
+<pre><code id="code" class="html">&lt;h1&gt;Header 1&lt;/h1&gt;
+&lt;h2&gt;Header 2&lt;/h2&gt;
+&lt;h3&gt;Header 3&lt;/h3&gt;
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!--Code Toolbox Sidebar End-->
+
+<!--File System, Editor and Preview-->
+<div id="bramble" class="full"></div>
+<script src="thirdparty/require.min.js" data-main="hosted.js"></script>
+<!--File System, Editor and Preview End-->
 
   </nav>
 </div>
+
 <!--Main Content Wrapper End-->
 
 <!--Main and Thirdparty Scripts-->
-<script src="thirdparty/require.min.js" data-main="hosted.js"></script>
 <script src="thirdparty/clipboard/dist/clipboard.min.js"></script>
 <script src="thirdparty/highlight/highlight.pack.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>

@@ -1,0 +1,356 @@
+<!doctype html>
+<html>
+<head>
+  <title>Code With Venus</title>
+  <meta charset="utf-8"/>
+  <link rel=stylesheet href="../doc/docs.css">
+
+  <link rel=stylesheet href=../lib/codemirror.css>
+  <script src=../lib/codemirror.js></script>
+  <script src=../mode/xml/xml.js></script>
+  <script src=../mode/javascript/javascript.js></script>
+  <script src=../mode/css/css.js></script>
+  <script src=../mode/htmlmixed/htmlmixed.js></script>
+
+  <!--Bootstrap Stylesheet-->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type='text/css'/>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script type="text/javascript" src="scripts.js"></script>
+  <link rel="stylesheet" href="style.css" type='text/css' />
+
+  <!--Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+  <style type=text/css>
+        .CodeMirror {
+          float: left;
+          width: 50%;
+          height: 100% !important;
+          border: 1px solid black;
+        }
+        iframe {
+          width: 50%;
+          float: left;
+          height: 100vh;
+          border: 1px solid black;
+          border-left: 0px;
+        }
+        .btn:not(a) {
+          border:0;
+          border-bottom:0;
+          border-left:0;
+          font-weight:'900';
+          box-shadow: inset 0 -3.2px rgba(0, 0, 0, 0.12),inset 2px 0 rgba(0, 0, 0, 0.1);outline:none;
+          -webkit-outline:none;
+          -o-outline:none;
+          -moz-outline:none;
+        }
+        .btn:active:not(a), .btn.active {
+          outline:none;-moz-outline:none;
+          background-image: none;
+          -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) !important;
+          position: relative;box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) !important;top: 1px;left:-1px;
+        }
+        .btn:focus:not(a) {
+          outline:none;
+          -webkit-outline:none;
+          -moz-outline:none;
+        }
+        .btn-sm {
+          padding-top:1.5px;
+        }
+      </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display-->
+    <div class="navbar-header">
+        <div class="navbar-brand navbar-brand-centered">
+          <a class="navbar-link" href="venus-editor.html" title="homepage">
+            <img id="venus" src="../imgs/Venus-Diamond-transparent.png" style="width: 85px; height:auto; margin: 15px"></a>
+        </div>
+        <button type="button" class="btn btn-default navbar-toggle btn-xs" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="glyphicon glyphicon-menu-hamburger icons-padding"></span>
+        </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling-->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <button class="btn btn-default" onclick="window.location.href='../fullPage/examples/venus-home.html'" alt="" style="margin-top: 10px; margin-right: 5px;"><span class="glyphicon glyphicon-home icons-padding"></span></button>
+			<button class="btn btn-default disabled" onclick="window.location.href='venus-editor.html'" alt="" style="margin-top: 10px; margin-right: 5px;" disabled>Create New</button>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a>Already have an account? &nbsp; &nbsp;<b>Login</b> <span class="caret"></span>  &nbsp;</a></li>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse-->
+  </div><!-- /.container-fluid-->
+</nav><!--Top Navigation Bar End-->
+
+<div id="wrapper" class="active" style="margin-top: 52px;">
+      <!-- Code Toolbox Sidebar -->
+      <div id="codetools-wrapper">
+      <ul id="codetools_menu" class="codetools-nav">
+           <li class="codetools-brand">
+             <a id="menu-toggle" href="#">Code Toolbox
+             <span id="main_icon" class="glyphicon glyphicon-wrench"></span></a>
+           </li>
+      </ul>
+
+      <div class="panel">
+        <div class="panel-header" style="color: #fff; display: block; float: left; text-decoration: none; width: 400px; height: 50px; background: #4BBFC3; margin-top: -10px; margin-left: -1px; padding-left: 18px; line-height: 20px; font-size: 18px;">
+      			<button class="btn btn-default" alt="" style="margin-top: 10px; margin-right: 5px;">Home</button>
+      			<button class="btn btn-default" alt="" style="margin-top: 10px; margin-right: 5px;">HTML</button>
+      			<button class="btn btn-default" alt="" style="margin-top: 10px; margin-right: 5px;">CSS</button>
+      			<button class="btn btn-default" alt="" style="margin-top: 10px; margin-right: 5px;">JavaScript</button>
+        </div>
+      </div>
+          <div class="row">
+              <div class="bhoechie-tab-container">
+                  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 bhoechie-tab-menu">
+                    <div class="list-group">
+                      <a href="#" class="list-group-item active text-center">
+                        <h4 class="glyphicon glyphicon-book"></h4><br/>About
+                      </a>
+                      <a href="#" class="list-group-item text-center">
+                        <h4 class="glyphicon glyphicon-road"></h4><br/>Navigation
+                      </a>
+                      <a href="#" class="list-group-item text-center">
+                        <h4 class="glyphicon glyphicon-modal-window"></h4><br/>Boxes
+                      </a>
+                      <a href="#" class="list-group-item text-center">
+                        <h4 class="glyphicon glyphicon-text-size"></h4><br/>Text
+                      </a>
+                      <a href="#" class="list-group-item text-center">
+                        <h4 class="glyphicon glyphicon-film"></h4><br/>Media
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 bhoechie-tab">
+                      <!-- ABOUT section -->
+                      <div class="bhoechie-tab-content active">
+<h1 style="text-align: center"><b>HTML</b></h1>
+<h5 style="text-align: justify"><i>Hypertext Markup Language</i>, a standardized system for tagging text files to achieve font, color, graphic, and hyperlink effects on World Wide Web pages.</h5>
+
+<p style="text-align: justify">If thats a mouth-full, think of HTML as your basic building blocks. This programming language allows you to position your content appropiately, create basic tables, navigation tabs, text areas and formatting. With HTML, you'll be able to begin to organize and style your page.</p>
+
+<br><div class="panel" style="background-color: #cef1f2; border: 1px solid #eeeeee; padding-left: 10px; padding-right: 10px;">
+    <h5 style="text-align: justify"><span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span> Select a category to start building your website!
+  </h5>
+</div>
+                      </div>
+                      <!-- NAVIGATION section -->
+                      <div class="bhoechie-tab-content" style="padding-top: 10px;">
+                        <div class="panel" style="background-color: #cef1f2; border: 1px solid #eeeeee; padding-left: 10px; padding-right: 10px;">
+                            <h5 style="text-align: justify"><span class="glyphicon glyphicon-move" aria-hidden="true"></span> You can <u>Drag and Drop Code</u> to your Website. Try it out!
+                          </h5>
+                        </div>
+<div class="panel panel-default">
+<div class="panel-header" style="color: #fff; width: 100px; border-radius: 0px 0px 10px 0px; height: 18px; padding-left: 10px; background-color: #999; border: 1px solid #eeeeee;"><b>Hyperlinks</b></div>
+<div class="panel-body">
+<a href="../fullPage/examples/venus-home.html">This is a link</a>
+</div>
+<div class="panel-footer">
+<pre><code id="
+
+  &lt;a href='Type in URL Here'&gt; Type in Hyperlink Text &lt;/a&gt;
+  " class="html" style="overflow: hidden; overflow-x: hidden;" draggable="true" ondragstart="onDrag(event)">&lt;a href='Type in URL Here'&gt; Type in Hyperlink Text &lt;/a&gt;
+</code></pre>
+</div>
+</div>
+                      </div>
+
+                      <!-- DIVS & BOXES search -->
+                      <div class="bhoechie-tab-content" style="padding-top: 10px;">
+                        <div class="panel" style="background-color: #cef1f2; border: 1px solid #eeeeee; padding-left: 10px; padding-right: 10px;">
+                            <h5 style="text-align: justify"><span class="glyphicon glyphicon-move" aria-hidden="true"></span> You can <u>Drag and Drop Code</u> to your Website. Try it out!
+                          </h5>
+                        </div>
+<div class="panel panel-default">
+<div class="panel-header" style="color: #fff; width: 100px; border-radius: 0px 0px 10px 0px; height: 18px; padding-left: 10px; background-color: #999; border: 1px solid #eeeeee;"><b>Box Divider</b></div>
+<div class="panel-body">
+  <div style="background-color:black;color:white;padding:20px;">
+    <h2>Lorem Ipsum</h2>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+  </div>
+</div>
+<div class="panel-footer">
+<pre><code id="
+
+  &lt;div style='background-color:black;color:white;padding:20px;'&gt;
+  &lt;h2&gt; Type in Title Text &lt;/h2&gt;
+  &lt;p&gt; Type in Content Text &lt;/p&gt;
+  &lt;/div&gt;
+  " class="html" style="overflow: hidden; overflow-x: hidden;" draggable="true" ondragstart="onDrag(event)">&lt;div style='background-color:black;color:white;padding:20px;'&gt;
+    &lt;h2&gt; Type in Title Text &lt;/h2&gt;
+    &lt;p&gt; Type in Content Text &lt;/p&gt;
+  &lt;div/&gt;
+</code></pre>
+</div>
+</div>
+                      </div>
+
+                      <!-- TEXT & FONTS search -->
+                      <div class="bhoechie-tab-content" style="padding-top: 10px;">
+                        <div class="panel" style="background-color: #cef1f2; border: 1px solid #eeeeee; padding-left: 10px; padding-right: 10px;">
+                            <h5 style="text-align: justify"><span class="glyphicon glyphicon-move" aria-hidden="true"></span> You can <u>Drag and Drop Code</u> to your Website. Try it out!
+                          </h5>
+                        </div>
+<div class="panel panel-default">
+<div class="panel-header" style="color: #fff; width: 100px; border-radius: 0px 0px 10px 0px; height: 18px; padding-left: 10px; background-color: #999; border: 1px solid #eeeeee;"><b>Title Text</b></div>
+<div class="panel-body">
+<h1>I am a Heading Text</h1>
+</div>
+<div class="panel-footer">
+<pre><code id="
+
+  &lt;h1&gt;Type in your Title Here&lt;/h1&gt;
+  " class="html" style="overflow: hidden; overflow-x: hidden;" draggable="true" ondragstart="onDrag(event)">&lt;h1&gt;Header 1&lt;/h1&gt;
+</code></pre>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-header" style="color: #fff; width: 100px; border-radius: 0px 0px 10px 0px; height: 18px; padding-left: 10px; background-color: #999; border: 1px solid #eeeeee;"><b>Bold Text</b></div>
+<div class="panel-body">
+<p>Make it <b>BOLD</b></p>
+</div>
+<div class="panel-footer">
+<pre><code id="
+
+  &lt;b&gt;Type in your Text Here&lt;/b&gt;
+  " class="html" style="overflow: hidden; overflow-x: hidden;" draggable="true" ondragstart="onDrag(event)">&lt;b&gt;I'm Bold&lt;/b&gt;
+</code></pre>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-header" style="color: #fff; width: 100px; border-radius: 0px 0px 10px 0px; height: 18px; padding-left: 10px; background-color: #999; border: 1px solid #eeeeee;"><b>Italic Text</b></div>
+<div class="panel-body">
+<p>Make it <i>Italic</i></p>
+</div>
+<div class="panel-footer">
+<pre><code id="
+
+  &lt;i&gt;Type in your Text Here&lt;/i&gt;
+  " class="html" style="overflow: hidden; overflow-x: hidden;" draggable="true" ondragstart="onDrag(event)">&lt;i&gt;I'm Italic&lt;/i&gt;
+</code></pre>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-header" style="color: #fff; width: 100px; border-radius: 0px 0px 10px 0px; height: 18px; padding-left: 10px; background-color: #999; border: 1px solid #eeeeee;"><b>Underlined Text</b></div>
+<div class="panel-body">
+<p><u>Underline</u> the important stuff!</p>
+</div>
+<div class="panel-footer">
+<pre><code id="
+
+  &lt;u&gt;Type in your Text Here&lt;/u&gt;
+  " class="html" style="overflow: hidden; overflow-x: hidden;" draggable="true" ondragstart="onDrag(event)">&lt;u&gt;I'm Underlined&lt;/u&gt;
+</code></pre>
+</div>
+</div>
+                      </div>
+
+                      <!-- MEDIA search -->
+                      <div class="bhoechie-tab-content" style="padding-top: 10px;">
+                        <div class="panel" style="background-color: #cef1f2; border: 1px solid #eeeeee; padding-left: 10px; padding-right: 10px;">
+                            <h5 style="text-align: justify"><span class="glyphicon glyphicon-move" aria-hidden="true"></span> You can <u>Drag and Drop Code</u> to your Website. Try it out!
+                          </h5>
+                        </div>
+<div class="panel panel-default">
+<div class="panel-header" style="color: #fff; width: 100px; border-radius: 0px 0px 10px 0px; height: 18px; padding-left: 10px; background-color: #999; border: 1px solid #eeeeee;"><b>Image</b></div>
+<div class="panel-body">
+<center><img id="venus" src="../imgs/Venus-Diamond-transparent.png" style="width: 85px; height:auto; margin: 15px">
+<br><p>Want to add images? Its simple!</p></center>
+</div>
+<div class="panel-footer">
+<pre><code id="
+
+  &lt;img src='../imgs/Venus-Diamond-transparent.png' style='width: 85px; height:auto; margin: 15px'&gt;
+  " class="html" style="overflow: hidden; overflow-x: hidden;" draggable="true" ondragstart="onDrag(event)">&lt;img src='../imgs/Venus-Diamond-transparent.png' style='width: 85px; height:auto; margin: 15px'&gt;
+</code></pre>
+</div>
+</div>
+                      </div>
+                  </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- Page content -->
+  <div id="page-content-wrapper" style="overflow: hidden!important; position: relative!important; height: 100vh!important">
+    <!-- Keep all page content within the page-content inset div! -->
+    <div class="page-content inset">
+      <div class="panel">
+        <div class="panel-header" style="color: #fff; display: block; float: left; text-decoration: none; width: 50%; height: 50px; background: #58dce6; line-height: 50px; padding-left: 20px; border-radius: 30px 30px 0px 0px; font-size: 18px;">
+          Editor
+        </div>
+        <div class="panel-header" style="color: #fff; display: block; float: left; text-decoration: none; width: 50%; height: 50px; background: #00cadb; line-height: 50px; padding-left: 20px; border-radius: 30px 30px 0px 0px; font-size: 18px;">
+          Preview
+        </div>
+        <div class="panel-body">
+<textarea id=code name=code ondrop="onDrop(event)" ondragover="allowDrop(event)">
+<!doctype html>
+<html>
+  <head>
+    <meta charset=utf-8>
+    <title>Code with Venus</title>
+    <style>
+    body {
+      font-family:'Roboto', sans-serif !important;
+      *DragCSSHere*
+    }
+    </style>
+  </head>
+  <body>
+    <center>
+      <h1>Code with Venus</h1>
+      <h3>Welcome to the Programming Page</h3>
+      <p>DragHTMLHere</p>
+    </center>
+
+    <script>
+      var *DragJavaScriptHere*
+    </script>
+  </body>
+</html></textarea>
+                <iframe id=preview></iframe>
+                <script>
+                  var delay;
+                  // Initialize CodeMirror editor with a nice html5 canvas demo.
+                  var editor = CodeMirror.fromTextArea(document.getElementById('code'), {
+                    mode: 'text/html'
+                  });
+                  editor.on("change", function() {
+                    clearTimeout(delay);
+                    delay = setTimeout(updatePreview, 300);
+                  });
+
+                  function updatePreview() {
+                    var previewFrame = document.getElementById('preview');
+                    var preview =  previewFrame.contentDocument ||  previewFrame.contentWindow.document;
+                    preview.open();
+                    preview.write(editor.getValue());
+                    preview.close();
+                  }
+                  setTimeout(updatePreview, 300);
+
+                  editor.setSize("50%", "100%");
+                  preview.setSize("50%", "100%");
+
+                </script>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <script>
+      $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("active");
+      });
+    </script>
+
+</body>

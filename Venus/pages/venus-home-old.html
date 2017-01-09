@@ -1,0 +1,167 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
+<head>
+  <title>Code With Venus</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel=stylesheet href="../doc/docs.css">
+
+  <link rel=stylesheet href=../lib/codemirror.css>
+  <script src=../lib/codemirror.js></script>
+  <script src=../mode/xml/xml.js></script>
+  <script src=../mode/javascript/javascript.js></script>
+  <script src=../mode/css/css.js></script>
+  <script src=../mode/htmlmixed/htmlmixed.js></script>
+
+  <!--Bootstrap Stylesheet-->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type='text/css'/>
+
+  <!--FullPage.js Stuff-->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="../fullPage/vendors/scrolloverflow.js"></script>
+  <link rel="stylesheet" type="text/css" href="../fullPage/jquery.fullPage.css" />
+  <link rel="stylesheet" type="text/css" href="../fullPage/examples/examples.css" />
+
+  <script type="text/javascript" src="../jquery.fullPage.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#fullpage').fullpage({
+        sectionsColor: ['#cef1f2', '#a2edf0', '#dff4f4', '#4BBFC3'],
+        continuousVertical: true,
+        navigation: true,
+        navigationPosition: 'left',
+      });
+    });
+  </script>
+
+  <script type="text/javascript" src="scripts.js"></script>
+  <link rel="stylesheet" href="style.css" type='text/css' />
+
+  <style>
+
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display-->
+      <div class="navbar-header">
+          <div class="navbar-brand navbar-brand-centered">
+            <a class="navbar-link" href="venus-editor.html" title="homepage">
+              <img id="venus" src="../imgs/Venus-Diamond-transparent.png" style="width: 85px; height:auto; margin: 15px"></a>
+          </div>
+          <button type="button" class="btn navbar-toggle btn-xs" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="glyphicon glyphicon-menu-hamburger icons-padding"></span>
+          </button>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling-->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+        <ul class="nav navbar-nav navbar-right">
+          <li><a>Already have an account? &nbsp; &nbsp;<b>Login</b> <span class="caret"></span>  &nbsp;</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse-->
+    </div><!-- /.container-fluid-->
+  </nav><!--Top Navigation Bar End-->
+
+  <div id="fullpage">
+  	<div class="section active" id="section0">
+  		<img id="venus" src="../../imgs/diamond.png" style="width:100px;">
+  		<br><br><h4>WELCOME TO</h4>
+  	  <h1>Code with Venus</h1>
+  		<h4>An Introduction Tool for Web-Based Programming</h4>
+  		<button class="btn btn-lg btn-default" onclick="window.location.href='#section1'" alt="">Click to Start</button>
+  	</div>
+
+  	<div class="section" id="section1">
+  		<div class="row" style="margin-left:10%; width: 80%;">
+  			<div class="col-xs-6">
+  				<div class="panel panel-default">
+  					<div class="panel-heading">Panel heading without title</div>
+  					<div class="panel-body">
+  						<h3>The Starter Blog</h3>
+
+  					</div>
+  					<div class="panel-footer" style="background-color:#dff4f4;">
+  						<button class="btn btn-default" onclick="window.location.href='../../pages/venus-editor.html'" alt="" style="margin-right: 5px;">
+  							Create New</button>
+  						<button class="btn btn-default" onclick="window.location.href='../../pages/venus-editor.html'" alt="" style="margin-right: 5px;">
+  							Simple Demo</button>
+  					</div>
+  				</div>
+  			</div>
+  			<div class="col-xs-6">
+  				<div class="panel panel-default">
+  					<div class="panel-heading">Panel heading without title</div>
+  					<div class="panel-body">
+  						<h3>The Starter Blog</h3>
+  					</div>
+  					<div class="panel-footer" style="background-color:#dff4f4;">
+  						<button class="btn btn-default" onclick="window.location.href='../../pages/venus-editor.html'" alt="" style="margin-right: 5px;">
+  							Create New</button>
+  						<button class="btn btn-default" onclick="window.location.href='../../pages/venus-editor.html'" alt="" style="margin-right: 5px;">
+  							Simple Demo</button>
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+
+  	<div class="section" id="section2">
+  		<h4>EVERY JOURNEY BEGINS WITH</h4>
+  		<h1>A Single Step</h1>
+  		<br>
+  		<h4>BUT YOU'LL NEVER FINISH IF</h4>
+  		<h1>You Don't Start</h1>
+  	</div>
+
+  </div>
+<!--<div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
+  <!-- Indicators
+  <ol class="carousel-indicators">
+    <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
+    <li data-target="#bs-carousel" data-slide-to="1"></li>
+    <li data-target="#bs-carousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides
+  <div class="carousel-inner">
+    <div class="item slides active">
+      <div class="overlay"></div>
+      <div class="slide-1"></div>
+      <div class="hero">
+        <hgroup>
+            <h1>We are creative</h1>
+            <h3>Get start your next awesome project</h3>
+        </hgroup>
+        <button class="btn btn-hero btn-lg" role="button">See all features</button>
+      </div>
+    </div>
+    <div class="item slides">
+      <div class="slide-2"></div>
+      <div class="hero">
+        <hgroup>
+            <h1>We are smart</h1>
+            <h3>Get start your next awesome project</h3>
+        </hgroup>
+        <button class="btn btn-hero btn-lg" role="button">See all features</button>
+      </div>
+    </div>
+    <div class="item slides">
+      <div class="slide-3"></div>
+      <div class="hero">
+        <hgroup>
+            <h1>We are amazing</h1>
+            <h3>Get start your next awesome project</h3>
+        </hgroup>
+        <button class="btn btn-hero btn-lg" role="button">See all features</button>
+      </div>
+    </div>
+  </div>
+</div>-->
+
+</body>

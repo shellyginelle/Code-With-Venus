@@ -1,0 +1,52 @@
+<!doctype html>
+
+<!--
+Bramble must be hosted in an iframe vs. loaded directly.
+This page is a helper for local development.
+-->
+
+<html spellcheck="false">
+<head>
+    <meta charset="utf-8">
+    <title>Framed Bramble</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .full {
+            height: 100vh;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div id="bramble" class="full"></div>
+    <script src="thirdparty/require.min.js" data-main="hosted"></script>
+
+    <div id="boot-structure" class="panel-collapse collapse"><div class="row">
+      <div class="col-md-6" id="title" draggable="true" ondragstart="onDrag(event)"><div class="panel-body">Title</div></div>
+      <div class="col-md-6" id="section" draggable="true" ondragstart="onDrag(event)"><div class="panel-body">Section</div></div>
+    </div></div>
+
+    <script>
+    /* Drag and Drop Functions */
+    function allowDrop(ev) {
+        ev.preventDefault();
+    }
+
+    function onDrag(ev) {
+        /* //On Drag
+        var code = "<example> Hello World </example>";
+        ev.dataTransfer.setData("text", ev.code); */
+        ev.dataTransfer.setData("text", ev.target.id);
+    }
+
+    function onDrop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data).cloneNode(true));
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Code With Venus</title>
+
+	<link rel="stylesheet" type="text/css" href="../jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="examples.css" />
+
+	<!--Fancy Box-->
+	<!-- Add fancyBox -->
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+		    //FANCYBOX
+		    //https://github.com/fancyapps/fancyBox
+		    $(".fancybox").fancybox({
+		        openEffect: "none",
+		        closeEffect: "none"
+		    });
+		});
+	</script>
+
+	<!--Bootstrap Stylesheet-->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type='text/css'/>
+
+	<!-- FullPage.js -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../vendors/scrolloverflow.js"></script>
+
+	<!--Fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+	<script type="text/javascript" src="../jquery.fullPage.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				sectionsColor: ['#cef1f2', '#a2edf0', '#dff4f4', '#4BBFC3'],
+				continuousVertical: true,
+				navigation: true,
+				navigationPosition: 'left',
+				scrollOverflow: true
+			});
+		});
+	</script>
+
+	<style>
+		body {
+			font-family:'Roboto', sans-serif !important;
+		}
+		.navbar-brand-centered {
+		    position: absolute;
+		    left: 50%;
+		    display: block;
+		    width: 160px;
+		    text-align: center;
+		    top: -15px;
+		}
+		.navbar>.container .navbar-brand-centered,
+		.navbar>.container-fluid .navbar-brand-centered {
+		    margin-left: -80px;
+		}
+		.btn:not(a) {
+			border:0;
+			border-bottom:0;
+			border-left:0;
+			font-weight:'900';
+			font-family:'Roboto', sans-serif;
+			box-shadow: inset 0 -3.2px rgba(0, 0, 0, 0.12),inset 2px 0 rgba(0, 0, 0, 0.1);
+			outline:none;
+			-webkit-outline:none;
+			-o-outline:none;
+			-moz-outline:none;
+		}
+		.btn:active:not(a), .btn.active {
+			outline:none;
+			-moz-outline:none;
+			background-image: none;
+			-webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) !important;
+			position: relative;box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) !important;
+			top: 1px;
+			left:-1px;
+		}
+		.btn:focus:not(a) {
+			outline:none;
+			-webkit-outline:none;
+			-moz-outline:none;
+		}
+		.btn-sm {
+			padding-top:1.5px;
+		}
+	</style>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display-->
+    <div class="navbar-header">
+        <div class="navbar-brand navbar-brand-centered">
+          <a class="navbar-link" href="venus-editor.html" title="homepage">
+            <img id="venus" src="../../imgs/Venus-Diamond-transparent.png" style="width: 85px; height:auto; margin: 15px"></a>
+        </div>
+        <button type="button" class="btn btn-default navbar-toggle btn-xs" data-toggle="collapse" data-target="#right-nav">
+          <span class="glyphicon glyphicon-menu-hamburger icons-padding"></span>
+        </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling-->
+    <div class="collapse navbar-collapse" id="right-nav">
+			<button class="btn btn-default" onclick="window.location.href='venus-home.html'" alt="" style="margin-top: 10px; margin-right: 5px;"><span class="glyphicon glyphicon-home icons-padding"></span></button>
+			<button class="btn btn-default" onclick="window.location.href='../../pages/venus-editor.html'" alt="" style="margin-top: 10px; margin-right: 5px;">Create New</button>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a>Already have an account? &nbsp; &nbsp;<b>Login</b> <span class="caret"></span>  &nbsp;</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse-->
+  </div><!-- /.container-fluid-->
+</nav><!--Top Navigation Bar End-->
+
+<div id="fullpage">
+	<div class="section active" id="section0">
+		<img id="venus" src="../../imgs/diamond.png" style="width:100px;">
+		<br><br><h4>WELCOME TO</h4>
+	  <h1>Code with Venus</h1>
+		<h4>An Introduction Tool for Web-Based Programming</h4>
+		<button class="btn btn-lg btn-default" onclick="window.location.href='../../pages/venus-editor.html'" style="margin-right: 5px;" alt="">Click to Start</button>
+		<button class="btn btn-lg btn-default" onclick="window.location.href='#section1'" style="margin-right: 5px;" alt="">Need Inspiration?</button>
+	</div>
+
+	<div class="section" id="section1">
+		<br><br><br><h1>Need Inspiration?</h1><br>
+		<div class="container-fluid">
+		<div class="row" style="margin-left:10%; width: 80%;">
+			<div class="col-md-6">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<a class="fancybox" rel="group" href="../../imgs/diamond.png">
+							<img src="../../imgs/diamond.png" alt="" style="width:100px;" />
+						</a>
+					</div>
+					<div class="panel-body" style="height: 100%;">
+						<h3>The Starter Blog</h3>
+						Ever wondered how the <i>top fashion, food or technology bloggers</i> do it? Creating a blog can be the first step into programming as it allows you to <b>add your personality</b> into something that is shareable online! Learn how to create a <b>basic template</b> from organizing your content to adding figures, tables or navigation to <b>show your creative side</b>.
+					</div>
+					<div class="panel-footer" style="background-color:#dff4f4;">
+						<center><button class="btn btn-default" onclick="window.location.href='../../pages/venus-editor.html'" alt="" style="margin: 5px;">
+							Create New</button>
+						<button class="btn btn-default" onclick="window.location.href='../../pages/venus-editor.html'" alt="" style="margin: 5px;">
+							Simple Demo</button></center>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<a class="fancybox" rel="group" href="../../imgs/diamond.png">
+							<img src="../../imgs/diamond.png" alt="" style="width:100px;" />
+						</a>
+					</div>
+					<div class="panel-body" style="height: 100%;">
+						<h3>The Multi-Media Platform</h3>
+						Discover how to unravel the secrets behind programming multi-media elements onto your website. Teaching you how to add <b>images, videos, audio, and more</b> to make your platform intriguing and inviting! It is important to <i>communicate with your audience</i> through visual cues incorporating your own <b>style</b> and <b>design</b>.
+					</div>
+					<div class="panel-footer" style="background-color:#dff4f4;">
+						<center><button class="btn btn-default" onclick="window.location.href='../../pages/venus-editor.html'" alt="" style="margin: 5px;">
+							Create New</button>
+						<button class="btn btn-default" onclick="window.location.href='../../pages/venus-editor.html'" alt="" style="margin: 5px;">
+							Simple Demo</button></center>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+
+	<div class="section" id="section2">
+		<div class="row" style="margin-left:10%; width: 80%;">
+			<div class="col-md-6">
+				<h4>EVERY JOURNEY BEGINS WITH</h4>
+				<h1>A Single Step</h1>
+				<br>
+				<h4>BUT YOU'LL NEVER FINISH IF</h4>
+				<h1>You Don't Start</h1>
+				<br>Remember, Web-Based Programming is an Art not a Science.
+			</div>
+			<div class="col-md-6">
+				<div class="panel panel-default">
+					<video width="100%" controls>
+						<source src="mov_bbb.mp4" type="video/mp4">
+						<source src="mov_bbb.ogg" type="video/ogg">
+						Your browser does not support HTML5 video.
+					</video>
+				</div>
+			</div>
+	</div>
+
+</div>
+
+</body>
+</html>
